@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button, Lines, Reveal } from "@/components/ui";
-import type { AboutContent } from "@/lib/types";
+import type { PhotoHeroContent } from "@/lib/types";
 
 const desktopMask =
   "linear-gradient(90deg, transparent 0%, #000 14%, #000 86%, transparent 100%), linear-gradient(#000 0%, #000 62%, transparent 100%)";
@@ -8,7 +8,7 @@ const desktopMask =
 const mobileMask =
   "radial-gradient(ellipse 62% 54% at 50% 46%, #000 0%, rgba(0,0,0,0.82) 24%, rgba(0,0,0,0.28) 58%, transparent 100%)";
 
-export function AboutHero({ hero }: { hero: AboutContent["hero"] }) {
+export function AboutHero({ hero }: { hero: PhotoHeroContent }) {
   return (
     <section className="relative min-h-svh overflow-hidden bg-white lg:h-svh">
       <MaskedPhoto hero={hero} mask={mobileMask} className="lg:hidden" />
@@ -56,7 +56,7 @@ function MaskedPhoto({
   className,
   composite = false,
 }: {
-  hero: AboutContent["hero"];
+  hero: PhotoHeroContent;
   mask: string;
   className: string;
   composite?: boolean;

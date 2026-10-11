@@ -20,123 +20,168 @@
       "href": "/services",
       "menu": [
         {
-          "label": "Holistic healing",
-          "href": "/services#holistic-healing",
-          "body": "A session for mind, body, and spirit together.",
-          "tone": "green",
-          "icon": "heart"
-        },
-        {
-          "label": "Tarot card readings",
-          "href": "/services#tarot-card-readings",
-          "body": "A reading that names what is already asking.",
-          "tone": "violet",
-          "icon": "cards"
-        },
-        {
-          "label": "Vedic healing techniques",
-          "href": "/services#vedic-healing",
-          "body": "Vedic practice, held for the life you are living.",
-          "tone": "amber",
-          "icon": "sun"
-        },
-        {
-          "label": "Ritual, candle, and meditation",
-          "href": "/services#ritual-candle-meditation",
-          "body": "Candle magic, ritual, and meditation.",
-          "tone": "red",
-          "icon": "flame"
-        },
-        {
-          "label": "Ritual castings and Hoodoo",
+          "label": "Ritual Castings & Hoodoo",
           "href": "/services#ritual-castings",
-          "body": "Healing through ritual, shaped around you.",
-          "tone": "blue",
-          "icon": "spark"
+          "body": "Hoodoo and candle magic rituals, tailored to you.",
+          "tone": "red",
+          "icon": "flame",
+          "group": "Services"
         },
         {
-          "label": "Digital Vedic healings",
+          "label": "Digital Vedic Healings",
           "href": "/services#digital-vedic-healings",
           "body": "Vedic healing, offered at a distance.",
-          "tone": "mist",
-          "icon": "device"
+          "tone": "amber",
+          "icon": "sun",
+          "group": "Services"
         },
         {
           "label": "Divinations",
           "href": "/services#divinations",
-          "body": "Card work for clarity, then a next step.",
+          "body": "Card readings for clarity in your life.",
           "tone": "violet",
-          "icon": "eye"
+          "icon": "cards",
+          "group": "Services"
         },
         {
           "label": "Meditations",
           "href": "/services#meditations",
-          "body": "A practice toward the higher self.",
+          "body": "An ancient method toward the higher self.",
           "tone": "green",
-          "icon": "moon"
+          "icon": "moon",
+          "group": "Services"
+        },
+        {
+          "label": "Ritual castings and Hoodoo",
+          "href": "/services#course-ritual-castings",
+          "body": "A course in Hoodoo and candle magic rituals.",
+          "tone": "red",
+          "icon": "flame",
+          "group": "Courses"
+        },
+        {
+          "label": "Digital Vedic healings",
+          "href": "/services#course-digital-vedic-healings",
+          "body": "A course in Vedic healing, offered at a distance.",
+          "tone": "amber",
+          "icon": "sun",
+          "group": "Courses"
+        },
+        {
+          "label": "Divinations",
+          "href": "/services#course-divinations",
+          "body": "A course in card readings for clarity.",
+          "tone": "violet",
+          "icon": "cards",
+          "group": "Courses"
+        },
+        {
+          "label": "Meditations",
+          "href": "/services#course-meditations",
+          "body": "A course in the ancient method of meditation.",
+          "tone": "green",
+          "icon": "moon",
+          "group": "Courses"
         }
       ]
     },
     {
       "label": "Products",
-      "href": "/products"
+      "href": "/products",
+      "menu": [
+        {
+          "label": "Crystals",
+          "href": "/products#crystals",
+          "body": "Crystals matched to the issue you are working with.",
+          "tone": "violet",
+          "icon": "spark",
+          "group": "Products"
+        },
+        {
+          "label": "Healing kits",
+          "href": "/products#healing-kits",
+          "body": "Healing tools gathered for the technique the work needs.",
+          "tone": "blue",
+          "icon": "heart",
+          "group": "Products"
+        },
+        {
+          "label": "Ritual casting tools",
+          "href": "/products#ritual-casting-tools",
+          "body": "Tools for candle magic and ritual casting.",
+          "tone": "amber",
+          "icon": "flame",
+          "group": "Products"
+        }
+      ]
     }
   ],
   "footer": {
     "blurb": "Holistic healing, tarot, and Vedic guidance with Priya. Courses, services, and products in one place.",
-    "columns": [
-      {
-        "title": "Explore",
-        "links": [
-          {
-            "label": "Home",
-            "href": "/"
-          },
-          {
-            "label": "About",
-            "href": "/about"
-          },
-          {
-            "label": "Courses",
-            "href": "/services#courses"
-          }
-        ]
-      },
-      {
-        "title": "Work",
-        "links": [
-          {
-            "label": "Services",
-            "href": "/services"
-          },
-          {
-            "label": "Products",
-            "href": "/products"
-          },
-          {
-            "label": "Contacts",
-            "href": "/contacts"
-          }
-        ]
-      },
-      {
-        "title": "Visit",
-        "links": [
-          {
-            "label": "Start a conversation",
-            "href": "/contacts"
-          },
-          {
-            "label": "See the courses",
-            "href": "/services#courses"
-          },
-          {
-            "label": "See the products",
-            "href": "/products"
-          }
-        ]
-      }
-    ],
+    "explore": {
+      "title": "Explore",
+      "links": [
+        { "label": "Home", "href": "/" },
+        { "label": "About", "href": "/about" },
+        { "label": "Services", "href": "/services" },
+        { "label": "Products", "href": "/products" },
+        { "label": "Contact", "href": "/contacts" }
+      ]
+    },
+    "services": {
+      "title": "Services",
+      "links": [
+        { "label": "Ritual Castings & Hoodoo", "href": "/services#ritual-castings" },
+        { "label": "Digital Vedic Healings", "href": "/services#digital-vedic-healings" },
+        { "label": "Divinations", "href": "/services#divinations" },
+        { "label": "Meditations", "href": "/services#meditations" }
+      ],
+      "coursesTitle": "Courses",
+      "courses": [
+        { "label": "Ritual castings and Hoodoo", "href": "/services#course-ritual-castings" },
+        { "label": "Digital Vedic healings", "href": "/services#course-digital-vedic-healings" },
+        { "label": "Divinations", "href": "/services#course-divinations" },
+        { "label": "Meditations", "href": "/services#course-meditations" }
+      ]
+    },
+    "social": {
+      "title": "Social",
+      "links": [
+        { "label": "Instagram", "href": "https://www.instagram.com/divinesoulsbypriya/" },
+        { "label": "Facebook", "href": "https://www.facebook.com/divinesoulsindia" }
+      ],
+      "legalTitle": "Legal",
+      "legal": [
+        { "label": "Terms & conditions", "href": "/terms" },
+        { "label": "Privacy Policy", "href": "/privacy" },
+        { "label": "Cookie Policy", "href": "/cookies" }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "items": [
+        {
+          "label": "Address",
+          "value": "Dehradun, India",
+          "href": "https://www.google.com/maps/place/Divine+Souls/@21.0680074,82.7525294,5z/data=!3m1!4b1!4m6!3m5!1s0x3be04dcf4d001d75:0x7f2ddcbbbcbefc00!8m2!3d21.0680074!4d82.7525294!16s%2Fg%2F11f55jgcmh"
+        },
+        {
+          "label": "WhatsApp",
+          "value": "+91 7668648224",
+          "href": "https://wa.me/917668648224"
+        },
+        {
+          "label": "Gmail",
+          "value": "priyasinha1809@gmail.com",
+          "href": "mailto:priyasinha1809@gmail.com"
+        },
+        {
+          "label": "Mobile",
+          "value": "+91 7668648224",
+          "href": "tel:+917668648224"
+        }
+      ]
+    },
     "note": "© 2026 Divine Souls By Priya. All rights reserved."
   }
 }

@@ -3,14 +3,28 @@
   "description": "Divinely charged crystals, healing kits, and ritual tools from Divine Souls By Priya.",
   "hero": {
     "eyebrow": "Products",
-    "title": "Divinely charged,\ntailored to you.\n",
-    "body": "Crystals, healing kits, and ritual tools. Each one is chosen for the person and the issue, not pulled from a generic shelf."
+    "title": "Divinely charged,\ntailored to you.",
+    "body": "Crystals, healing kits, and ritual tools. Each one is chosen for the person and the issue, not pulled from a generic shelf.",
+    "cta": "Contact",
+    "href": "/contacts",
+    "whatsapp": "WhatsApp",
+    "whatsappHref": "https://wa.me/917668648224",
+    "notes": ["Crystals, kits, and ritual tools", "Charged for the person who asks"],
+    "image": "/media/practice-a.jpg",
+    "imageAlt": "Stones set out for a healing piece"
+  },
+  "intro": {
+    "chip": "Products",
+    "title": "Crystals, kits, and ritual tools."
   },
   "items": [
     {
       "name": "Crystals",
       "summary": "Customized crystals for elemental correction, matched to the issue you are working with.",
       "tone": "violet",
+      "image": "/media/mark.jpg",
+      "imageAlt": "Crystals and a card laid out for a reading",
+      "align": "left",
       "points": [
         "Chosen for your situation",
         "Used in elemental correction",
@@ -21,6 +35,9 @@
       "name": "Healing kits",
       "summary": "A combination of healing tools, gathered for the technique the work actually needs.",
       "tone": "blue",
+      "image": "/media/practice-b.jpg",
+      "imageAlt": "A singing bowl held during a healing",
+      "align": "right",
       "points": [
         "More than one tool",
         "Paired with a method",
@@ -31,6 +48,9 @@
       "name": "Ritual casting tools",
       "summary": "Tools used for performing rituals, including the work of candle magic and casting.",
       "tone": "orange",
+      "image": "/media/candles.jpg",
+      "imageAlt": "A candle prepared for ritual work",
+      "align": "left",
       "points": [
         "Made for ritual use",
         "Matched to the casting",

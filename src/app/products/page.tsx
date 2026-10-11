@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { PageClose, PageHero } from "@/components/page-hero";
+import Image from "next/image";
+import { AboutHero } from "@/components/about-hero";
+import { ContactBand, HomeFaq } from "@/components/home-sections";
+import { ProductOrder } from "@/components/product-order";
 import { Check, Reveal } from "@/components/ui";
-import { getProducts } from "@/lib/content";
+import { getHome, getProducts } from "@/lib/content";
 
 const wash = {
   blue: "bg-[#dff2fe]",
@@ -16,55 +19,59 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ProductsPage() {
   const page = await getProducts();
+  const home = await getHome();
 
   return (
     <main>
-      <PageHero eyebrow={page.hero.eyebrow} title={page.hero.title} body={page.hero.body} />
-      <section className="px-6 py-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8">
-          {page.items.map((item, index) => (
-            <article key={item.name} className="grid items-center gap-8 rounded-[32px] bg-white lg:grid-cols-2">
-              <Reveal className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className={`flex min-h-[320px] items-end rounded-[28px] p-8 ${wash[item.tone]}`}>
-                  <div className="w-full rounded-2xl bg-white p-5 shadow-[0_16px_40px_rgba(24,24,27,0.06)]">
-                    <p className="text-[13px] font-medium text-zinc-500">Product</p>
-                    <p className="mt-6 text-[28px] font-medium tracking-[-0.04em]">{item.name}</p>
-                    <div className="mt-4 h-2 w-24 rounded-full bg-accent" />
-                  </div>
-                </div>
-              </Reveal>
-              <Reveal delay={0.06}>
-                <h2 className="text-[clamp(32px,4vw,44px)] font-medium leading-[1.15] tracking-[-0.03em]">{item.name}</h2>
-                <p className="mt-4 max-w-md text-[16px] leading-7 text-zinc-600">{item.summary}</p>
-                <ul className="mt-6 space-y-3">
-                  {item.points.map((point) => (
-                    <li key={point} className="flex gap-3 text-[15px] leading-6">
-                      <Check />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <h2 className="text-[clamp(32px,4vw,48px)] font-medium leading-[1.18] tracking-[-0.03em]">{page.specs.title}</h2>
+      <AboutHero hero={page.hero} />
+      <section className="bg-white px-6 pb-8 pt-8">
+        <div className="mx-auto flex max-w-[1000px] flex-col">
+          <Reveal className="flex flex-col items-center gap-5 text-center">
+            <span className="inline-flex rounded-md border-b border-white bg-mist px-3 py-3 text-[12px] font-normal leading-none text-black shadow-md">
+              {page.intro.chip}
+            </span>
+            <h2 className="max-w-[700px] text-balance text-[clamp(32px,4vw,48px)] font-medium leading-[1.2] tracking-[-0.03em] text-ink">
+              {page.intro.title}
+            </h2>
           </Reveal>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {page.specs.items.map((item) => (
-              <article key={item.title} className="rounded-3xl bg-mist p-6">
-                <h3 className="text-[18px] font-medium tracking-[-0.03em]">{item.title}</h3>
-                <p className="mt-3 text-[14px] leading-6 text-zinc-600">{item.body}</p>
+          <div className="mt-16 flex flex-col gap-28">
+            {page.items.map((item) => (
+              <article
+                key={item.name}
+                id={item.name.toLowerCase().replaceAll(" ", "-")}
+                className={`scroll-mt-32 flex flex-col items-center gap-10 lg:flex-row lg:justify-between lg:gap-[60px] ${item.align === "right" ? "lg:flex-row-reverse" : ""}`}
+              >
+                <Reveal className="w-full lg:w-[405px] lg:shrink-0">
+                  <h2 className="max-w-md text-[clamp(26px,3vw,34px)] font-normal leading-[1.2] tracking-[-0.04em] text-ink">{item.name}</h2>
+                  <p className="mt-4 max-w-md text-[16px] leading-6 text-zinc-600">{item.summary}</p>
+                  <ul className="mt-6 max-w-md space-y-3">
+                    {item.points.map((point) => (
+                      <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
+                        <Check />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <ProductOrder name={item.name} summary={item.summary} points={item.points} />
+                </Reveal>
+                <Reveal delay={0.08} className="w-full lg:w-[420px] lg:shrink-0">
+                  <div className={`relative aspect-[1.12766] w-full overflow-hidden rounded-[30px] ${wash[item.tone]}`}>
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 420px, calc(100vw - 48px)"
+                      className="object-cover"
+                    />
+                  </div>
+                </Reveal>
               </article>
             ))}
           </div>
         </div>
       </section>
-      <PageClose title={page.closing.title} body={page.closing.body} cta={page.closing.cta} href={page.closing.href} />
+      <ContactBand contact={home.contact} />
+      <HomeFaq faq={home.faq} />
     </main>
   );
 }

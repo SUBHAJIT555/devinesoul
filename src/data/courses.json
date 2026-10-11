@@ -3,7 +3,7 @@
   "description": "Candle magic, ritual, Vedic healing, divination, and meditation with Divine Souls By Priya.",
   "hero": {
     "eyebrow": "Courses",
-    "title": "Candle magic\nand healing.",
+    "title": "Candle magic and healing.",
     "body": "Empowering rituals, tarot readings, and healing techniques for your spiritual journey and personal growth."
   },
   "filters": ["All", "Ritual", "Vedic", "Insight", "Practice"],
@@ -14,7 +14,9 @@
       "level": "Ritual",
       "length": "By session",
       "summary": "Healing through Hoodoo and candle magic rituals, tailored to what you are actually facing.",
-      "tone": "orange"
+      "tone": "orange",
+      "image": "/media/candles.jpg",
+      "imageAlt": "Candles prepared for a ritual"
     },
     {
       "id": "digital-vedic-healings",
@@ -22,7 +24,9 @@
       "level": "Vedic",
       "length": "At a distance",
       "summary": "Vedic healing offered remotely, so the work can meet you without asking you to travel first.",
-      "tone": "blue"
+      "tone": "blue",
+      "image": "/media/practice-b.jpg",
+      "imageAlt": "A guided healing moment with a singing bowl"
     },
     {
       "id": "divinations",
@@ -30,7 +34,9 @@
       "level": "Insight",
       "length": "A reading",
       "summary": "Card readings for clarity. A way to see the situation, then choose what comes next.",
-      "tone": "violet"
+      "tone": "violet",
+      "image": "/media/mark.jpg",
+      "imageAlt": "Cards laid out for a reading"
     },
     {
       "id": "meditations",
@@ -38,7 +44,9 @@
       "level": "Practice",
       "length": "A practice",
       "summary": "An ancient method of meditation, used to lift attention toward the higher self.",
-      "tone": "mist"
+      "tone": "mist",
+      "image": "/media/meditation.jpg",
+      "imageAlt": "A quiet moment of meditation"
     }
   ],
   "closing": {

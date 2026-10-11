@@ -1,82 +1,62 @@
 {
   "title": "Services",
-  "description": "Holistic healing, tarot card readings, and Vedic healing techniques with Priya.",
+  "description": "Ritual, Vedic healing, divination, and meditation with Divine Souls By Priya. Courses sit inside the same practice.",
   "hero": {
     "eyebrow": "Services",
-    "title": "Explore our holistic\nhealing services.",
-    "body": "Divinely charged techniques for what you are carrying. Each service is named before you begin, and the next step is a conversation with Priya."
+    "title": "Divine\nAssistance.",
+    "body": "Explore a world of Divinely charged techniques to solve your issues. The courses live here too, as part of the same practice.",
+    "cta": "Contact",
+    "href": "/contacts",
+    "whatsapp": "WhatsApp",
+    "whatsappHref": "https://wa.me/917668648224",
+    "notes": ["Ritual, readings, and meditation", "In Dehradun and at a distance"],
+    "image": "/media/mark.jpg",
+    "imageAlt": "Cards and crystals prepared for a reading"
   },
-  "items": [
+  "intro": {
+    "chip": "Services",
+    "title": "Explore our service and book according to your need."
+  },
+  "features": [
     {
-      "id": "holistic-healing",
-      "index": "01",
-      "title": "Holistic healing",
-      "body": "A session shaped around you. Priya works with the whole person, so the healing can reach mind, body, and spirit together.",
-      "points": [
-        "Tailored to one person",
-        "Mind, body, and spirit",
-        "A clear next step"
-      ]
+      "id": "ritual-castings",
+      "title": "Ritual Castings & Hoodoo",
+      "body": "Experience powerful healing through Hoodoo and candle magic rituals tailored to your needs. The working is set around the matter you bring, whether that is protection, a clearing, or something that has stayed stuck.",
+      "points": ["Set around the matter you bring", "Protection, a clearing, or something stuck", "Hoodoo and candle magic, tailored to you"],
+      "image": "/media/candles.jpg",
+      "imageAlt": "Candles prepared for a ritual",
+      "align": "left",
+      "tone": "peach"
     },
     {
-      "id": "tarot-card-readings",
-      "index": "02",
-      "title": "Tarot card readings",
-      "body": "A reading that helps you face what is already asking for attention, and leave with a clearer sense of the next step.",
-      "points": [
-        "Card work for clarity",
-        "Truths named out loud",
-        "Guidance you can use"
-      ]
+      "id": "digital-vedic-healings",
+      "title": "Digital Vedic Healings",
+      "body": "Vedic healing offered at a distance, so the session can meet you without a journey to Dehradun first. The method stays the same as an in-person sitting. Distance only changes where you are while the work is done.",
+      "points": ["The same method as an in-person sitting", "No journey to Dehradun required first", "The session meets you where you are"],
+      "image": "/media/practice-b.jpg",
+      "imageAlt": "A guided healing moment with a singing bowl",
+      "align": "right",
+      "tone": "blue"
     },
     {
-      "id": "vedic-healing",
-      "index": "03",
-      "title": "Vedic healing techniques",
-      "body": "Guidance rooted in Vedic practice, including digital sessions, so the work can support real life and not only the hour itself.",
-      "points": [
-        "Tradition, applied now",
-        "In person or at a distance",
-        "Room to continue"
-      ]
+      "id": "divinations",
+      "title": "Divinations",
+      "body": "Discover insights and guidance through card readings for clarity in your life. A reading shows what is present and what is pressing, so the next choice is easier to see.",
+      "points": ["See what is present and what is pressing", "Card readings for clarity", "A clearer look at the next choice"],
+      "image": "/media/mark.jpg",
+      "imageAlt": "Cards laid out for a reading",
+      "align": "left",
+      "tone": "violet"
     },
     {
-      "id": "ritual-candle-meditation",
-      "index": "04",
-      "title": "Ritual, candle, and meditation",
-      "body": "Hoodoo and candle magic rituals, plus meditation toward the higher self, when the right form is a practice rather than a single reading.",
-      "points": [
-        "Candle magic",
-        "Ritual casting",
-        "Meditation instruction"
-      ]
+      "id": "meditations",
+      "title": "Meditations",
+      "body": "Elevate yourself to your higher self using the ancient method of meditation. The sitting is guided and quiet, meant to settle attention and lift it toward the part of you that already knows the way.",
+      "points": ["A guided, quiet sitting", "Attention settled, then lifted", "An ancient method toward the higher self"],
+      "image": "/media/meditation.jpg",
+      "imageAlt": "A quiet moment of meditation",
+      "align": "right",
+      "tone": "peach"
     }
-  ],
-  "method": {
-    "title": "The same three moves, every time.",
-    "body": "However the offer changes, the way Priya begins stays familiar.",
-    "items": [
-      {
-        "index": "01",
-        "title": "Name the work",
-        "body": "Holistic healing, a reading, a Vedic session, or a ritual. Said in a line you can repeat."
-      },
-      {
-        "index": "02",
-        "title": "Shape it around you",
-        "body": "The session follows your situation, not a script written for someone else."
-      },
-      {
-        "index": "03",
-        "title": "Leave with a next step",
-        "body": "A practice, a tool, or another conversation. One action, not a pile of advice."
-      }
-    ]
-  },
-  "closing": {
-    "title": "Ready to transform your life?",
-    "body": "Join a session and discover the healing practices that can guide you toward clarity and joy.",
-    "cta": "Ask about a service",
-    "href": "/contacts"
-  }
+  ]
 }

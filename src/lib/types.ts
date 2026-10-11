@@ -9,10 +9,17 @@ export type NavMenuItem = {
   body: string;
   tone: "blue" | "amber" | "green" | "violet" | "red" | "mist";
   icon: "heart" | "cards" | "sun" | "flame" | "spark" | "device" | "eye" | "moon";
+  group?: string;
 };
 
 export type NavItem = LinkItem & {
   menu?: NavMenuItem[];
+};
+
+export type FooterContactItem = {
+  label: string;
+  value: string;
+  href: string;
 };
 
 export type SiteContent = {
@@ -23,7 +30,10 @@ export type SiteContent = {
   nav: NavItem[];
   footer: {
     blurb: string;
-    columns: { title: string; links: LinkItem[] }[];
+    explore: { title: string; links: LinkItem[] };
+    services: { title: string; links: LinkItem[]; coursesTitle: string; courses: LinkItem[] };
+    social: { title: string; links: LinkItem[]; legalTitle: string; legal: LinkItem[] };
+    contact: { title: string; items: FooterContactItem[] };
     note: string;
   };
 };
@@ -141,21 +151,22 @@ export type HomeContent = {
   };
 };
 
+export type PhotoHeroContent = {
+  title: string;
+  body: string;
+  cta: string;
+  href: string;
+  whatsapp: string;
+  whatsappHref: string;
+  notes: string[];
+  image: string;
+  imageAlt: string;
+};
+
 export type AboutContent = {
   title: string;
   description: string;
-  hero: {
-    eyebrow: string;
-    title: string;
-    body: string;
-    cta: string;
-    href: string;
-    whatsapp: string;
-    whatsappHref: string;
-    notes: string[];
-    image: string;
-    imageAlt: string;
-  };
+  hero: PhotoHeroContent & { eyebrow: string };
   features: {
     title: string;
     paragraphs: string[];
@@ -210,6 +221,8 @@ export type Course = {
   length: string;
   summary: string;
   tone: "blue" | "orange" | "violet" | "mist";
+  image: string;
+  imageAlt: string;
 };
 
 export type CoursesContent = {
@@ -224,25 +237,33 @@ export type CoursesContent = {
 export type ServicesContent = {
   title: string;
   description: string;
-  hero: { eyebrow: string; title: string; body: string };
-  items: { id: string; index: string; title: string; body: string; points: string[] }[];
-  method: {
+  hero: PhotoHeroContent & { eyebrow: string };
+  intro: { chip: string; title: string };
+  features: {
+    id: string;
     title: string;
     body: string;
-    items: { index: string; title: string; body: string }[];
-  };
-  closing: { title: string; body: string; cta: string; href: string };
+    points: string[];
+    image: string;
+    imageAlt: string;
+    align: "left" | "right";
+    tone: "blue" | "violet" | "peach";
+  }[];
 };
 
 export type ProductsContent = {
   title: string;
   description: string;
-  hero: { eyebrow: string; title: string; body: string };
+  hero: PhotoHeroContent & { eyebrow: string };
+  intro: { chip: string; title: string };
   items: {
     name: string;
     summary: string;
     points: string[];
     tone: "blue" | "orange" | "violet";
+    image: string;
+    imageAlt: string;
+    align: "left" | "right";
   }[];
   specs: { title: string; items: { title: string; body: string }[] };
   closing: { title: string; body: string; cta: string; href: string };

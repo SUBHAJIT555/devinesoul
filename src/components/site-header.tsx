@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
@@ -36,11 +36,11 @@ export function SiteHeader({ site }: { site: SiteContent }) {
   const pathname = usePathname();
   const reduce = useReducedMotion();
   const [open, setOpen] = useState(false);
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState<string | null>(null);
 
   useEffect(() => {
     setOpen(false);
-    setMenu(false);
+    setMenu(null);
   }, [pathname]);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export function SiteHeader({ site }: { site: SiteContent }) {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false);
-        setMenu(false);
+        setMenu(null);
       }
     };
 
@@ -68,7 +68,7 @@ export function SiteHeader({ site }: { site: SiteContent }) {
         <div
           data-hero-appear={pathname === "/" ? "navigation" : undefined}
           className="pointer-events-auto w-full rounded-[22px] bg-nav p-1.5 text-white shadow-[0_2px_40px_rgba(0,0,0,0.25)] lg:w-auto"
-          onMouseLeave={() => setMenu(false)}
+          onMouseLeave={() => setMenu(null)}
         >
           <div className="flex items-center gap-1 pl-1.5">
             <Link href="/" className="mr-1 flex items-center gap-2 rounded-full py-1 pr-2" aria-label={`${site.name} home`}>
@@ -81,19 +81,21 @@ export function SiteHeader({ site }: { site: SiteContent }) {
                 const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
 
                 if (item.menu) {
+                  const expanded = menu === item.href;
+
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[15px] font-medium tracking-[-0.02em] transition-colors ${menu || active ? "text-white" : "text-white/60 hover:text-white"}`}
+                      className={`inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[15px] font-medium tracking-[-0.02em] transition-colors ${expanded || active ? "text-white" : "text-white/60 hover:text-white"}`}
                       aria-current={active ? "page" : undefined}
-                      aria-expanded={menu}
+                      aria-expanded={expanded}
                       aria-haspopup="true"
-                      onMouseEnter={() => setMenu(true)}
-                      onFocus={() => setMenu(true)}
+                      onMouseEnter={() => setMenu(item.href)}
+                      onFocus={() => setMenu(item.href)}
                     >
                       {item.label}
-                      <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 transition-transform ${menu ? "rotate-180" : ""}`} aria-hidden="true">
+                      <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 transition-transform ${expanded ? "rotate-180" : ""}`} aria-hidden="true">
                         <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </Link>
@@ -106,7 +108,7 @@ export function SiteHeader({ site }: { site: SiteContent }) {
                     href={item.href}
                     className={`rounded-full px-3 py-1.5 text-[15px] font-medium tracking-[-0.02em] transition-colors ${active ? "text-white" : "text-white/60 hover:text-white"}`}
                     aria-current={active ? "page" : undefined}
-                    onMouseEnter={() => setMenu(false)}
+                    onMouseEnter={() => setMenu(null)}
                   >
                     {item.label}
                   </Link>
@@ -137,7 +139,7 @@ export function SiteHeader({ site }: { site: SiteContent }) {
           <AnimatePresence initial={false}>
             {menu ? (
               <motion.div
-                key="services-menu"
+                key={menu}
                 className="hidden w-0 min-w-full overflow-hidden lg:block"
                 initial={reduce ? false : { height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
@@ -146,26 +148,31 @@ export function SiteHeader({ site }: { site: SiteContent }) {
               >
                 <div className="grid grid-cols-2 gap-1.5 px-0 pt-4">
                   {site.nav
-                    .find((item) => item.menu)
-                    ?.menu?.map((item) => {
+                    .find((item) => item.href === menu)
+                    ?.menu?.map((item, index, items) => {
                       const tone = toneStyle[item.tone];
+                      const showGroup = Boolean(item.group) && item.group !== items[index - 1]?.group;
 
                       return (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className={`flex flex-col gap-3 rounded-[20px] p-[18px] no-underline transition-colors duration-300 ease-out ${tone.card}`}
-                        >
-                          <span className={`grid h-[30px] w-[30px] place-items-center rounded-full text-ink ${tone.icon}`}>
-                            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
-                              <path d={glyph[item.icon]} />
-                            </svg>
-                          </span>
-                          <span>
-                            <span className="block text-[16px] font-semibold leading-[19.2px] text-white">{item.label}</span>
-                            <span className="mt-1 block text-[14px] leading-[17px] text-white">{item.body}</span>
-                          </span>
-                        </Link>
+                        <Fragment key={item.href}>
+                          {showGroup ? (
+                            <p className="font-meta col-span-2 px-2 pt-2 text-[12px] leading-[18px] text-white/50 first:pt-0">{item.group}</p>
+                          ) : null}
+                          <Link
+                            href={item.href}
+                            className={`flex flex-col gap-3 rounded-[20px] p-[18px] no-underline transition-colors duration-300 ease-out ${tone.card}`}
+                          >
+                            <span className={`grid h-[30px] w-[30px] place-items-center rounded-full text-ink ${tone.icon}`}>
+                              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                                <path d={glyph[item.icon]} />
+                              </svg>
+                            </span>
+                            <span>
+                              <span className="block text-[16px] font-semibold leading-[19.2px] text-white">{item.label}</span>
+                              <span className="mt-1 block text-[14px] leading-[17px] text-white">{item.body}</span>
+                            </span>
+                          </Link>
+                        </Fragment>
                       );
                     })}
                 </div>
@@ -198,16 +205,24 @@ export function SiteHeader({ site }: { site: SiteContent }) {
                   >
                     {item.label}
                   </Link>
-                  {item.menu?.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className="block rounded-2xl py-2 pl-8 pr-4 text-[16px] text-white/75"
-                      onClick={() => setOpen(false)}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
+                  {item.menu?.map((child, index, items) => {
+                    const showGroup = Boolean(child.group) && child.group !== items[index - 1]?.group;
+
+                    return (
+                      <Fragment key={child.href}>
+                        {showGroup ? (
+                          <p className="font-meta px-8 pt-3 text-[12px] leading-[18px] text-white/45">{child.group}</p>
+                        ) : null}
+                        <Link
+                          href={child.href}
+                          className="block rounded-2xl py-2 pl-8 pr-4 text-[16px] text-white/75"
+                          onClick={() => setOpen(false)}
+                        >
+                          {child.label}
+                        </Link>
+                      </Fragment>
+                    );
+                  })}
                 </div>
               );
             })}

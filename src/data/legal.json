@@ -1,0 +1,101 @@
+{
+  "terms": {
+    "title": "Terms & conditions",
+    "description": "How the Divine Souls By Priya site can be used, and how a note on the page differs from reaching Priya.",
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Terms &\nconditions.",
+      "body": "How this site can be used, and how a note left on the page is different from reaching Priya."
+    },
+    "sections": [
+      {
+        "title": "The practice",
+        "paragraphs": [
+          "Divine Souls By Priya is a healing practice in Dehradun. The site describes sessions, courses, and charged pieces. It does not list prices."
+        ]
+      },
+      {
+        "title": "A note on the page",
+        "paragraphs": [
+          "Book, enroll, and enquire forms confirm what you typed. Nothing from those forms is sent on. To reach Priya, call +91 7668648224, email priyasinha1809@gmail.com, or write on WhatsApp."
+        ]
+      },
+      {
+        "title": "A session or a piece",
+        "paragraphs": [
+          "A session, a course, or a charged piece is arranged with Priya. The right form depends on what you are carrying. This site does not take payment."
+        ]
+      },
+      {
+        "title": "Links that leave",
+        "paragraphs": [
+          "Instagram, Facebook, WhatsApp, email, the phone link, and the map open those services. What you do there follows their own terms."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "What the Divine Souls By Priya site keeps, and what it does not send on.",
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Privacy\nPolicy.",
+      "body": "What this site does with a note, and what it does not keep."
+    },
+    "sections": [
+      {
+        "title": "What stays on the page",
+        "paragraphs": [
+          "The book, enroll, and enquire forms do not store what you type, and they do not send it on. Leaving the page clears the note."
+        ]
+      },
+      {
+        "title": "Reaching Priya",
+        "paragraphs": [
+          "A call, an email, or a WhatsApp message goes through those services, not through a mailbox on this site. Write only what you are ready for Priya to read there."
+        ]
+      },
+      {
+        "title": "Links away",
+        "paragraphs": [
+          "Instagram and Facebook open in those places. This site does not follow you there."
+        ]
+      },
+      {
+        "title": "No tracker",
+        "paragraphs": [
+          "This site does not run an advertising or analytics tracker."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "description": "The Divine Souls By Priya site does not set advertising or analytics cookies.",
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Cookie\nPolicy.",
+      "body": "This site does not set advertising or analytics cookies."
+    },
+    "sections": [
+      {
+        "title": "No extra cookies",
+        "paragraphs": [
+          "The pages load without a tracking cookie. There is no cookie banner, because there is nothing of that kind to accept."
+        ]
+      },
+      {
+        "title": "What a browser may keep",
+        "paragraphs": [
+          "Your browser can remember an ordinary visit so a page can open again. That is the browser’s own behavior, not a tracker added here."
+        ]
+      },
+      {
+        "title": "If that changes",
+        "paragraphs": [
+          "If a later tool needs a cookie, this page will say so before it is used."
+        ]
+      }
+    ]
+  }
+}
