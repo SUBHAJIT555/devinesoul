@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Course } from "@/lib/types";
+import { Lines } from "@/components/ui";
 
 const wash: Record<Course["tone"], string> = {
   blue: "bg-[#dff2fe]",
@@ -10,7 +11,17 @@ const wash: Record<Course["tone"], string> = {
   mist: "bg-mist",
 };
 
-export function CourseBoard({ filters, items }: { filters: string[]; items: Course[] }) {
+export function CourseBoard({
+  filters,
+  items,
+  title,
+  intro,
+}: {
+  filters: string[];
+  items: Course[];
+  title?: string;
+  intro?: string;
+}) {
   const [active, setActive] = useState(filters[0] ?? "All");
   const visible = useMemo(
     () => (active === "All" ? items : items.filter((item) => item.level === active)),
@@ -18,8 +29,16 @@ export function CourseBoard({ filters, items }: { filters: string[]; items: Cour
   );
 
   return (
-    <section className="px-6 pb-8">
+    <section id="courses" className="scroll-mt-32 px-6 py-16">
       <div className="mx-auto max-w-6xl">
+        {title ? (
+          <div className="mb-8">
+            <h2 className="max-w-xl text-[clamp(32px,4vw,48px)] font-medium leading-[1.18] tracking-[-0.03em]">
+              <Lines text={title} />
+            </h2>
+            {intro ? <p className="mt-4 max-w-xl text-[16px] leading-6 text-zinc-600">{intro}</p> : null}
+          </div>
+        ) : null}
         <div className="flex flex-wrap gap-2" role="tablist" aria-label="Course levels">
           {filters.map((filter) => {
             const selected = filter === active;
@@ -40,7 +59,7 @@ export function CourseBoard({ filters, items }: { filters: string[]; items: Cour
         </div>
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {visible.map((item) => (
-            <article key={item.title} className={`flex min-h-[260px] flex-col rounded-[28px] p-6 ${wash[item.tone]}`}>
+            <article id={item.id} key={item.id} className={`flex min-h-[260px] scroll-mt-32 flex-col rounded-[28px] p-6 ${wash[item.tone]}`}>
               <div className="flex items-center justify-between text-[13px] font-medium text-zinc-600">
                 <span>{item.level}</span>
                 <span>{item.length}</span>

@@ -8,6 +8,7 @@
   },
   "items": [
     {
+      "id": "holistic-healing",
       "index": "01",
       "title": "Holistic healing",
       "body": "A session shaped around you. Priya works with the whole person, so the healing can reach mind, body, and spirit together.",
@@ -18,6 +19,7 @@
       ]
     },
     {
+      "id": "tarot-card-readings",
       "index": "02",
       "title": "Tarot card readings",
       "body": "A reading that helps you face what is already asking for attention, and leave with a clearer sense of the next step.",
@@ -28,6 +30,7 @@
       ]
     },
     {
+      "id": "vedic-healing",
       "index": "03",
       "title": "Vedic healing techniques",
       "body": "Guidance rooted in Vedic practice, including digital sessions, so the work can support real life and not only the hour itself.",
@@ -38,6 +41,7 @@
       ]
     },
     {
+      "id": "ritual-candle-meditation",
       "index": "04",
       "title": "Ritual, candle, and meditation",
       "body": "Hoodoo and candle magic rituals, plus meditation toward the higher self, when the right form is a practice rather than a single reading.",

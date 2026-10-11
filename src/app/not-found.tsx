@@ -9,7 +9,7 @@ export default function NotFound() {
           This page is not on the map.
         </h1>
         <p className="mt-4 max-w-md text-[16px] leading-6 text-zinc-600">
-          The link may be old. Home, courses, services, products, and contact are all still here.
+          The link may be old. Home, about, services, products, and contact are all still here.
         </p>
         <div className="mt-8">
           <Button href="/">Back home</Button>

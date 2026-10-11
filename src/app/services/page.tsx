@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import { CourseBoard } from "@/components/course-board";
 import { PageClose, PageHero } from "@/components/page-hero";
 import { Check, Reveal } from "@/components/ui";
-import { getServices } from "@/lib/content";
+import { getCourses, getServices } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getServices();
@@ -10,6 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ServicesPage() {
   const page = await getServices();
+  const courses = await getCourses();
 
   return (
     <main>
@@ -19,10 +21,22 @@ export default async function ServicesPage() {
           <div className="lg:sticky lg:top-32 lg:self-start">
             <ol className="space-y-2">
               {page.items.map((item) => (
-                <li key={item.index}>
-                  <a href={`#service-${item.index}`} className="flex items-baseline gap-3 rounded-2xl px-3 py-2 text-[15px] hover:bg-mist">
+                <li key={item.id}>
+                  <a href={`#${item.id}`} className="flex items-baseline gap-3 rounded-2xl px-3 py-2 text-[15px] hover:bg-mist">
                     <span className="font-meta text-[12px] tracking-normal text-zinc-400">{item.index}</span>
                     <span>{item.title}</span>
+                  </a>
+                </li>
+              ))}
+              <li className="pt-3">
+                <a href="#courses" className="block rounded-2xl px-3 py-2 text-[13px] font-medium text-zinc-500 hover:bg-mist">
+                  Courses
+                </a>
+              </li>
+              {courses.items.map((item) => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`} className="block rounded-2xl px-3 py-2 text-[15px] hover:bg-mist">
+                    {item.title}
                   </a>
                 </li>
               ))}
@@ -30,7 +44,7 @@ export default async function ServicesPage() {
           </div>
           <div className="space-y-20">
             {page.items.map((item) => (
-              <article key={item.index} id={`service-${item.index}`} className="scroll-mt-32">
+              <article key={item.id} id={item.id} className="scroll-mt-32">
                 <Reveal>
                   <p className="font-meta text-[13px] tracking-normal text-zinc-400">{item.index}</p>
                   <h2 className="mt-3 max-w-xl text-[clamp(32px,4vw,44px)] font-medium leading-[1.18] tracking-[-0.03em]">
@@ -51,6 +65,7 @@ export default async function ServicesPage() {
           </div>
         </div>
       </section>
+      <CourseBoard filters={courses.filters} items={courses.items} title={courses.hero.title} intro={courses.hero.body} />
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <Reveal>

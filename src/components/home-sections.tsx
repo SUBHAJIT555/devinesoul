@@ -3,6 +3,7 @@ import type { HomeContent } from "@/lib/types";
 import { Button, Check, Lines, Reveal, SectionHeading } from "@/components/ui";
 import { Compare } from "@/components/compare";
 import { FaqList } from "@/components/faq-list";
+import { div } from "motion/react-client";
 
 const stage: Record<HomeContent["stories"][number]["tone"], string> = {
   blue: "bg-[#dff2fe]",
@@ -563,10 +564,18 @@ export function Plans({ plans }: { plans: HomeContent["plans"] }) {
 
 const channelTone: Record<HomeContent["contact"]["channels"][number]["tone"], string> = {
   instagram: "bg-[#430033] text-white",
-  facebook: "bg-[#1877F2] text-white",
-  whatsapp: "bg-[#25D366] text-white",
+  facebook: "bg-[#0A3D82] text-white",
+  whatsapp: "bg-[#0E7A38] text-white",
   mail: "bg-white text-ink shadow-[inset_0_0_0_1px_rgba(0,0,0,0.08)]",
-  location: "bg-white text-ink shadow-[inset_0_0_0_1px_rgba(0,0,0,0.08)]",
+  location: "bg-[#1e1e1f] text-white",
+};
+
+const channelIcon: Record<HomeContent["contact"]["channels"][number]["tone"], string> = {
+  instagram: "/icons/instagram.png",
+  facebook: "/icons/facebook.png",
+  whatsapp: "/icons/whatsapp.png",
+  mail: "/icons/mail.png",
+  location: "/icons/map.png",
 };
 
 export function ContactBand({ contact }: { contact: HomeContent["contact"] }) {
@@ -606,7 +615,7 @@ export function ContactBand({ contact }: { contact: HomeContent["contact"] }) {
                 className={`flex h-[192px] w-full flex-col items-center justify-center gap-[18px] rounded-[30px] p-[30px] text-center no-underline ${channelTone[channel.tone]}`}
               >
                 <ChannelIcon tone={channel.tone} />
-                <span className="w-full">
+                <span className="w-full text-center">
                   <span className="block text-[14px] font-semibold leading-[16.8px] tracking-[-0.3px]">
                     <Handle text={channel.handle} />
                   </span>
@@ -652,68 +661,18 @@ function Handle({ text }: { text: string }) {
       </>
     );
   }
-  return <span className="block truncate">{text}</span>;
+  return <span className="block">{text}</span>;
 }
 
 function ChannelIcon({ tone }: { tone: HomeContent["contact"]["channels"][number]["tone"] }) {
-  if (tone === "instagram") {
-    return (
-      <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden="true">
-        <defs>
-          <radialGradient id="ig" cx="30%" cy="107%" r="150%">
-            <stop offset="0%" stopColor="#fdf497" />
-            <stop offset="5%" stopColor="#fdf497" />
-            <stop offset="45%" stopColor="#fd5949" />
-            <stop offset="60%" stopColor="#d6249f" />
-            <stop offset="90%" stopColor="#285AEB" />
-          </radialGradient>
-        </defs>
-        <path
-          fill="url(#ig)"
-          d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84ZM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44Z"
-        />
-      </svg>
-    );
-  }
-  if (tone === "facebook") {
-    return (
-      <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden="true">
-        <path
-          fill="#fff"
-          d="M13.6 22v-8.2h2.8l.4-3.2h-3.2V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H8.1v3.2h2.4V22h3.1Z"
-        />
-      </svg>
-    );
-  }
-  if (tone === "whatsapp") {
-    return (
-      <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden="true">
-        <path
-          fill="#fff"
-          d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Zm-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.88 9.88Zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"
-        />
-      </svg>
-    );
-  }
-  if (tone === "mail") {
-    return (
-      <svg viewBox="0 0 48 48" className="h-10 w-10" aria-hidden="true">
-        <path fill="#4caf50" d="M45 16.2 40 19l-5 4.7V40h7a3 3 0 0 0 3-3V16.2z" />
-        <path fill="#1e88e5" d="M3 16.2 6.6 17.9 13 23.7V40H6a3 3 0 0 1-3-3V16.2z" />
-        <path fill="#e53935" d="m35 11.2-11 8.25L13 11.2 12 17l1 6.7 11 8.25 11-8.25 1-6.7z" />
-        <path fill="#c62828" d="M3 12.3V16.2l10 7.5V11.2L9.9 8.9A4.3 4.3 0 0 0 7.3 8C4.9 8 3 9.9 3 12.3z" />
-        <path fill="#fbc02d" d="M45 12.3V16.2l-10 7.5V11.2l3.1-2.3A4.3 4.3 0 0 1 40.7 8C43.1 8 45 9.9 45 12.3z" />
-      </svg>
-    );
-  }
   return (
-    <svg viewBox="0 0 48 48" className="h-10 w-10" aria-hidden="true">
-      <path fill="#34a853" d="M24 44s14-11.1 14-22A14 14 0 0 0 10 22c0 10.9 14 22 14 22z" />
-      <path fill="#fbbc04" d="M24 4A14 14 0 0 0 10 22c0 3.1 1.1 6.2 3 9.2L24 22V4z" />
-      <path fill="#ea4335" d="M24 4a14 14 0 0 1 14 18c0 3.1-1.1 6.2-3 9.2L24 22V4z" />
-      <path fill="#1a73e8" d="M13 31.2C16.2 36 20.4 40.8 24 44c3.6-3.2 7.8-8 11-12.8L24 22 13 31.2z" />
-      <circle cx="24" cy="22" r="6" fill="#fff" />
-    </svg>
+    
+    <img
+      src={channelIcon[tone]}
+      alt=""
+      className="h-12 w-12"
+      style={{ filter: "drop-shadow(0 2px 2px rgba(0,0,0,0.45)) drop-shadow(0 4px 4px rgba(0,0,0,0.4))" }}
+    />
   );
 }
 

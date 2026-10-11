@@ -9,6 +9,7 @@
   "filters": ["All", "Ritual", "Vedic", "Insight", "Practice"],
   "items": [
     {
+      "id": "ritual-castings",
       "title": "Ritual castings and Hoodoo",
       "level": "Ritual",
       "length": "By session",
@@ -16,6 +17,7 @@
       "tone": "orange"
     },
     {
+      "id": "digital-vedic-healings",
       "title": "Digital Vedic healings",
       "level": "Vedic",
       "length": "At a distance",
@@ -23,6 +25,7 @@
       "tone": "blue"
     },
     {
+      "id": "divinations",
       "title": "Divinations",
       "level": "Insight",
       "length": "A reading",
@@ -30,6 +33,7 @@
       "tone": "violet"
     },
     {
+      "id": "meditations",
       "title": "Meditations",
       "level": "Practice",
       "length": "A practice",

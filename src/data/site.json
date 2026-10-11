@@ -16,20 +16,70 @@
       "href": "/about"
     },
     {
-      "label": "Courses",
-      "href": "/courses"
-    },
-    {
       "label": "Services",
-      "href": "/services"
+      "href": "/services",
+      "menu": [
+        {
+          "label": "Holistic healing",
+          "href": "/services#holistic-healing",
+          "body": "A session for mind, body, and spirit together.",
+          "tone": "green",
+          "icon": "heart"
+        },
+        {
+          "label": "Tarot card readings",
+          "href": "/services#tarot-card-readings",
+          "body": "A reading that names what is already asking.",
+          "tone": "violet",
+          "icon": "cards"
+        },
+        {
+          "label": "Vedic healing techniques",
+          "href": "/services#vedic-healing",
+          "body": "Vedic practice, held for the life you are living.",
+          "tone": "amber",
+          "icon": "sun"
+        },
+        {
+          "label": "Ritual, candle, and meditation",
+          "href": "/services#ritual-candle-meditation",
+          "body": "Candle magic, ritual, and meditation.",
+          "tone": "red",
+          "icon": "flame"
+        },
+        {
+          "label": "Ritual castings and Hoodoo",
+          "href": "/services#ritual-castings",
+          "body": "Healing through ritual, shaped around you.",
+          "tone": "blue",
+          "icon": "spark"
+        },
+        {
+          "label": "Digital Vedic healings",
+          "href": "/services#digital-vedic-healings",
+          "body": "Vedic healing, offered at a distance.",
+          "tone": "mist",
+          "icon": "device"
+        },
+        {
+          "label": "Divinations",
+          "href": "/services#divinations",
+          "body": "Card work for clarity, then a next step.",
+          "tone": "violet",
+          "icon": "eye"
+        },
+        {
+          "label": "Meditations",
+          "href": "/services#meditations",
+          "body": "A practice toward the higher self.",
+          "tone": "green",
+          "icon": "moon"
+        }
+      ]
     },
     {
       "label": "Products",
       "href": "/products"
-    },
-    {
-      "label": "Contacts",
-      "href": "/contacts"
     }
   ],
   "footer": {
@@ -48,7 +98,7 @@
           },
           {
             "label": "Courses",
-            "href": "/courses"
+            "href": "/services#courses"
           }
         ]
       },
@@ -78,7 +128,7 @@
           },
           {
             "label": "See the courses",
-            "href": "/courses"
+            "href": "/services#courses"
           },
           {
             "label": "See the products",

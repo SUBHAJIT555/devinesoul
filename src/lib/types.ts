@@ -3,12 +3,24 @@ export type LinkItem = {
   href: string;
 };
 
+export type NavMenuItem = {
+  label: string;
+  href: string;
+  body: string;
+  tone: "blue" | "amber" | "green" | "violet" | "red" | "mist";
+  icon: "heart" | "cards" | "sun" | "flame" | "spark" | "device" | "eye" | "moon";
+};
+
+export type NavItem = LinkItem & {
+  menu?: NavMenuItem[];
+};
+
 export type SiteContent = {
   name: string;
   title: string;
   description: string;
   cta: LinkItem;
-  nav: LinkItem[];
+  nav: NavItem[];
   footer: {
     blurb: string;
     columns: { title: string; links: LinkItem[] }[];
@@ -151,6 +163,7 @@ export type AboutContent = {
 };
 
 export type Course = {
+  id: string;
   title: string;
   level: string;
   length: string;
@@ -171,7 +184,7 @@ export type ServicesContent = {
   title: string;
   description: string;
   hero: { eyebrow: string; title: string; body: string };
-  items: { index: string; title: string; body: string; points: string[] }[];
+  items: { id: string; index: string; title: string; body: string; points: string[] }[];
   method: {
     title: string;
     body: string;
