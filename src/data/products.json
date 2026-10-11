@@ -1,0 +1,68 @@
+{
+  "title": "Products",
+  "description": "Divinely charged crystals, healing kits, and ritual tools from Divine Souls By Priya.",
+  "hero": {
+    "eyebrow": "Products",
+    "title": "Divinely charged,\ntailored to you.\n",
+    "body": "Crystals, healing kits, and ritual tools. Each one is chosen for the person and the issue, not pulled from a generic shelf."
+  },
+  "items": [
+    {
+      "name": "Crystals",
+      "summary": "Customized crystals for elemental correction, matched to the issue you are working with.",
+      "tone": "violet",
+      "points": [
+        "Chosen for your situation",
+        "Used in elemental correction",
+        "Charged before they leave"
+      ]
+    },
+    {
+      "name": "Healing kits",
+      "summary": "A combination of healing tools, gathered for the technique the work actually needs.",
+      "tone": "blue",
+      "points": [
+        "More than one tool",
+        "Paired with a method",
+        "Ready to use at home"
+      ]
+    },
+    {
+      "name": "Ritual casting tools",
+      "summary": "Tools used for performing rituals, including the work of candle magic and casting.",
+      "tone": "orange",
+      "points": [
+        "Made for ritual use",
+        "Matched to the casting",
+        "Explained before you begin"
+      ]
+    }
+  ],
+  "specs": {
+    "title": "What every piece keeps.",
+    "items": [
+      {
+        "title": "A plain name",
+        "body": "Crystal, kit, or tool. Something you can ask for again."
+      },
+      {
+        "title": "A reason",
+        "body": "Elemental correction, a healing technique, or a ritual. One job."
+      },
+      {
+        "title": "A charge",
+        "body": "Divinely charged, and tailored rather than sold as a generic object."
+      },
+      {
+        "title": "A way to ask",
+        "body": "Write Priya with the situation. She can say which piece belongs with it."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Tell Priya what the piece is for.",
+    "body": "The right crystal or kit depends on the issue. A short note is the way to begin.",
+    "cta": "Ask about a product",
+    "href": "/contacts"
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "seoTitle": "Divine Souls By Priya — Awaken your spiritual journey",
+  "description": "Experience transformative healing and spiritual guidance tailored to your unique path with our expert, Priya, and her holistic practices.",
+  "hero": {
+    "headline": "Awaken your spiritual\njourney in one place",
+    "subhead": "Experience transformative healing and spiritual guidance tailored to your unique path with our expert, Priya, and her holistic practices.",
+    "cta": "Get started",
+    "ctaHref": "/contacts",
+    "notes": [
+      "Holistic healing",
+      "Tarot and Vedic guidance"
+    ]
+  },
+  "logos": {
+    "label": "A path through",
+    "names": [
+      "Holistic healing",
+      "Tarot",
+      "Vedic practice",
+      "Candle magic",
+      "Meditation",
+      "Crystals"
+    ]
+  },
+  "statement": {
+    "line1": "Ready to transform your life,",
+    "line2": "and walk it with Priya.",
+    "chapters": [
+      { "id": "healing", "label": "Holistic Healing" },
+      { "id": "readings", "label": "Tarot Card" },
+      { "id": "vedic", "label": "Vedic Healing" }
+    ]
+  },
+  "stories": [
+    {
+      "id": "healing",
+      "badge": "Healing",
+      "tone": "blue",
+      "title": "Holistic healing, shaped around you.",
+      "intro": "Sessions are tailored to the person in front of Priya, so the work can reach mind, body, and spirit together.",
+      "align": "left",
+      "image": "/media/meditation.jpg",
+      "quote": {
+        "text": "Her healing sessions brought me peace I never thought possible.",
+        "role": "Client",
+        "place": "Healing session"
+      }
+    },
+    {
+      "id": "readings",
+      "badge": "Tarot",
+      "tone": "violet",
+      "title": "A reading that names what is already asking.",
+      "intro": "Tarot and divination for clarity. You leave with the truth that needed a voice, and a sense of the next step.",
+      "align": "right",
+      "image": "/media/mark.jpg",
+      "quote": {
+        "text": "Her tarot reading unveiled truths I needed to confront.",
+        "role": "Client",
+        "place": "Tarot reading"
+      }
+    },
+    {
+      "id": "vedic",
+      "badge": "Vedic",
+      "tone": "orange",
+      "title": "Ancient practice, held for real life.",
+      "intro": "Vedic healing, candle magic, and meditation sit in the same house. The method is old. The session is for the life you are actually living.",
+      "align": "left",
+      "image": "/media/candles.jpg",
+      "points": [
+        "Vedic healing techniques",
+        "Candle magic and ritual",
+        "Meditation toward the higher self"
+      ]
+    }
+  ],
+  "compare": {
+    "eyebrow": "One sitting",
+    "title": "From a quiet altar to a guided session.",
+    "body": "Drag across the frame. Candle work and a healing session belong to the same practice.",
+    "before": "Candle work",
+    "after": "A session",
+    "beforeImage": "/media/candles.jpg",
+    "afterImage": "/media/practice-b.jpg"
+  },
+  "bento": {
+    "eyebrow": "Why Priya",
+    "title": "Experience the Divine Souls difference.",
+    "items": [
+      {
+        "icon": "user-heart",
+        "title": "Personalized care",
+        "body": "Every session is tailored, so the healing stays personal and specific to you."
+      },
+      {
+        "icon": "shield-check",
+        "title": "Expertise you can trust",
+        "body": "Priya’s knowledge of healing traditions keeps the guidance rooted, and aimed at real results."
+      },
+      {
+        "icon": "yin-yang",
+        "title": "Holistic integration",
+        "body": "Mind, body, and spirit are addressed together, not as three separate appointments."
+      },
+      {
+        "icon": "cards",
+        "title": "Tarot readings",
+        "body": "Card work that helps you face what is already present, then choose a next step."
+      },
+      {
+        "icon": "sun",
+        "title": "Vedic techniques",
+        "body": "Healing drawn from Vedic practice, brought into the life you return to after the session."
+      },
+      {
+        "icon": "route",
+        "title": "A path you can continue",
+        "body": "Courses, charged tools, and another conversation when the work needs to go further."
+      }
+    ]
+  },
+  "spotlight": {
+    "eyebrow": "The work",
+    "title": "Intention is what\nshapes the healing.\n",
+    "body": "Priya teaches that the practice has no color of its own. Intention is the force behind growth. Sessions combine holistic healing, tarot, and Vedic technique so the whole person is met.",
+    "points": [
+      "More than fifteen years in the work",
+      "Over 150 clients already guided",
+      "A serene place to explore, in Dehradun and by message"
+    ]
+  },
+  "steps": {
+    "eyebrow": "Begin",
+    "title": "From the first look\nto a real conversation.\n",
+    "items": [
+      {
+        "index": "01",
+        "title": "Name what you carry",
+        "body": "A question, a season, or something you cannot quite say yet. That is enough to start.",
+        "image": "/illustrations/carry.svg"
+      },
+      {
+        "index": "02",
+        "title": "Choose the form",
+        "body": "A healing session, a tarot reading, a course, or a tool charged for your situation.",
+        "image": "/illustrations/choose.svg"
+      },
+      {
+        "index": "03",
+        "title": "Reach Priya",
+        "body": "Call, email, or send a note. The practice is in Dehradun, and the first conversation can begin from anywhere.",
+        "image": "/illustrations/reach.svg"
+      }
+    ]
+  },
+  "voices": {
+    "title": "Hear from people who have sat with Priya.",
+    "cta": "Read all Testimonials",
+    "href": "https://www.google.com/maps?cid=9164223515652455424",
+    "items": [
+      {
+        "text": "Divine Souls Surat, has actually been a blessing in disguise to me. My entire perception regarding life was changed after the healing sessions. I have received clarity, positivity, self love, strength and definitely the decision making skills. I have never been this happy inside out. Thank you Priya Sinha for helping all of us to get a better picture of our lives. You are truly a gem! You and your work are truly incredible and every single penny is all worth it!",
+        "role": "Ritu Hariyani",
+        "place": "Client",
+        "image": "/voices/ritu-hariyani.png"
+      },
+      {
+        "text": "I had a great experience of learning and healing with Ms. Priya. She is very open and direct. Her guidance helped me resolve my doubts and boosted my energy very quickly to get back to life during tough times. Thank you Priya.",
+        "role": "Amit Aggarwal",
+        "place": "Client",
+        "image": "/voices/amit-aggarwal.png"
+      },
+      {
+        "text": "It is an amazing and wonderful experience with Reiki Grand Master Priya Sinha. She is a very kind person and she has so much amazing knowledge about reiki. She helps me so much. She gives me lots of positivity and universal energy. Thank you Priya Didi.",
+        "role": "Bhoomika Patel",
+        "place": "Client",
+        "image": "/voices/bhoomika-patel.png"
+      },
+      {
+        "text": "It was a wonderful experience that I felt with Mrs. Priya ma’am. She always inspired me, helped me to get rid of my problems. It is just out of the world, our imagination and of course satisfied with the gift that I received from here. I just know that you are doing great and of course for the welfare of the society. At last I want to say she is motivation, inspiration, dedication and many more for me.",
+        "role": "Saurabh Rao",
+        "place": "Client",
+        "image": "/voices/saurabh-rao.png"
+      },
+      {
+        "text": "It is an amazing experience with Mrs. Priya. She is a great healer, helped me feel universal energy, and most prominently a great teacher who guided me to help others and forgive them, but also to forgive oneself prior to others. I would be obliged if I am able to be in touch with you and hoping for the longevity of our relation.",
+        "role": "Ritika Rawat",
+        "place": "Client",
+        "image": "/voices/ritika-rawat.png"
+      },
+      {
+        "text": "The first time I realised how the healing can change your life. It includes everything. Fantastic experience. I have no words for this. Once you visit this place you will find the miracle starts in your life. Thanks.",
+        "role": "Himanshu Gupta",
+        "place": "Client",
+        "image": "/voices/himanshu-gupta.png"
+      },
+      {
+        "text": "Amazing. I am truly amazed by her power of knowledge. So many times she answered me about the questions which I never asked her. I think she is the best healer. Priya, I am truly blessed to have you in my life. Saying thank you is a very small word for your support and your efforts.",
+        "role": "Deboshree Chatterjee",
+        "place": "Client",
+        "image": "/voices/deboshree-chatterjee.png"
+      },
+      {
+        "text": "Positivity and satisfaction both come together. Concerning and devoted toward helping people. Thank you Priya Ma’am for helping me with your healing power and starting believing in miracles. Thanks for your support.",
+        "role": "Apurva Tripathi",
+        "place": "Client",
+        "image": "/voices/apurva-tripathi.png"
+      }
+    ]
+  },
+  "plans": {
+    "title": "A practice with time behind it.",
+    "note": "Sessions, courses, and charged tools. Ask Priya which one fits.",
+    "items": [
+      {
+        "name": "Experience",
+        "tag": "Years of practice",
+        "price": "15+",
+        "unit": "years",
+        "cadence": "Priya has spent more than fifteen years in healing traditions.",
+        "cta": "Talk to us",
+        "href": "/contacts",
+        "featured": true,
+        "points": [
+          "Lama Fera Grandmaster",
+          "High Priestess of ITW",
+          "Meditation instructor"
+        ]
+      },
+      {
+        "name": "People guided",
+        "tag": "Clients healed",
+        "price": "150+",
+        "unit": "clients",
+        "cadence": "People who have already walked a session, a reading, or a longer path.",
+        "cta": "Get started",
+        "href": "/contacts",
+        "featured": false,
+        "points": [
+          "Care tailored to one person",
+          "Mind, body, and spirit together",
+          "A way to continue through courses"
+        ]
+      }
+    ],
+    "features": [
+      "Holistic healing",
+      "Tarot readings",
+      "Vedic techniques",
+      "Candle magic",
+      "Meditations",
+      "Divinations",
+      "Crystals",
+      "Healing kits",
+      "Ritual tools",
+      "Private sessions",
+      "Dehradun",
+      "Direct contact"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "A note is enough to begin.",
+    "cards": [
+      {
+        "title": "We're here to help",
+        "body": "A question about a session, a course, or a charged tool. Write Priya, and the first conversation can start from anywhere.",
+        "cta": "Contact us",
+        "href": "/contacts",
+        "icon": "help"
+      },
+      {
+        "title": "Ready for a longer path?",
+        "body": "A healing session, a tarot reading, or a course. Tell Priya what you are carrying, and she will say which form fits.",
+        "cta": "WhatsApp",
+        "href": "https://wa.me/917668648224",
+        "icon": "people",
+        "external": true
+      }
+    ],
+    "channels": [
+      {
+        "name": "Instagram",
+        "handle": "@divinesoulsbypriya",
+        "body": "Notes from the practice",
+        "href": "https://www.instagram.com/divinesoulsbypriya/",
+        "tone": "instagram"
+      },
+      {
+        "name": "Facebook",
+        "handle": "Divine Souls",
+        "body": "Updates and gatherings",
+        "href": "https://www.facebook.com/divinesoulsindia",
+        "tone": "facebook"
+      },
+      {
+        "name": "WhatsApp",
+        "handle": "917668648224",
+        "body": "A direct conversation",
+        "href": "https://wa.me/917668648224",
+        "tone": "whatsapp"
+      },
+      {
+        "name": "Email",
+        "handle": "priyasinha1809@gmail.com",
+        "body": "Write when you are ready",
+        "href": "mailto:priyasinha1809@gmail.com",
+        "tone": "mail"
+      },
+      {
+        "name": "Location",
+        "handle": "Dehradun",
+        "body": "Find the practice",
+        "href": "https://www.google.com/maps/place/Divine+Souls/@21.0680074,82.7525294,5z/data=!3m1!4b1!4m6!3m5!1s0x3be04dcf4d001d75:0x7f2ddcbbbcbefc00!8m2!3d21.0680074!4d82.7525294!16s%2Fg%2F11f55jgcmh?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D",
+        "tone": "location"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "intro": "A few practical answers. For anything personal, call or write Priya directly.",
+    "items": [
+      {
+        "q": "What does Divine Souls offer?",
+        "a": "Holistic healing, tarot card readings, and Vedic healing techniques. Courses cover candle magic, ritual, divination, and meditation. Products include crystals, healing kits, and ritual tools."
+      },
+      {
+        "q": "Who guides the sessions?",
+        "a": "Priya. She is a Lama Fera Grandmaster, High Priestess of ITW, and a meditation instructor, with more than fifteen years in the work."
+      },
+      {
+        "q": "Where is the practice?",
+        "a": "Dehradun, India. You can also reach Priya by phone at +91 7668648224 or by email at priyasinha1809@gmail.com."
+      },
+      {
+        "q": "How do I begin?",
+        "a": "Send a note, call, or email. Sessions are tailored, so the first message only needs to say what you are hoping to work with."
+      },
+      {
+        "q": "What can I take home?",
+        "a": "Crystals chosen for elemental correction, healing kits, and tools for ritual casting. Each one is divinely charged and matched to the person."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Begin your healing\njourney today.",
+    "body": "Connect with Priya and see how holistic healing, tarot, and Vedic guidance can meet your path.",
+    "cta": "Get started",
+    "href": "/contacts"
+  },
+  "ribbon": [
+    "Holistic healing",
+    "Tarot",
+    "Vedic practice",
+    "Candle magic",
+    "Meditation",
+    "Crystals"
+  ]
+}

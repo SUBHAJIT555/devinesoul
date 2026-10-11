@@ -1,0 +1,92 @@
+{
+  "name": "Divine Souls",
+  "title": "Divine Souls By Priya",
+  "description": "Experience transformative healing and spiritual guidance tailored to your unique path with Priya and her holistic practices.",
+  "cta": {
+    "label": "Get started",
+    "href": "/contacts"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Courses",
+      "href": "/courses"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Products",
+      "href": "/products"
+    },
+    {
+      "label": "Contacts",
+      "href": "/contacts"
+    }
+  ],
+  "footer": {
+    "blurb": "Holistic healing, tarot, and Vedic guidance with Priya. Courses, services, and products in one place.",
+    "columns": [
+      {
+        "title": "Explore",
+        "links": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About",
+            "href": "/about"
+          },
+          {
+            "label": "Courses",
+            "href": "/courses"
+          }
+        ]
+      },
+      {
+        "title": "Work",
+        "links": [
+          {
+            "label": "Services",
+            "href": "/services"
+          },
+          {
+            "label": "Products",
+            "href": "/products"
+          },
+          {
+            "label": "Contacts",
+            "href": "/contacts"
+          }
+        ]
+      },
+      {
+        "title": "Visit",
+        "links": [
+          {
+            "label": "Start a conversation",
+            "href": "/contacts"
+          },
+          {
+            "label": "See the courses",
+            "href": "/courses"
+          },
+          {
+            "label": "See the products",
+            "href": "/products"
+          }
+        ]
+      }
+    ],
+    "note": "© 2026 Divine Souls By Priya. All rights reserved."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Contacts",
+  "description": "Call, email, or write Divine Souls By Priya in Dehradun.",
+  "hero": {
+    "eyebrow": "Contacts",
+    "title": "We’d love to\nhear from you.\n",
+    "body": "A question about a session, a course, or a charged tool. Reach Priya directly, or leave a note on this page."
+  },
+  "channels": [
+    {
+      "title": "Call",
+      "body": "For a first conversation, or a time-sensitive question.",
+      "value": "+91 7668648224"
+    },
+    {
+      "title": "Email",
+      "body": "Write Priya with what you are hoping to work on.",
+      "value": "priyasinha1809@gmail.com"
+    },
+    {
+      "title": "Visit",
+      "body": "The practice is based in Dehradun. Sessions can also begin by message.",
+      "value": "Dehradun, India"
+    }
+  ],
+  "form": {
+    "title": "Send a note",
+    "body": "This form confirms on the page. It does not deliver yet. To reach Priya now, call +91 7668648224 or email priyasinha1809@gmail.com.",
+    "submit": "Send",
+    "topics": [
+      "Holistic healing",
+      "A tarot reading",
+      "Vedic healing",
+      "A course",
+      "A product",
+      "Something else"
+    ],
+    "success": "Received on this page. Nothing was sent on. Email priyasinha1809@gmail.com or call +91 7668648224 and Priya can pick it up."
+  },
+  "faq": {
+    "title": "Before you write",
+    "intro": "The practical details. The personal part can wait for the conversation.",
+    "items": [
+      {
+        "q": "Where do messages go?",
+        "a": "The form on this page only confirms what you typed. Call +91 7668648224 or email priyasinha1809@gmail.com to reach Priya."
+      },
+      {
+        "q": "What should I include?",
+        "a": "What you are interested in, and the simplest version of what you need. A topic is enough to start."
+      },
+      {
+        "q": "Do I have to be in Dehradun?",
+        "a": "No. The practice is based in Dehradun, and Vedic healing can also be offered at a distance. Say which you need."
+      }
+    ]
+  }
+}

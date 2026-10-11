@@ -1,0 +1,65 @@
+{
+  "title": "About",
+  "description": "How Divine Souls By Priya intertwines ancient practices with modern spirituality.",
+  "hero": {
+    "eyebrow": "About",
+    "title": "Learn about our\nunique healing approach.",
+    "body": "Discover how Divine Souls By Priya intertwines ancient practices with modern spirituality to enhance personal growth and healing."
+  },
+  "story": {
+    "title": "The will behind the healing.",
+    "paragraphs": [
+      "Divine Souls By Priya was founded to offer a serene space for spiritual exploration. Priya’s expertise in healing techniques has guided people through personal challenges, toward revelations and a strength they can carry home.",
+      "Her philosophy is plain. The work has no color of its own. It is shaped by the intention of the practitioner. Intention is what drives growth, and understanding that is how these practices can be met without fear."
+    ],
+    "aside": "Ancient practice, held with modern clarity."
+  },
+  "values": {
+    "title": "Experience the Divine Souls difference.",
+    "items": [
+      {
+        "title": "Personalized care",
+        "body": "Sessions are tailored to individual needs, so the healing stays personal and has a real effect."
+      },
+      {
+        "title": "Expertise you can trust",
+        "body": "Priya’s knowledge of healing traditions keeps the guidance rooted in practice, and pointed at life outside the session."
+      },
+      {
+        "title": "Holistic integration",
+        "body": "Diverse modalities sit together, so mind, body, and spirit are addressed as one."
+      },
+      {
+        "title": "Intention first",
+        "body": "The practice is shaped by intention. That is the standard Priya teaches, and the one she works by."
+      }
+    ]
+  },
+  "path": {
+    "title": "A path with a record.",
+    "body": "From a founded sanctuary to a practice people return to. These are the marks Priya stands on.",
+    "items": [
+      {
+        "index": "01",
+        "title": "Fifteen years",
+        "body": "More than fifteen years in healing traditions, including Lama Fera, and a life of teaching meditation."
+      },
+      {
+        "index": "02",
+        "title": "One hundred and fifty clients",
+        "body": "People who have been guided through a session, a reading, or a longer stretch of work."
+      },
+      {
+        "index": "03",
+        "title": "A mission that stays still",
+        "body": "Transformative healing through personal guidance, so a person can meet their own strength."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Our vision is a community that can find itself.",
+    "body": "A place to discover who you are, hold your own power, and take the spiritual journey seriously.",
+    "cta": "Begin a conversation",
+    "href": "/contacts"
+  }
+}
