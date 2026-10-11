@@ -289,7 +289,9 @@ export function Bento({ bento }: { bento: HomeContent["bento"] }) {
             <Lines text={bento.title} />
           </h2>
         </Reveal>
-        <div className="mt-14 grid gap-px bg-[radial-gradient(50%_50%,#d8d8d8_0%,#fff_100%)] sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          className={`mt-14 grid gap-px bg-[radial-gradient(50%_50%,#d8d8d8_0%,#fff_100%)] sm:grid-cols-2 ${bento.items.length > 4 ? "lg:grid-cols-3" : ""}`}
+        >
           {bento.items.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.04} className="h-full bg-white">
               <article className="flex h-full flex-col gap-4 px-[30px] py-5">
@@ -359,33 +361,89 @@ function FeatureIcon({ name }: { name: string }) {
           <path d="M11 19h5.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h4.5" />
         </>
       ) : null}
+      {name === "focus" ? (
+        <>
+          <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          <path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
+          <path d="M12 3v2" />
+          <path d="M12 19v2" />
+          <path d="M3 12h2" />
+          <path d="M19 12h2" />
+        </>
+      ) : null}
     </svg>
   );
 }
 
-export function Spotlight({ spotlight }: { spotlight: HomeContent["spotlight"] }) {
+export function Spotlight({
+  spotlight,
+}: {
+  spotlight: {
+    eyebrow?: string;
+    title: string;
+    body?: string;
+    paragraphs?: string[];
+    points?: string[];
+    aside?: string;
+    mark?: string;
+    actions?: { label: string; href: string; variant?: "primary" | "secondary" | "dark" | "whatsapp" }[];
+  };
+}) {
   return (
     <section>
       <div className="h-[50px] bg-[#0f071c]" aria-hidden="true">
         <div className="h-full rounded-b-[30px] bg-white" />
       </div>
-      <div className="bg-[linear-gradient(#0f071c,#085a7a)] px-6 pb-16 pt-10 text-white">
-        <Reveal className="mx-auto flex max-w-[700px] flex-col items-center text-center">
-          <span className="inline-flex rounded-full bg-white/10 px-3 py-3 text-[14px] font-semibold leading-none">
-            {spotlight.eyebrow}
-          </span>
+      <div className="relative overflow-hidden bg-[linear-gradient(#0f071c,#085a7a)] px-6 pb-36 pt-10 text-white">
+        {spotlight.mark ? (
+          <p
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 -bottom-4 select-none text-center text-[clamp(64px,9vw,112px)] font-medium leading-none tracking-[-0.05em] text-white/5 "
+          >
+            {spotlight.mark}
+          </p>
+        ) : null}
+        <Reveal className="relative mx-auto flex max-w-[700px] flex-col items-center text-center">
+          {spotlight.eyebrow ? (
+            <span className="inline-flex rounded-full bg-white/10 px-3 py-3 text-[14px] font-semibold leading-none">
+              {spotlight.eyebrow}
+            </span>
+          ) : null}
           <h2 className="mt-5 max-w-[600px] text-[clamp(32px,4vw,48px)] font-medium leading-[1.2] tracking-[-0.03em]">
             <Lines text={spotlight.title} />
           </h2>
-          <p className="mt-5 text-[16px] leading-6 text-white/80">{spotlight.body}</p>
-          <ul className="mt-8 space-y-3">
-            {spotlight.points.map((point) => (
-              <li key={point} className="flex items-center justify-center gap-3 text-[15px] leading-6 text-white/85">
-                <Check light />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
+          {spotlight.body ? <p className="mt-5 text-[16px] leading-6 text-white/80">{spotlight.body}</p> : null}
+          {spotlight.paragraphs?.length ? (
+            <div className="mt-5 space-y-4">
+              {spotlight.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="text-[16px] leading-6 text-white/80">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          ) : null}
+          {spotlight.points?.length ? (
+            <ul className="mt-8 space-y-3">
+              {spotlight.points.map((point) => (
+                <li key={point} className="flex items-center justify-center gap-3 text-[15px] leading-6 text-white/85">
+                  <Check light />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {spotlight.aside ? (
+            <p className="mt-8 text-[22px] font-normal leading-[1.35] tracking-[-0.03em]">{spotlight.aside}</p>
+          ) : null}
+          {spotlight.actions?.length ? (
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              {spotlight.actions.map((action) => (
+                <Button key={action.href + action.label} href={action.href} variant={action.variant ?? "primary"}>
+                  {action.label}
+                </Button>
+              ))}
+            </div>
+          ) : null}
         </Reveal>
       </div>
       <div className="h-[50px] bg-[#085a7a]" aria-hidden="true">

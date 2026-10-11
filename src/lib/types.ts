@@ -144,7 +144,43 @@ export type HomeContent = {
 export type AboutContent = {
   title: string;
   description: string;
-  hero: { eyebrow: string; title: string; body: string };
+  hero: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    cta: string;
+    href: string;
+    whatsapp: string;
+    whatsappHref: string;
+    notes: string[];
+    image: string;
+    imageAlt: string;
+  };
+  features: {
+    title: string;
+    paragraphs: string[];
+    image: string;
+    imageAlt: string;
+    align: "left" | "right";
+    tone: "blue" | "violet";
+    actions: {
+      label: string;
+      href: string;
+      variant: "primary" | "dark" | "whatsapp";
+      external?: boolean;
+    }[];
+  }[];
+  conquests: {
+    title: string;
+    items: {
+      index: string;
+      title: string;
+      body: string;
+      tone: "blue" | "violet" | "peach";
+      image: string;
+      imageAlt: string;
+    }[];
+  };
   story: {
     title: string;
     paragraphs: string[];
@@ -152,12 +188,17 @@ export type AboutContent = {
   };
   values: {
     title: string;
-    items: { title: string; body: string }[];
+    items: { title: string; body: string; icon: string }[];
   };
   path: {
     title: string;
     body: string;
-    items: { index: string; title: string; body: string }[];
+    items: { index: string; title: string; body: string; figure?: string }[];
+  };
+  purpose: {
+    title: string;
+    body: string;
+    items: { title: string; body: string; tone: "dark" | "light"; points: string[] }[];
   };
   closing: { title: string; body: string; cta: string; href: string };
 };

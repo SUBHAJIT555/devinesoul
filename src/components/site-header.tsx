@@ -115,7 +115,9 @@ export function SiteHeader({ site }: { site: SiteContent }) {
             </nav>
 
             <div className="ml-auto flex items-center gap-1 lg:ml-2">
-              <Button href={site.cta.href}>{site.cta.label}</Button>
+              <div className="hidden lg:block">
+                <Button href={site.cta.href}>{site.cta.label}</Button>
+              </div>
               <button
                 type="button"
                 className="grid h-[38px] w-[38px] place-items-center rounded-xl text-white lg:hidden"
@@ -209,6 +211,9 @@ export function SiteHeader({ site }: { site: SiteContent }) {
                 </div>
               );
             })}
+            <div className="px-4 pb-2 pt-3">
+              <Button href={site.cta.href}>{site.cta.label}</Button>
+            </div>
           </motion.nav>
         ) : null}
       </AnimatePresence>
