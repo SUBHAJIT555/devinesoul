@@ -152,9 +152,9 @@
       ],
       "legalTitle": "Legal",
       "legal": [
-        { "label": "Terms & conditions", "href": "/terms" },
-        { "label": "Privacy Policy", "href": "/privacy" },
-        { "label": "Cookie Policy", "href": "/cookies" }
+        { "label": "Terms & conditions", "href": "/terms-and-conditions" },
+        { "label": "Privacy Policy", "href": "/privacy-policy" },
+        { "label": "Cookie Policy", "href": "/cookie-policy" }
       ]
     },
     "contact": {

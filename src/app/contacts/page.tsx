@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { FaqList } from "@/components/faq-list";
-import { PageHero } from "@/components/page-hero";
-import { Reveal, SectionHeading } from "@/components/ui";
-import { getContacts } from "@/lib/content";
+import { ContactBand, Spotlight } from "@/components/home-sections";
+import { Lines, Reveal } from "@/components/ui";
+import { getContacts, getCourses, getProducts, getServices, getSite } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getContacts();
@@ -12,36 +12,51 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ContactsPage() {
   const page = await getContacts();
+  const site = getSite();
+  const services = await getServices();
+  const courses = await getCourses();
+  const products = await getProducts();
 
   return (
     <main>
-      <PageHero eyebrow={page.hero.eyebrow} title={page.hero.title} body={page.hero.body} />
-      <section className="px-6 py-8">
-        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="grid gap-4">
-            {page.channels.map((channel) => (
-              <Reveal key={channel.title}>
-                <article className="rounded-[28px] bg-mist p-6">
-                  <h2 className="text-[20px] font-medium tracking-[-0.03em]">{channel.title}</h2>
-                  <p className="mt-2 text-[15px] leading-6 text-zinc-600">{channel.body}</p>
-                  <p className="mt-4 text-[15px] font-medium text-accent-deep">{channel.value}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+      <ContactBand contact={page.reach} lead />
+      <Spotlight
+        spotlight={{
+          title: page.visit.title,
+          aside: page.visit.body,
+          mark: site.name,
+          actions: page.visit.actions,
+        }}
+      />
+      <section id="request" className="scroll-mt-32 px-6 py-16">
+        <div className="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <Reveal>
-            <ContactForm form={page.form} />
+            <h2 className="max-w-md text-[clamp(32px,4vw,48px)] font-medium leading-[1.18] tracking-[-0.03em] text-ink">
+              <Lines text={page.form.title} />
+            </h2>
+            <p className="mt-4 max-w-md text-[16px] leading-6 text-zinc-600">{page.form.body}</p>
+          </Reveal>
+          <Reveal>
+            <ContactForm
+              form={page.form}
+              services={services.features.map((item) => item.title)}
+              courses={courses.items.map((item) => item.title)}
+              products={products.items.map((item) => item.name)}
+            />
           </Reveal>
         </div>
       </section>
-      <section className="px-6 py-20">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <Reveal>
-            <SectionHeading title={page.faq.title} body={page.faq.intro} />
+      <section className="bg-white px-5 pb-20 pt-[60px]">
+        <div className="mx-auto flex max-w-[1000px] flex-col gap-8 lg:flex-row lg:items-start lg:gap-5">
+          <Reveal className="w-full lg:w-[400px] lg:shrink-0">
+            <h2 className="text-[18px] font-medium leading-6 tracking-[-0.02em] text-ink">{page.faq.title}</h2>
+            <p className="mt-1.5 max-w-sm text-[16px] leading-6 text-zinc-500">{page.faq.intro}</p>
           </Reveal>
-          <FaqList items={page.faq.items} />
+          <FaqList items={page.faq.items} variant="cards" />
         </div>
       </section>
     </main>
   );
 }
+
+

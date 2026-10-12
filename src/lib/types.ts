@@ -272,13 +272,16 @@ export type ProductsContent = {
 export type ContactsContent = {
   title: string;
   description: string;
-  hero: { eyebrow: string; title: string; body: string };
-  channels: { title: string; body: string; value: string }[];
+  reach: HomeContent["contact"];
+  visit: {
+    title: string;
+    body: string;
+    actions: { label: string; href: string; variant: "primary" | "secondary" | "whatsapp" }[];
+  };
   form: {
     title: string;
     body: string;
     submit: string;
-    topics: string[];
     success: string;
   };
   faq: { title: string; intro: string; items: FaqItem[] };

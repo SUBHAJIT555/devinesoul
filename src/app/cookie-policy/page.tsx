@@ -4,6 +4,6 @@ export function generateMetadata() {
   return legalMetadata("cookies");
 }
 
-export default function CookiesPage() {
+export default function CookiePage() {
   return <LegalDocument pageKey="cookies" />;
 }

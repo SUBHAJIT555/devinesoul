@@ -69,9 +69,18 @@ export function Button({
 }) {
   const classes = `inline-flex h-[45px] w-max shrink-0 cursor-pointer items-center justify-center gap-[7px] overflow-clip whitespace-nowrap rounded-[16px] px-4 text-[15px] font-medium tracking-[-0.02em] no-underline transition-colors ${buttonStyles[variant]} ${className}`;
 
-  if (external) {
+  if (href.startsWith("#")) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a href={href} className={classes}>
+        {children}
+      </a>
+    );
+  }
+
+  const blank = external || href.startsWith("http");
+  if (blank || href.startsWith("tel:") || href.startsWith("mailto:")) {
+    return (
+      <a href={href} target={blank ? "_blank" : undefined} rel={blank ? "noopener noreferrer" : undefined} className={classes}>
         {children}
       </a>
     );

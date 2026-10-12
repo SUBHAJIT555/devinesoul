@@ -46,10 +46,10 @@ export function LogoRow({ logos }: { logos: HomeContent["logos"] }) {
 export function Statement({ statement }: { statement: HomeContent["statement"] }) {
   return (
     <section>
-      <div className="h-[50px] bg-[#1e1e1f]" aria-hidden="true">
+      <div className="h-[50px] bg-[#0f071c]" aria-hidden="true">
         <div className="h-full rounded-b-[30px] bg-white" />
       </div>
-      <div className="flex h-[400px] flex-col items-center justify-center bg-[#1e1e1f] px-6 text-center text-white">
+      <div className="flex h-[400px] flex-col items-center justify-center bg-[linear-gradient(#0f071c,#085a7a)] px-6 text-center text-white">
         <h2 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-normal leading-[1.2] tracking-[-0.02em]">
           <Lines text={`${statement.line1}\n${statement.line2}`} />
         </h2>
@@ -63,7 +63,7 @@ export function Statement({ statement }: { statement: HomeContent["statement"] }
           ))}
         </div>
       </div>
-      <div className="h-[50px] bg-[#1e1e1f]" aria-hidden="true">
+      <div className="h-[50px] bg-[#085a7a]" aria-hidden="true">
         <div className="h-full rounded-t-[30px] bg-white" />
       </div>
     </section>
@@ -636,17 +636,19 @@ const channelIcon: Record<HomeContent["contact"]["channels"][number]["tone"], st
   location: "/icons/map.png",
 };
 
-export function ContactBand({ contact }: { contact: HomeContent["contact"] }) {
+export function ContactBand({ contact, lead = false }: { contact: HomeContent["contact"]; lead?: boolean }) {
+  const Title = lead ? "h1" : "h2";
+
   return (
-    <section className="bg-white px-5 pb-20 pt-[60px]">
+    <section className={`bg-white px-5 ${lead ? "pb-8 pt-36 sm:pt-40" : "pb-20 pt-[60px]"}`}>
       <div className="mx-auto flex max-w-[1000px] flex-col items-center gap-20">
         <Reveal className="flex flex-col items-center gap-5 text-center">
           <span className="inline-flex rounded-md shadow-md border-b border-white bg-mist px-3 py-3 text-[12px] font-normal leading-none text-black">
             {contact.eyebrow}
           </span>
-          <h2 className="max-w-[700px] text-[clamp(32px,4vw,48px)] font-medium leading-[1.2] tracking-[-0.03em] text-ink">
+          <Title className="max-w-[700px] text-[clamp(32px,4vw,48px)] font-medium leading-[1.2] tracking-[-0.03em] text-ink">
             <Lines text={contact.title} />
-          </h2>
+          </Title>
         </Reveal>
         <div className="flex w-full flex-col gap-5">
           <div className="grid gap-5 md:grid-cols-2">
