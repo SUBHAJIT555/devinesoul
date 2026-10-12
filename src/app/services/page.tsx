@@ -36,41 +36,52 @@ export default async function ServicesPage() {
               {page.intro.title}
             </h2>
           </Reveal>
-          <div className="mt-16 flex flex-col gap-28">
-          {page.features.map((feature) => (
-            <article
-              key={feature.id}
-              id={feature.id}
-              className={`scroll-mt-32 flex flex-col items-center gap-10 lg:flex-row lg:justify-between lg:gap-[60px] ${feature.align === "right" ? "lg:flex-row-reverse" : ""}`}
-            >
-              <Reveal className="w-full lg:w-[405px] lg:shrink-0">
-                <h2 className="max-w-md text-[clamp(26px,3vw,34px)] font-normal leading-[1.2] tracking-[-0.04em] text-ink">
-                  {feature.title}
-                </h2>
-                <p className="mt-4 max-w-md text-[16px] leading-6 text-zinc-600">{feature.body}</p>
-                <ul className="mt-6 max-w-md space-y-3">
-                  {feature.points.map((point) => (
-                    <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
-                      <Check />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-                <ServiceBook title={feature.title} body={feature.body} points={feature.points} />
-              </Reveal>
-              <Reveal delay={0.08} className="w-full lg:w-[420px] lg:shrink-0">
-                <div className={`relative aspect-[1.12766] w-full overflow-hidden rounded-[30px] ${wash[feature.tone]}`}>
-                  <Image
-                    src={feature.image}
-                    alt={feature.imageAlt}
-                    fill
-                    sizes="(min-width: 1024px) 420px, calc(100vw - 48px)"
-                    className="object-cover"
-                  />
-                </div>
-              </Reveal>
-            </article>
-          ))}
+          <div className="mt-16 flex flex-col gap-6">
+          {page.features.map((feature) => {
+            const reversed = feature.align === "right";
+            const textCol = reversed ? "lg:col-start-2" : "lg:col-start-1";
+            const imageCol = reversed ? "lg:col-start-1" : "lg:col-start-2";
+
+            return (
+              <article
+                key={feature.id}
+                id={feature.id}
+                className={`grid scroll-mt-32 grid-cols-1 items-start rounded-[30px] p-4 sm:p-6 lg:grid-cols-2 lg:items-center lg:gap-x-10 lg:p-8 ${wash[feature.tone]}`}
+              >
+                <Reveal className={`order-1 ${textCol} lg:row-start-1`}>
+                  <h2 className="max-w-md text-[clamp(26px,3vw,34px)] font-normal leading-[1.2] tracking-[-0.04em] text-ink">
+                    {feature.title}
+                  </h2>
+                </Reveal>
+                <Reveal
+                  delay={0.08}
+                  className={`order-2 mt-8 w-full lg:order-none lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-center ${imageCol}`}
+                >
+                  <div className="relative aspect-[1.35] w-full overflow-hidden rounded-[22px] bg-white/40">
+                    <Image
+                      src={feature.image}
+                      alt={feature.imageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 420px, calc(100vw - 48px)"
+                      className="object-cover"
+                    />
+                  </div>
+                </Reveal>
+                <Reveal className={`order-3 mt-8 lg:mt-4 ${textCol} lg:row-start-2`}>
+                  <p className="max-w-md text-[16px] leading-6 text-zinc-600">{feature.body}</p>
+                  <ul className="mt-6 max-w-md space-y-3">
+                    {feature.points.map((point) => (
+                      <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
+                        <Check />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <ServiceBook title={feature.title} body={feature.body} points={feature.points} />
+                </Reveal>
+              </article>
+            );
+          })}
           </div>
         </div>
       </section>

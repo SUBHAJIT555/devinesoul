@@ -127,6 +127,7 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
             aria-modal="true"
             aria-labelledby={titleId}
             onKeyDown={trap}
+            data-lenis-prevent
             className="quiet-scroll relative max-h-[min(720px,calc(100vh-32px))] w-full max-w-lg overflow-y-auto rounded-[28px] bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.18)] sm:p-8"
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}

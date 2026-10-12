@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Inter } from "next/font/google";
 import { HashScroll } from "@/components/hash-scroll";
+import { ScrollToTop } from "@/components/scroll-to-top";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getSite } from "@/lib/content";
@@ -42,10 +44,13 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         >
           Skip to content
         </a>
-        <HashScroll />
-        <SiteHeader site={site} />
-        <div id="content">{children}</div>
-        <SiteFooter site={site} />
+        <SmoothScroll>
+          <HashScroll />
+          <SiteHeader site={site} />
+          <div id="content">{children}</div>
+          <SiteFooter site={site} />
+          <ScrollToTop />
+        </SmoothScroll>
       </body>
     </html>
   );

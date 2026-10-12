@@ -186,6 +186,7 @@ export function SiteHeader({ site }: { site: SiteContent }) {
         {open ? (
           <motion.nav
             aria-label="Mobile"
+            data-lenis-prevent
             className="pointer-events-auto mx-auto mt-3 max-h-[calc(100vh-96px)] max-w-[760px] overflow-auto rounded-3xl bg-nav p-3 text-white shadow-[0_20px_50px_rgba(0,0,0,0.24)] lg:hidden"
             initial={reduce ? false : { opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}

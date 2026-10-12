@@ -28,8 +28,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   color-scheme: light;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
 }
 
 body {

@@ -139,7 +139,7 @@ function BookModal({
               </div>
             ) : (
               <form onSubmit={onSubmit} className="flex min-h-0 flex-1 flex-col">
-                <div className="quiet-scroll min-h-0 flex-1 overflow-y-auto px-6 pb-2 pt-3">
+                <div data-lenis-prevent className="quiet-scroll min-h-0 flex-1 overflow-y-auto px-6 pb-2 pt-3">
                   <div className="rounded-[24px] bg-mist px-5 py-5">
                     <p className="font-meta text-[12px] leading-[18px] text-zinc-500">Service</p>
                     <p className="mt-1 text-[20px] font-medium tracking-[-0.03em] text-ink">{title}</p>

@@ -160,47 +160,60 @@ export function Stories({ stories }: { stories: HomeContent["stories"] }) {
   return (
     <section className="bg-white px-6 pb-12 pt-16">
       <div className="mx-auto flex max-w-[1000px] flex-col gap-28">
-        {stories.map((story) => (
-          <article
-            key={story.id}
-            id={story.id}
-            className={`scroll-mt-28 flex flex-col items-center gap-10 overflow-visible lg:flex-row lg:justify-between lg:gap-[60px] ${story.align === "right" ? "lg:flex-row-reverse" : ""}`}
-          >
-            <Reveal className="w-full lg:w-[405px] lg:shrink-0">
-              <span className={`inline-flex items-center gap-1.5 rounded-md border-b border-r border-white px-3 py-1 text-[13px] font-semibold shadow-sm ${badge[story.tone]}`}>
-                <ChapterIcon id={story.id} className="h-4 w-4" stroke="currentColor" fill="currentColor" />
-                {story.badge}
-              </span>
-              <h3 className="mt-5 max-w-md text-[clamp(26px,3vw,34px)] font-normal leading-[1.2] tracking-[-0.04em] text-ink">
-                {story.title}
-              </h3>
-              <p className="mt-4 max-w-md text-[16px] leading-6 text-zinc-600">{story.intro}</p>
-              {story.quote ? (
-                <figure className="mt-8 max-w-md border-t border-black/8 pt-6">
-                  <blockquote className="text-[16px] leading-6 text-ink">“ {story.quote.text} ”</blockquote>
-                  <figcaption className="mt-4 text-[14px] text-zinc-500">
-                    {story.quote.role}
-                    <span className="mx-2 text-zinc-300">·</span>
-                    {story.quote.place}
-                  </figcaption>
-                </figure>
-              ) : null}
-              {story.points?.length ? (
-                <ul className="mt-8 max-w-md space-y-3">
-                  {story.points.map((point) => (
-                    <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
-                      <Check />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </Reveal>
-            <Reveal delay={0.08} className="w-full lg:w-[420px] lg:shrink-0">
-              <StoryArt tone={story.tone} title={story.title} image={story.image} />
-            </Reveal>
-          </article>
-        ))}
+        {stories.map((story) => {
+          const textCol = story.align === "right" ? "lg:col-start-2" : "lg:col-start-1";
+          const imageCol = story.align === "right" ? "lg:col-start-1" : "lg:col-start-2";
+
+          return (
+            <article
+              key={story.id}
+              id={story.id}
+              className={`grid scroll-mt-28 grid-cols-1 items-start overflow-visible lg:items-center lg:justify-between lg:gap-x-[60px] ${
+                story.align === "right"
+                  ? "lg:grid-cols-[minmax(0,420px)_minmax(0,405px)]"
+                  : "lg:grid-cols-[minmax(0,405px)_minmax(0,420px)]"
+              }`}
+            >
+              <Reveal className={`order-1 ${textCol} lg:row-start-1`}>
+                <span className={`inline-flex items-center gap-1.5 rounded-md border-b border-r border-white px-3 py-1 text-[13px] font-semibold shadow-sm ${badge[story.tone]}`}>
+                  <ChapterIcon id={story.id} className="h-4 w-4" stroke="currentColor" fill="currentColor" />
+                  {story.badge}
+                </span>
+              </Reveal>
+              <Reveal className={`order-2 mt-5 ${textCol} lg:row-start-2`}>
+                <h3 className="max-w-md text-[clamp(26px,3vw,34px)] font-normal leading-[1.2] tracking-[-0.04em] text-ink">
+                  {story.title}
+                </h3>
+              </Reveal>
+              <Reveal delay={0.08} className={`order-3 mt-8 w-full lg:order-none lg:row-span-3 lg:row-start-1 lg:mt-0 lg:self-center ${imageCol}`}>
+                <StoryArt tone={story.tone} title={story.title} image={story.image} />
+              </Reveal>
+              <Reveal className={`order-4 mt-8 lg:mt-4 ${textCol} lg:row-start-3`}>
+                <p className="max-w-md text-[16px] leading-6 text-zinc-600">{story.intro}</p>
+                {story.quote ? (
+                  <figure className="mt-8 max-w-md border-t border-black/8 pt-6">
+                    <blockquote className="text-[16px] leading-6 text-ink">“ {story.quote.text} ”</blockquote>
+                    <figcaption className="mt-4 text-[14px] text-zinc-500">
+                      {story.quote.role}
+                      <span className="mx-2 text-zinc-300">·</span>
+                      {story.quote.place}
+                    </figcaption>
+                  </figure>
+                ) : null}
+                {story.points?.length ? (
+                  <ul className="mt-8 max-w-md space-y-3">
+                    {story.points.map((point) => (
+                      <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
+                        <Check />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </Reveal>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
@@ -462,37 +475,51 @@ export function Steps({ steps }: { steps: HomeContent["steps"] }) {
             <Lines text={steps.title} />
           </h2>
         </Reveal>
-        {steps.items.map((item, index) => (
-          <article
-            key={item.index}
-            className={`flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-between ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
-          >
-            <Reveal className="w-full lg:w-[405px] lg:shrink-0">
-              <p className="text-[14px] font-semibold text-accent-deep">{item.index}</p>
-              <h3 className="mt-3 text-[28px] font-normal leading-[1.2] tracking-[-0.05em] text-ink">{item.title}</h3>
-              <p className="mt-3 max-w-md text-[16px] leading-6 text-zinc-600">{item.body}</p>
-              {index === steps.items.length - 1 ? (
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <Button href="/contacts">Contact us</Button>
-                  <Button href="https://wa.me/917668648224" variant="whatsapp" external>
-                    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" aria-hidden="true">
-                      <path
-                        fill="currentColor"
-                        d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10 10 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.9c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.14-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.16-1.54-1.16-2.94s.73-2.08 1-2.37c.24-.28.64-.41 1.02-.41.12 0 .23 0 .33.01.3.01.44.03.64.49.24.57.82 1.98.89 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.28.14.44.12.6-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.46.21.53.33.07.12.07.68-.17 1.36z"
-                      />
-                    </svg>
-                    WhatsApp
-                  </Button>
+        {steps.items.map((item, index) => {
+          const reversed = index % 2 === 1;
+          const textCol = reversed ? "lg:col-start-2" : "lg:col-start-1";
+          const imageCol = reversed ? "lg:col-start-1" : "lg:col-start-2";
+
+          return (
+            <article
+              key={item.index}
+              className={`grid w-full grid-cols-1 items-start lg:items-center lg:justify-between lg:gap-x-[60px] ${
+                reversed
+                  ? "lg:grid-cols-[minmax(0,420px)_minmax(0,405px)]"
+                  : "lg:grid-cols-[minmax(0,405px)_minmax(0,420px)]"
+              }`}
+            >
+              <Reveal className={`order-1 ${textCol} lg:row-start-1`}>
+                <p className="text-[14px] font-semibold text-accent-deep">{item.index}</p>
+              </Reveal>
+              <Reveal className={`order-2 mt-3 ${textCol} lg:row-start-2`}>
+                <h3 className="text-[28px] font-normal leading-[1.2] tracking-[-0.05em] text-ink">{item.title}</h3>
+              </Reveal>
+              <Reveal delay={0.08} className={`order-3 mt-8 w-full max-w-[420px] lg:order-none lg:row-span-3 lg:row-start-1 lg:mt-0 lg:w-[420px] lg:max-w-none lg:self-center ${imageCol}`}>
+                <div className="flex aspect-[535/380] w-full items-center justify-center">
+                  <img src={item.image} alt="" className="h-full w-full object-contain" />
                 </div>
-              ) : null}
-            </Reveal>
-            <Reveal delay={0.08} className="w-full max-w-[420px] lg:w-[420px] lg:shrink-0">
-              <div className="flex aspect-[535/380] w-full items-center justify-center">
-                <img src={item.image} alt="" className="h-full w-full object-contain" />
-              </div>
-            </Reveal>
-          </article>
-        ))}
+              </Reveal>
+              <Reveal className={`order-4 mt-8 lg:mt-3 ${textCol} lg:row-start-3`}>
+                <p className="max-w-md text-[16px] leading-6 text-zinc-600">{item.body}</p>
+                {index === steps.items.length - 1 ? (
+                  <div className="mt-6 flex flex-wrap items-center gap-3">
+                    <Button href="/contacts">Contact us</Button>
+                    <Button href="https://wa.me/917668648224" variant="whatsapp" external>
+                      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" aria-hidden="true">
+                        <path
+                          fill="currentColor"
+                          d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10 10 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.9c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.14-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.16-1.54-1.16-2.94s.73-2.08 1-2.37c.24-.28.64-.41 1.02-.41.12 0 .23 0 .33.01.3.01.44.03.64.49.24.57.82 1.98.89 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.28.14.44.12.6-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.46.21.53.33.07.12.07.68-.17 1.36z"
+                        />
+                      </svg>
+                      WhatsApp
+                    </Button>
+                  </div>
+                ) : null}
+              </Reveal>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

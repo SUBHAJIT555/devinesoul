@@ -1,10 +1,12 @@
 "use client";
 
+import { useLenis } from "lenis/react";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 export function HashScroll() {
   const pathname = usePathname();
+  const lenis = useLenis();
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -18,15 +20,9 @@ export function HashScroll() {
     }
     if (!id || id === "content") return;
 
-    const root = document.documentElement;
-    const previous = root.style.scrollBehavior;
     let frame = 0;
     let frames = 0;
     let stopped = false;
-
-    const finish = () => {
-      root.style.scrollBehavior = previous;
-    };
 
     const stop = () => {
       stopped = true;
@@ -36,23 +32,17 @@ export function HashScroll() {
     window.addEventListener("touchmove", stop, { passive: true });
 
     const tick = () => {
-      if (stopped) {
-        finish();
-        return;
-      }
+      if (stopped) return;
 
       const target = document.getElementById(id);
       if (target) {
-        root.style.scrollBehavior = "auto";
-        target.scrollIntoView({ block: "start", behavior: "auto" });
+        if (lenis) lenis.scrollTo(target, { duration: 1.15 });
+        else target.scrollIntoView({ block: "start", behavior: "auto" });
+        return;
       }
 
       frames += 1;
-      if (frames < 48) {
-        frame = window.requestAnimationFrame(tick);
-      } else {
-        finish();
-      }
+      if (frames < 48) frame = window.requestAnimationFrame(tick);
     };
 
     frame = window.requestAnimationFrame(tick);
@@ -62,9 +52,8 @@ export function HashScroll() {
       window.cancelAnimationFrame(frame);
       window.removeEventListener("wheel", stop);
       window.removeEventListener("touchmove", stop);
-      finish();
     };
-  }, [pathname]);
+  }, [pathname, lenis]);
 
   return null;
 }
