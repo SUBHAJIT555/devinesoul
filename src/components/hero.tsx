@@ -132,32 +132,38 @@ function Stage() {
   const reduce = useReducedMotion();
 
   return (
-    <div className="relative aspect-video overflow-hidden rounded-2xl bg-black shadow-[0_30px_80px_rgba(24,24,27,0.28)]">
-      <Image
-        src="/media/practice-b.jpg"
-        alt="A guided healing moment with a singing bowl"
-        fill
-        sizes="(min-width: 1080px) 1080px, 75vw"
-        className={`object-cover ${playing && !reduce ? "scale-105 transition-transform duration-[18s]" : ""}`}
-      />
-      <div className="pointer-events-none absolute inset-0 bg-black/10" />
-      <button
-        type="button"
-        onClick={() => setPlaying((value) => !value)}
-        className="absolute left-1/2 top-1/2 grid h-[92px] w-[92px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/40 text-white backdrop-blur-md transition hover:bg-black/55"
-        aria-label={playing ? "Pause preview" : "Play preview"}
-      >
-        {playing ? (
-          <span className="flex gap-1.5" aria-hidden="true">
-            <span className="h-7 w-1.5 rounded-full bg-white" />
-            <span className="h-7 w-1.5 rounded-full bg-white" />
-          </span>
-        ) : (
-          <svg viewBox="0 0 24 24" className="ml-1 h-9 w-9" aria-hidden="true">
-            <path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor" />
-          </svg>
-        )}
-      </button>
+    <div className="group relative aspect-video">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-black opacity-60 blur-[10px]" />
+      <div className="relative h-full overflow-hidden rounded-2xl bg-black">
+        <Image
+          src="/media/practice-b.jpg"
+          alt="A guided healing moment with a singing bowl"
+          fill
+          sizes="(min-width: 1080px) 1080px, 75vw"
+          className={`object-cover ${playing && !reduce ? "scale-105 transition-transform duration-[18s]" : ""}`}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-black/10" />
+        <button
+          type="button"
+          onClick={() => setPlaying((value) => !value)}
+          className="absolute left-1/2 top-1/2 aspect-square w-[12%] min-w-[88px] max-w-[128px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/10 text-white shadow-[0_1px_2px_rgba(0,0,0,0.1),inset_0_3px_2px_-1px_rgba(255,255,255,0.5)] backdrop-blur-[5px] transition-transform duration-200 will-change-transform group-hover:scale-[1.08]"
+          aria-label={playing ? "Pause preview" : "Play preview"}
+        >
+          {playing ? (
+            <span className="absolute left-1/2 top-1/2 flex h-[38%] w-[29%] -translate-x-1/2 -translate-y-1/2 items-center justify-between" aria-hidden="true">
+              <span className="h-full w-[22%] rounded-full bg-white" />
+              <span className="h-full w-[22%] rounded-full bg-white" />
+            </span>
+          ) : (
+            <svg viewBox="0 0 38.55 43.29" className="absolute left-1/2 top-1/2 h-[40%] w-[36%] -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
+              <path
+                d="M0 39.0107V4.27515C0 2.83391 0.372456 1.76512 1.11737 1.06879C1.86228 0.356263 2.74484 0 3.76505 0C4.6719 0 5.57065 0.2591 6.46131 0.7773L35.4643 17.6836C36.5331 18.3151 37.3104 18.9224 37.7962 19.5054C38.2982 20.0883 38.5492 20.8009 38.5492 21.6429C38.5492 22.4688 38.2982 23.1814 37.7962 23.7805C37.3104 24.3635 36.5331 24.9627 35.4643 25.578L6.46131 42.5086C5.57065 43.0268 4.6719 43.2859 3.76505 43.2859C2.74484 43.2859 1.86228 42.9296 1.11737 42.2171C0.372456 41.5046 0 40.4358 0 39.0107Z"
+                fill="white"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
     </div>
   );
 }
