@@ -5,11 +5,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/courses",
-        destination: "/services#courses",
-        permanent: false,
-      },
-      {
         source: "/terms",
         destination: "/terms-and-conditions",
         permanent: true,
@@ -25,6 +20,15 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+    ],
   },
   cacheComponents: true,
   partialPrefetching: true,

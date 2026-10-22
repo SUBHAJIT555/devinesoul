@@ -39,10 +39,10 @@ export function Hero({ hero }: { hero: HomeContent["hero"] }) {
           </video>
         </div>
 
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[700px] flex-col items-center px-6 pt-[108px] text-center sm:pt-[130px]">
-          <h1 className="text-[clamp(32px,8.4vw,56px)] font-medium leading-[1.2] tracking-[-0.025em] text-white">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1100px] flex-col items-center px-5 pt-[108px] text-center sm:pt-[130px]">
+          <h1 className="text-[clamp(20px,calc((100vw-2.5rem)/17.5),56px)] font-medium leading-[1.2] tracking-[-0.025em] text-white">
             {lines.map((line) => (
-              <span key={line} className="block">
+              <span key={line} className="block whitespace-nowrap">
                 {line.split(" ").map((word) => {
                   const delay = `${wordIndex * 0.07}s`;
                   wordIndex += 1;

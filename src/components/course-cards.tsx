@@ -1,22 +1,25 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import type { FormEvent, KeyboardEvent } from "react";
+import type { FormEvent, KeyboardEvent as ReactKeyboardEvent } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Course } from "@/lib/types";
+import { offeringHref } from "@/lib/content";
 import { courseEnquiry } from "@/lib/whatsapp";
-import { Button, Check, Reveal, WhatsAppIcon } from "@/components/ui";
+import { Button, Check, PointGrid, Reveal, WhatsAppIcon } from "@/components/ui";
 
 const wash: Record<Course["tone"], string> = {
   blue: "bg-[#dff2fe]",
   orange: "bg-[#ffedd4]",
+  peach: "bg-[#ffedd4]",
   violet: "bg-[#ece9fe]",
   mist: "bg-mist",
 };
 
-export function CourseCards({ items }: { items: Course[] }) {
+export function CourseCards({ items, idPrefix = "course-" }: { items: Course[]; idPrefix?: string }) {
   const [course, setCourse] = useState<Course | null>(null);
   const close = useCallback(() => setCourse(null), []);
 
@@ -25,7 +28,7 @@ export function CourseCards({ items }: { items: Course[] }) {
       <div className="mt-12 grid gap-4 md:grid-cols-2">
         {items.map((item, index) => (
           <Reveal key={item.id} delay={index * 0.04}>
-            <article id={`course-${item.id}`} className={`scroll-mt-32 flex h-full flex-col rounded-[30px] p-3 ${wash[item.tone]}`}>
+            <article id={`${idPrefix}${item.id}`} className={`scroll-mt-32 flex h-full flex-col rounded-[30px] p-3 ${wash[item.tone]}`}>
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[22px]">
                 <Image
                   src={item.image}
@@ -36,29 +39,39 @@ export function CourseCards({ items }: { items: Course[] }) {
                 />
               </div>
               <div className="flex flex-1 flex-col px-4 pb-5 pt-6">
-                <h3 className="text-[26px] font-medium leading-[1.2] tracking-[-0.04em] text-ink">{item.title}</h3>
+                <h3 className="text-[26px] font-medium leading-[1.2] tracking-[-0.04em] text-ink">
+                  <Link href={offeringHref("course", item.title)} className="text-ink no-underline hover:text-accent-deep">
+                    {item.title}
+                  </Link>
+                </h3>
                 <p className="mt-3 text-[15px] leading-6 text-zinc-600">{item.summary}</p>
                 {item.points.length ? (
                   <ul className="mt-4 space-y-2">
                     {item.points.map((point) => (
-                      <li key={point} className="flex gap-2 text-[14px] leading-5 text-ink">
-                        <Check />
-                        <span>{point}</span>
+                      <li key={point}>
+                        <Link
+                          href={offeringHref("course", point)}
+                          className="flex gap-2 text-[14px] leading-5 text-ink no-underline hover:text-accent-deep"
+                        >
+                          <Check />
+                          <span>{point}</span>
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 ) : null}
-                <div className="mt-6 flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-nowrap gap-2 sm:flex-wrap sm:gap-3">
                   <button
                     type="button"
                     onClick={() => setCourse(item)}
-                    className="inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-4 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa]"
+                    className="inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-3 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa] sm:px-4"
                   >
                     Free Enroll Now
                   </button>
                   <Button href={courseEnquiry(item.title)} variant="whatsapp" external>
                     <WhatsAppIcon />
-                    Enquire on WhatsApp
+                    <span className="sm:hidden">WhatsApp</span>
+                    <span className="hidden sm:inline">Enquire on WhatsApp</span>
                   </Button>
                 </div>
               </div>
@@ -85,7 +98,7 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
     setSent(false);
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const onKey = (event: KeyboardEvent) => {
+    const onKey = (event: globalThis.KeyboardEvent) => {
       if (event.key === "Escape") onClose();
     };
     window.addEventListener("keydown", onKey);
@@ -104,7 +117,7 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
     setSent(true);
   }
 
-  function trap(event: KeyboardEvent<HTMLDivElement>) {
+  function trap(event: ReactKeyboardEvent<HTMLDivElement>) {
     if (event.key !== "Tab" || !panelRef.current) return;
     const items = panelRef.current.querySelectorAll<HTMLElement>("button, input, textarea, a, select");
     if (!items.length) return;

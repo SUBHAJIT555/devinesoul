@@ -5,14 +5,14 @@ import {
   CompareBand,
   ContactBand,
   HomeFaq,
-  LogoRow,
   Spotlight,
   Statement,
   Steps,
   Stories,
   Voices,
 } from "@/components/home-sections";
-import { getHome } from "@/lib/content";
+import { QuoteMarquee, quotesToMarquee } from "@/components/quote-marquee";
+import { getHome, getReviews } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const home = await getHome();
@@ -25,11 +25,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   const home = await getHome();
+  const reviews = getReviews();
 
   return (
     <main>
       <Hero hero={home.hero} />
-      <LogoRow logos={home.logos} />
+      <section className="bg-white pt-6 md:pt-8">
+        <QuoteMarquee rows={[quotesToMarquee(reviews.items)]} duration="150s" />
+      </section>
       <Statement statement={home.statement} />
       <Stories stories={home.stories} />
       <CompareBand compare={home.compare} />

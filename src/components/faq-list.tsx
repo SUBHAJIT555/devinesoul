@@ -3,14 +3,23 @@
 import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { FaqItem } from "@/lib/types";
+import { LinkedCopy } from "@/components/ui";
 
-export function FaqList({ items, variant = "lines" }: { items: FaqItem[]; variant?: "lines" | "cards" }) {
+export function FaqList({
+  items,
+  variant = "lines",
+  className,
+}: {
+  items: FaqItem[];
+  variant?: "lines" | "cards";
+  className?: string;
+}) {
   const [open, setOpen] = useState<number | null>(0);
   const reduce = useReducedMotion();
 
   if (variant === "cards") {
     return (
-      <div className="flex w-full flex-col gap-2.5 lg:w-[580px] lg:shrink-0">
+      <div className={`flex w-full flex-col gap-2.5 ${className ?? "lg:w-[580px] lg:shrink-0"}`}>
         {items.map((item, index) => {
           const expanded = open === index;
 
@@ -34,7 +43,9 @@ export function FaqList({ items, variant = "lines" }: { items: FaqItem[]; varian
                     transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
-                    <p className="pt-2 text-[16px] leading-6 text-ink">{item.a}</p>
+                    <p className="pt-2 text-[16px] leading-6 text-ink">
+                      <LinkedCopy text={item.a} />
+                    </p>
                   </motion.div>
                 ) : null}
               </AnimatePresence>
@@ -72,7 +83,9 @@ export function FaqList({ items, variant = "lines" }: { items: FaqItem[]; varian
                   transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="max-w-2xl pb-5 text-[15px] leading-6 text-zinc-600">{item.a}</p>
+                  <p className="max-w-2xl pb-5 text-[15px] leading-6 text-zinc-600">
+                    <LinkedCopy text={item.a} />
+                  </p>
                 </motion.div>
               ) : null}
             </AnimatePresence>

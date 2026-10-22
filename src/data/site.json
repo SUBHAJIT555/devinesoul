@@ -1,9 +1,9 @@
 {
   "name": "Divine Souls",
   "title": "Divine Souls By Priya",
-  "description": "Experience transformative healing and spiritual guidance tailored to your unique path with Priya and her holistic practices.",
+  "description": "Healing sittings, tarot, and Vedic work with Priya in Dehradun. Write or WhatsApp to begin.",
   "cta": {
-    "label": "Get started",
+    "label": "Contact Now",
     "href": "/contacts"
   },
   "nav": [
@@ -18,72 +18,12 @@
     {
       "label": "Services",
       "href": "/services",
-      "menu": [
-        {
-          "label": "Healings",
-          "href": "/services#healings",
-          "body": "Lama Fera, Reiki, Saropa, and allied sittings.",
-          "tone": "blue",
-          "icon": "heart",
-          "group": "Services"
-        },
-        {
-          "label": "Ritual Castings",
-          "href": "/services#ritual-castings",
-          "body": "Candle rituals set around the matter you bring.",
-          "tone": "red",
-          "icon": "flame",
-          "group": "Services"
-        },
-        {
-          "label": "Divinations",
-          "href": "/services#divinations",
-          "body": "Tarot, dowsing, smoke, and runes.",
-          "tone": "violet",
-          "icon": "cards",
-          "group": "Services"
-        },
-        {
-          "label": "Meditations",
-          "href": "/services#meditations",
-          "body": "Sound, breath, bowl, water, chanting, and guided sitting.",
-          "tone": "green",
-          "icon": "moon",
-          "group": "Services"
-        },
-        {
-          "label": "Healings",
-          "href": "/services#course-healings",
-          "body": "A course in the healing modalities.",
-          "tone": "blue",
-          "icon": "heart",
-          "group": "Courses"
-        },
-        {
-          "label": "Ritual Castings",
-          "href": "/services#course-ritual-castings",
-          "body": "A course in candle rituals.",
-          "tone": "red",
-          "icon": "flame",
-          "group": "Courses"
-        },
-        {
-          "label": "Divinations",
-          "href": "/services#course-divinations",
-          "body": "A course in tarot, dowsing, smoke, and runes.",
-          "tone": "violet",
-          "icon": "cards",
-          "group": "Courses"
-        },
-        {
-          "label": "Meditations",
-          "href": "/services#course-meditations",
-          "body": "A course in the meditation sittings.",
-          "tone": "green",
-          "icon": "moon",
-          "group": "Courses"
-        }
-      ]
+      "menu": []
+    },
+    {
+      "label": "Courses",
+      "href": "/courses",
+      "menu": []
     },
     {
       "label": "Products",
@@ -92,7 +32,7 @@
         {
           "label": "Crystals",
           "href": "/products#crystals",
-          "body": "Crystals matched to the issue you are working with.",
+          "body": "A stone for the issue you are in, charged before it leaves.",
           "tone": "violet",
           "icon": "spark",
           "group": "Products"
@@ -100,7 +40,7 @@
         {
           "label": "Healing kits",
           "href": "/products#healing-kits",
-          "body": "Healing tools gathered for the technique the work needs.",
+          "body": "More than one tool, gathered for the method you will use at home.",
           "tone": "blue",
           "icon": "heart",
           "group": "Products"
@@ -108,7 +48,7 @@
         {
           "label": "Ritual casting tools",
           "href": "/products#ritual-casting-tools",
-          "body": "Tools for candle magic and ritual casting.",
+          "body": "What the candle work needs, explained before you begin.",
           "tone": "amber",
           "icon": "flame",
           "group": "Products"
@@ -117,37 +57,40 @@
     }
   ],
   "footer": {
-    "blurb": "Holistic healing, tarot, and Vedic guidance with Priya. Courses, services, and products in one place.",
+    "blurb": "Healing, tarot, and Vedic work with Priya. Sittings, courses, and charged tools from Dehradun.",
     "explore": {
       "title": "Explore",
       "links": [
         { "label": "Home", "href": "/" },
         { "label": "About", "href": "/about" },
         { "label": "Services", "href": "/services" },
+        { "label": "Courses", "href": "/courses" },
         { "label": "Products", "href": "/products" },
-        { "label": "Contact", "href": "/contacts" }
+        { "label": "Contact", "href": "/contacts" },
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Reviews", "href": "/reviews" }
       ]
     },
     "services": {
       "title": "Services",
       "links": [
-        { "label": "Healings", "href": "/services#healings" },
-        { "label": "Ritual Castings", "href": "/services#ritual-castings" },
-        { "label": "Akashic Records", "href": "/services#akashic-records" },
-        { "label": "PLR Therapy", "href": "/services#plr" },
-        { "label": "Hoodoo", "href": "/services#hoodoo" },
-        { "label": "Divinations", "href": "/services#divinations" },
-        { "label": "Meditations", "href": "/services#meditations" }
+        { "label": "Healings", "href": "/services/healings" },
+        { "label": "Ritual Castings", "href": "/services/ritual-castings" },
+        { "label": "Akashic Records", "href": "/services/akashic-records" },
+        { "label": "PLR Therapy", "href": "/services/plr" },
+        { "label": "Hoodoo", "href": "/services/hoodoo" },
+        { "label": "Divinations", "href": "/services/divinations" },
+        { "label": "Meditations", "href": "/services/meditations" }
       ],
       "coursesTitle": "Courses",
       "courses": [
-        { "label": "Healings", "href": "/services#course-healings" },
-        { "label": "Ritual Castings", "href": "/services#course-ritual-castings" },
-        { "label": "Akashic Records", "href": "/services#course-akashic-records" },
-        { "label": "PLR Therapy", "href": "/services#course-plr" },
-        { "label": "Hoodoo", "href": "/services#course-hoodoo" },
-        { "label": "Divinations", "href": "/services#course-divinations" },
-        { "label": "Meditations", "href": "/services#course-meditations" }
+        { "label": "Healings", "href": "/courses/healings" },
+        { "label": "Ritual Castings", "href": "/courses/ritual-castings" },
+        { "label": "Akashic Records", "href": "/courses/akashic-records" },
+        { "label": "PLR Therapy", "href": "/courses/plr" },
+        { "label": "Hoodoo", "href": "/courses/hoodoo" },
+        { "label": "Divinations", "href": "/courses/divinations" },
+        { "label": "Meditations", "href": "/courses/meditations" }
       ]
     },
     "social": {

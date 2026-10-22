@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { FaqList } from "@/components/faq-list";
 import { ContactBand, Spotlight } from "@/components/home-sections";
-import { Lines, Reveal } from "@/components/ui";
-import { getContacts, getCourses, getProducts, getServices, getSite, offeringNames } from "@/lib/content";
+import { Lines, LinkedCopy, Reveal } from "@/components/ui";
+import { catalogTitles, getContacts, getProducts, getSite } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getContacts();
@@ -13,9 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ContactsPage() {
   const page = await getContacts();
   const site = getSite();
-  const services = await getServices();
-  const courses = await getCourses();
   const products = await getProducts();
+  const offerings = catalogTitles();
 
   return (
     <main>
@@ -34,13 +33,15 @@ export default async function ContactsPage() {
             <h2 className="max-w-md text-[clamp(32px,4vw,48px)] font-medium leading-[1.18] tracking-[-0.03em] text-ink">
               <Lines text={page.form.title} />
             </h2>
-            <p className="mt-4 max-w-md text-[16px] leading-6 text-zinc-600">{page.form.body}</p>
+            <p className="mt-4 max-w-md text-[16px] leading-6 text-zinc-600">
+              <LinkedCopy text={page.form.body} />
+            </p>
           </Reveal>
           <Reveal>
             <ContactForm
               form={page.form}
-              services={offeringNames(services.features)}
-              courses={offeringNames(courses.items)}
+              services={offerings}
+              courses={offerings}
               products={products.items.map((item) => item.name)}
             />
           </Reveal>

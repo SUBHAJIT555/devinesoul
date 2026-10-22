@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { FormEvent } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { ContactsContent } from "@/lib/types";
+import { LinkedCopy } from "@/components/ui";
 
 const fieldClass =
   "h-12 w-full rounded-2xl bg-mist px-4 text-[15px] font-normal text-ink outline-none focus:bg-white focus:shadow-[inset_0_0_0_1.5px_#00a7f5]";
@@ -51,7 +52,7 @@ export function ContactForm({
           animate={{ opacity: 1, y: 0 }}
           exit={reduce ? undefined : { opacity: 0, y: -8 }}
         >
-          {form.success}
+          <LinkedCopy text={form.success} />
         </motion.p>
       ) : (
         <motion.form
@@ -210,37 +211,41 @@ function Menu({
       </button>
       <input type="hidden" name={name} value={value} />
       {open ? (
-        <ul
-          role="listbox"
-          aria-labelledby={`${name}-label`}
-          className="absolute top-[calc(100%+8px)] z-30 w-max min-w-full rounded-[20px] border border-black/6 bg-white p-1.5 shadow-[0_16px_40px_rgba(0,0,0,0.12)]"
-        >
-          {options.map((option) => {
-            const selected = value === option;
+        <div className="absolute top-[calc(100%+8px)] z-30 w-full overflow-hidden rounded-[20px] border border-black/6 bg-white shadow-[0_16px_40px_rgba(0,0,0,0.12)]">
+          <ul
+            role="listbox"
+            aria-labelledby={`${name}-label`}
+            data-lenis-prevent
+            className="quiet-scroll max-h-60 overflow-y-auto overscroll-contain p-1.5"
+          >
+            {options.map((option) => {
+              const selected = value === option;
 
-            return (
-              <li key={option}>
-                <button
-                  type="button"
-                  role="option"
-                  aria-selected={selected}
-                  onClick={() => {
-                    setValue(option);
-                    onClose();
-                  }}
-                  className={`flex w-full items-center justify-between gap-3 rounded-2xl px-3 py-2.5 text-left text-[15px] leading-5 text-ink ${selected ? "bg-[#dff2fe]" : "hover:bg-mist"}`}
-                >
-                  <span className="whitespace-nowrap">{option}</span>
-                  {selected ? (
-                    <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-[#00a7f5]" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
-                      <path d="M5 12.5 9.2 17 19 7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ) : null}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+              return (
+                <li key={option}>
+                  <button
+                    type="button"
+                    role="option"
+                    aria-selected={selected}
+                    onClick={() => {
+                      setValue(option);
+                      onClose();
+                    }}
+                    className={`flex w-full items-center justify-between gap-3 rounded-2xl px-3 py-2.5 text-left text-[15px] leading-5 text-ink ${selected ? "bg-[#dff2fe]" : "hover:bg-mist"}`}
+                  >
+                    <span className="min-w-0 text-pretty">{option}</span>
+                    {selected ? (
+                      <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-[#00a7f5]" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
+                        <path d="M5 12.5 9.2 17 19 7" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    ) : null}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-7 bg-gradient-to-t from-white to-transparent" />
+        </div>
       ) : null}
     </div>
   );

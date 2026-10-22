@@ -1,10 +1,10 @@
 {
-  "seoTitle": "Divine Souls By Priya — Awaken your spiritual journey",
-  "description": "Experience transformative healing and spiritual guidance tailored to your unique path with our expert, Priya, and her holistic practices.",
+  "seoTitle": "Divine Souls By Priya — Healing, tarot, and Vedic sittings in Dehradun",
+  "description": "Priya holds healing sittings, tarot readings, and Vedic work in Dehradun. Fifteen years in practice. Write or WhatsApp to begin.",
   "hero": {
-    "headline": "Awaken your spiritual\njourney in one place",
-    "subhead": "Experience transformative healing and spiritual guidance tailored to your unique path with our expert, Priya, and her holistic practices.",
-    "cta": "Get started",
+    "headline": "When something will not settle,\ncome sit with Priya.",
+    "subhead": "Healing, tarot, and Vedic work — in Dehradun, or by message if you cannot travel.",
+    "cta": "Contact Now",
     "ctaHref": "/contacts",
     "whatsapp": "WhatsApp",
     "whatsappHref": "https://wa.me/917668648224",
@@ -12,7 +12,7 @@
     "ratingHref": "https://www.google.com/maps/place/Divine+Souls/@20.7572373,72.1085035,5z/data=!4m8!3m7!1s0x3be04dcf4d001d75:0x7f2ddcbbbcbefc00!8m2!3d21.0680074!4d82.7525294!9m1!1b1!16s%2Fg%2F11f55jgcmh"
   },
   "logos": {
-    "label": "A path through",
+    "label": "The practice holds",
     "names": [
       "Holistic healing",
       "Tarot",
@@ -23,12 +23,12 @@
     ]
   },
   "statement": {
-    "line1": "Ready to transform your life,",
-    "line2": "and walk it with Priya.",
+    "line1": "Come with the thing that keeps you up.",
+    "line2": "Priya will sit with it.",
     "chapters": [
       { "id": "healing", "label": "Holistic Healing" },
-      { "id": "readings", "label": "Tarot Card" },
-      { "id": "vedic", "label": "Vedic Healing" }
+      { "id": "readings", "label": "Tarot" },
+      { "id": "vedic", "label": "Vedic Work" }
     ]
   },
   "stories": [
@@ -36,127 +36,135 @@
       "id": "healing",
       "badge": "Healing",
       "tone": "blue",
-      "title": "Holistic healing, shaped around you.",
-      "intro": "Sessions are tailored to the person in front of Priya, so the work can reach mind, body, and spirit together.",
+      "title": "A sitting for the person in the chair.",
+      "intro": "Priya listens first. Then she chooses the healing that fits what you walked in with — not a package, not a script.",
       "align": "left",
       "image": "/media/meditation.jpg",
       "quote": {
-        "text": "Her healing sessions brought me peace I never thought possible.",
-        "role": "Client",
-        "place": "Healing session"
+        "text": "My entire perception regarding life was changed after the healing sessions.",
+        "role": "Ritu Hariyani",
+        "place": "Client"
       }
     },
     {
       "id": "readings",
       "badge": "Tarot",
       "tone": "violet",
-      "title": "A reading that names what is already asking.",
-      "intro": "Tarot and divination for clarity. You leave with the truth that needed a voice, and a sense of the next step.",
+      "title": "A reading that tells you the truth.",
+      "intro": "Cards on the table, a straight conversation. You leave knowing what is going on, and what to do next.",
       "align": "right",
       "image": "/media/mark.jpg",
       "quote": {
-        "text": "Her tarot reading unveiled truths I needed to confront.",
-        "role": "Client",
-        "place": "Tarot reading"
+        "text": "So many times she answered me about the questions which I never asked her.",
+        "role": "Deboshree Chatterjee",
+        "place": "Client"
       }
     },
     {
       "id": "vedic",
       "badge": "Vedic",
       "tone": "orange",
-      "title": "Ancient practice, held for real life.",
-      "intro": "Vedic healing, candle magic, and meditation sit in the same house. The method is old. The session is for the life you are actually living.",
+      "title": "Old work, for the week you go back to.",
+      "intro": "Candle ritual, Vedic healing, and meditation live in the same house. The method is old. The hour is about your actual life.",
       "align": "left",
       "image": "/media/candles.jpg",
       "points": [
-        "Vedic healing techniques",
-        "Candle magic and ritual",
-        "Meditation toward the higher self"
+        "Vedic healing, held for the matter you bring",
+        "Candle work and ritual, named and set",
+        "Meditation you can keep after the hour"
       ]
     }
   ],
   "compare": {
-    "eyebrow": "One sitting",
-    "title": "From a quiet altar to a guided session.",
-    "body": "Drag across the frame. Candle work and a healing session belong to the same practice.",
+    "eyebrow": "One practice",
+    "title": "Candle work. Then the sitting.",
+    "body": "Slide the handle. Both belong to the same room.",
     "before": "Candle work",
-    "after": "A session",
+    "after": "A sitting",
     "beforeImage": "/media/candles.jpg",
-    "afterImage": "/media/practice-b.jpg"
+    "afterImage": "/media/practice-b.jpg",
+    "actions": [
+      { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
+      { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp" }
+    ]
   },
   "bento": {
-    "eyebrow": "Why Priya",
-    "title": "Experience the Divine Souls difference.",
+    "eyebrow": "Why people come",
+    "title": "What people come here for.",
     "items": [
       {
         "icon": "user-heart",
-        "title": "Personalized care",
-        "body": "Every session is tailored, so the healing stays personal and specific to you."
+        "title": "One person, one sitting",
+        "body": "She works with whoever is in front of her. No two hours look the same."
       },
       {
         "icon": "shield-check",
-        "title": "Expertise you can trust",
-        "body": "Priya’s knowledge of healing traditions keeps the guidance rooted, and aimed at real results."
+        "title": "Years in the craft",
+        "body": "Lama Fera Grandmaster, High Priestess of ITW, and a meditation teacher. Fifteen years, not a weekend course."
       },
       {
         "icon": "yin-yang",
-        "title": "Holistic integration",
-        "body": "Mind, body, and spirit are addressed together, not as three separate appointments."
+        "title": "The whole of you",
+        "body": "Healing, cards, and ritual can sit in one hour. You do not need three appointments."
       },
       {
         "icon": "cards",
-        "title": "Tarot readings",
-        "body": "Card work that helps you face what is already present, then choose a next step."
+        "title": "A reading you can use",
+        "body": "Tarot that names what is already true, then points to the next honest step."
       },
       {
         "icon": "sun",
-        "title": "Vedic techniques",
-        "body": "Healing drawn from Vedic practice, brought into the life you return to after the session."
+        "title": "Work you take home",
+        "body": "Vedic practice and charged tools, so the sitting does not end at the door."
       },
       {
         "icon": "route",
-        "title": "A path you can continue",
-        "body": "Courses, charged tools, and another conversation when the work needs to go further."
+        "title": "When one hour is not enough",
+        "body": "Courses, kits, and another conversation if the work needs more time."
       }
     ]
   },
   "spotlight": {
     "eyebrow": "The work",
-    "title": "Intention is what\nshapes the healing.\n",
-    "body": "Priya teaches that the practice has no color of its own. Intention is the force behind growth. Sessions combine holistic healing, tarot, and Vedic technique so the whole person is met.",
+    "title": "Magic has no colour.\nIntention does.",
+    "body": "Priya does not split this work into black or white. What you bring, and why you bring it, is what shapes the hour.",
     "points": [
-      "More than fifteen years in the work",
-      "Over 150 clients already guided",
-      "In Dehradun and by message"
+      "15+ years in the work",
+      "150+ people already guided",
+      "In Dehradun, and by message"
+    ],
+    "actions": [
+      { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
+      { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp" }
     ]
   },
   "steps": {
     "eyebrow": "Begin",
-    "title": "From the first look\nto a real conversation.\n",
+    "title": "How it usually starts.",
     "items": [
       {
         "index": "01",
-        "title": "Name what you carry",
-        "body": "A question, a season, or something you cannot quite say yet. That is enough to start.",
+        "title": "Tell her what is going on",
+        "body": "A question, a season, or something you cannot name yet. That is enough.",
         "image": "/illustrations/carry.svg"
       },
       {
         "index": "02",
-        "title": "Choose the form",
-        "body": "A healing session, a tarot reading, a course, or a tool charged for your situation.",
+        "title": "She will say what fits",
+        "body": "A healing sitting, a reading, a course, or a tool charged for your situation.",
         "image": "/illustrations/choose.svg"
       },
       {
         "index": "03",
-        "title": "Reach Priya",
-        "body": "Call, email, or send a note. The practice is in Dehradun, and the first conversation can begin from anywhere.",
+        "title": "You sit",
+        "body": "In Dehradun, or from where you are. Call, write, or send a WhatsApp.",
         "image": "/illustrations/reach.svg"
       }
     ]
   },
   "voices": {
-    "title": "Hear from people who have sat with Priya.",
-    "cta": "Read all Testimonials",
+    "title": "People who have sat with her.",
+    "cta": "Read the Google reviews",
     "href": "https://www.google.com/maps?cid=9164223515652455424",
     "items": [
       {
@@ -210,16 +218,16 @@
     ]
   },
   "plans": {
-    "title": "A practice with time behind it.",
-    "note": "Sessions, courses, and charged tools. Ask Priya which one fits.",
+    "title": "Fifteen years behind the work.",
+    "note": "Ask Priya which sitting fits. Do not guess from a list.",
     "items": [
       {
         "name": "Experience",
         "tag": "Years of practice",
         "price": "15+",
         "unit": "years",
-        "cadence": "Priya has spent more than fifteen years in healing traditions.",
-        "cta": "Talk to us",
+        "cadence": "More than fifteen years with these traditions.",
+        "cta": "Contact Now",
         "href": "/contacts",
         "featured": true,
         "points": [
@@ -232,15 +240,15 @@
         "name": "People guided",
         "tag": "Clients healed",
         "price": "150+",
-        "unit": "clients",
-        "cadence": "People who have already walked a session, a reading, or a longer path.",
-        "cta": "Get started",
-        "href": "/contacts",
+        "unit": "people",
+        "cadence": "People who have already sat for a healing, a reading, or a longer path.",
+        "cta": "WhatsApp",
+        "href": "https://wa.me/917668648224",
         "featured": false,
         "points": [
-          "Care tailored to one person",
-          "Mind, body, and spirit together",
-          "A way to continue through courses"
+          "One person at a time",
+          "Mind, body, and the rest of you",
+          "Courses when the work needs more"
         ]
       }
     ],
@@ -254,25 +262,25 @@
       "Crystals",
       "Healing kits",
       "Ritual tools",
-      "Private sessions",
+      "Private sittings",
       "Dehradun",
       "Direct contact"
     ]
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "A note is enough to begin.",
+    "title": "A few lines is enough.",
     "cards": [
       {
-        "title": "We're here to help",
-        "body": "A question about a session, a course, or a charged tool. Write Priya, and the first conversation can start from anywhere.",
-        "cta": "Contact us",
+        "title": "Write to Priya",
+        "body": "A sitting, a course, or a charged piece. Leave your name and a number. She will take it from there.",
+        "cta": "Contact Now",
         "href": "/contacts",
         "icon": "help"
       },
       {
-        "title": "Ready for a longer path?",
-        "body": "A healing session, a tarot reading, or a course. Tell Priya what you are carrying, and she will say which form fits.",
+        "title": "Prefer WhatsApp?",
+        "body": "Say what you are carrying. She will tell you which sitting fits.",
         "cta": "WhatsApp",
         "href": "https://wa.me/917668648224",
         "icon": "people",
@@ -318,35 +326,35 @@
     ]
   },
   "faq": {
-    "title": "Frequently asked questions",
-    "intro": "A few practical answers. For anything personal, call or write Priya directly.",
+    "title": "Things people ask first",
+    "intro": "The practical bits. The rest can wait until you speak.",
     "items": [
       {
-        "q": "What does Divine Souls offer?",
-        "a": "Holistic healing, tarot card readings, and Vedic healing techniques. Courses cover candle magic, ritual, divination, and meditation. Products include crystals, healing kits, and ritual tools."
+        "q": "Do I have to know which sitting I want?",
+        "a": "No. Tell Priya what is going on. She will say whether it is a healing, a reading, a course, or something to take home."
       },
       {
-        "q": "Who guides the sessions?",
-        "a": "Priya. She is a Lama Fera Grandmaster, High Priestess of ITW, and a meditation instructor, with more than fifteen years in the work."
+        "q": "Can she work with me if I am not in Dehradun?",
+        "a": "Yes. The room is in Dehradun, and a lot of the work can be held at a distance. Say which you need when you write."
       },
       {
-        "q": "Where is the practice?",
-        "a": "Dehradun, India. You can also reach Priya by phone at +91 7668648224 or by email at priyasinha1809@gmail.com."
+        "q": "How do I start?",
+        "a": "A few lines is enough. WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Leave your name, a number, and what you want to work on."
       },
       {
-        "q": "How do I begin?",
-        "a": "Send a note, call, or email. Sessions are tailored, so the first message only needs to say what you are hoping to work with."
+        "q": "How long is a sitting?",
+        "a": "It depends on the work. Priya will tell you before you sit, so you are not guessing."
       },
       {
-        "q": "What can I take home?",
-        "a": "Crystals chosen for elemental correction, healing kits, and tools for ritual casting. Each one is divinely charged and matched to the person."
+        "q": "Is this a religion I have to join?",
+        "a": "No. People come with a problem, a question, or a stretch of life that will not settle. You leave with the next step. You do not have to take on a faith."
       }
     ]
   },
   "closing": {
-    "title": "Begin your healing\njourney today.",
-    "body": "Connect with Priya and see how holistic healing, tarot, and Vedic guidance can meet your path.",
-    "cta": "Get started",
+    "title": "When you are ready,\nwrite.",
+    "body": "Priya is in Dehradun. The first note can come from anywhere.",
+    "cta": "Contact Now",
     "href": "/contacts"
   },
   "ribbon": [

@@ -1,39 +1,39 @@
 {
   "title": "Products",
-  "description": "Divinely charged crystals, healing kits, and ritual tools from Divine Souls By Priya.",
+  "description": "Crystals, healing kits, and ritual tools from Priya in Dehradun. Chosen for the person and the issue, then charged before they leave.",
   "hero": {
     "eyebrow": "Products",
-    "title": "Divinely charged,\ntailored to you.",
-    "body": "Crystals, healing kits, and ritual tools. Each one is chosen for the person and the issue, not pulled from a generic shelf.",
+    "title": "She charges it.\nYou take it home.",
+    "body": "A crystal, a kit, or the tools for a ritual. Write her the issue. She picks the piece, charges it, and tells you how to use it.",
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
     "whatsappHref": "https://wa.me/917668648224",
-    "notes": ["Crystals, kits, and ritual tools", "Charged for the person who asks"],
+    "notes": ["Crystals, kits, and ritual tools", "Named after she hears you"],
     "image": "/media/practice-a.jpg",
     "imageAlt": "Stones set out for a healing piece"
   },
   "intro": {
     "chip": "Products",
-    "title": "Crystals, kits, and ritual tools."
+    "title": "Three kinds of piece.\nAll of them named to you."
   },
   "items": [
     {
       "name": "Crystals",
-      "summary": "Customized crystals for elemental correction, matched to the issue you are working with.",
+      "summary": "A stone for the issue you are in — elemental correction, not a pretty object from a tray. She names it, then charges it, then it leaves.",
       "tone": "violet",
       "image": "/media/mark.jpg",
       "imageAlt": "Crystals and a card laid out for a reading",
       "align": "left",
       "points": [
-        "Chosen for your situation",
+        "Matched to the issue",
         "Used in elemental correction",
         "Charged before they leave"
       ]
     },
     {
       "name": "Healing kits",
-      "summary": "A combination of healing tools, gathered for the technique the work actually needs.",
+      "summary": "A small set of tools for the method you will actually use at home. She will say what is in it, why, and what to do first.",
       "tone": "blue",
       "image": "/media/practice-b.jpg",
       "imageAlt": "A singing bowl held during a healing",
@@ -46,14 +46,14 @@
     },
     {
       "name": "Ritual casting tools",
-      "summary": "Tools used for performing rituals, including the work of candle magic and casting.",
+      "summary": "What a candle working needs. She will say which tools, how they are held, and what she needs from you before you begin.",
       "tone": "orange",
       "image": "/media/candles.jpg",
       "imageAlt": "A candle prepared for ritual work",
       "align": "left",
       "points": [
         "Made for ritual use",
-        "Matched to the casting",
+        "Matched to the working",
         "Explained before you begin"
       ]
     }
@@ -62,20 +62,71 @@
     "title": "What every piece keeps.",
     "items": [
       {
+        "icon": "tag",
         "title": "A plain name",
         "body": "Crystal, kit, or tool. Something you can ask for again."
       },
       {
+        "icon": "focus",
         "title": "A reason",
-        "body": "Elemental correction, a healing technique, or a ritual. One job."
+        "body": "One job — a correction, a method, or a ritual. Not a mixed bag."
       },
       {
+        "icon": "sun",
         "title": "A charge",
-        "body": "Divinely charged, and tailored rather than sold as a generic object."
+        "body": "Done for the person who asked. Nothing leaves as a generic object."
       },
       {
+        "icon": "message",
         "title": "A way to ask",
-        "body": "Write Priya with the situation. She can say which piece belongs with it."
+        "body": "Write the situation. The product name can wait."
+      }
+    ]
+  },
+  "faq": {
+    "title": "About the pieces",
+    "intro": "What people ask before they take something home.",
+    "items": [
+      {
+        "q": "Do I pick the crystal myself?",
+        "a": "No. Tell her the issue. She will say which stone, kit, or tool belongs with it. If you already have a name in mind, write that too."
+      },
+      {
+        "q": "Are these sitting on a shelf?",
+        "a": "No. The piece is chosen after she hears you, then charged before it leaves. That is why a short note comes first."
+      },
+      {
+        "q": "Can I use a kit without a sitting?",
+        "a": "Sometimes. She will say if the kit is enough on its own, or if a sitting should come first."
+      },
+      {
+        "q": "Can you send it if I am not in Dehradun?",
+        "a": "Yes, once she has named the piece. Say where you are when you write."
+      },
+      {
+        "q": "How do I ask for one?",
+        "a": "WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Name the issue. The product name can wait."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Ask for the piece,\nnot the name.",
+    "cards": [
+      {
+        "title": "Write what the issue is",
+        "body": "A crystal, a kit, or a ritual tool. Leave your name and a number. She will say which piece fits.",
+        "cta": "Contact Now",
+        "href": "/contacts",
+        "icon": "help"
+      },
+      {
+        "title": "Prefer WhatsApp?",
+        "body": "Send the situation in a few lines. She will tell you what to take home.",
+        "cta": "WhatsApp",
+        "href": "https://wa.me/917668648224",
+        "icon": "people",
+        "external": true
       }
     ]
   },

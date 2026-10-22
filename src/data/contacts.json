@@ -1,21 +1,21 @@
 {
   "title": "Contacts",
-  "description": "Call, email, or write Divine Souls By Priya in Dehradun.",
+  "description": "Call, email, or write Priya in Dehradun. A few lines is enough to begin.",
   "reach": {
     "eyebrow": "Contacts",
-    "title": "Reach Divine Souls By Priya however you like.",
+    "title": "A few lines\nis enough.",
     "cards": [
       {
-        "title": "A free consultation",
-        "body": "Use the form on this page. Leave your name, a number, and whether it is a session, a course, or a charged piece.",
-        "cta": "Send a note",
+        "title": "Write on this page",
+        "body": "Your name, a number she can reach, and what you want — a sitting, a course, or a piece. She will take it from there.",
+        "cta": "Leave a note",
         "href": "#request",
         "icon": "help"
       },
       {
-        "title": "A query on WhatsApp",
-        "body": "Send your name and a short note. Priya can answer there and keep the conversation going.",
-        "cta": "WhatsApp for your query",
+        "title": "Or WhatsApp",
+        "body": "Faster if you already know what you need. Send the same few lines there.",
+        "cta": "WhatsApp",
         "href": "https://wa.me/917668648224",
         "icon": "people",
         "external": true
@@ -25,77 +25,85 @@
       {
         "name": "Instagram",
         "handle": "@divinesoulsbypriya",
-        "body": "Moments from the work",
+        "body": "Notes from the practice",
         "href": "https://www.instagram.com/divinesoulsbypriya/",
         "tone": "instagram"
       },
       {
         "name": "Facebook",
         "handle": "Divine Souls",
-        "body": "The practice, in public",
+        "body": "Updates and gatherings",
         "href": "https://www.facebook.com/divinesoulsindia",
         "tone": "facebook"
       },
       {
         "name": "WhatsApp",
         "handle": "917668648224",
-        "body": "A private reply",
+        "body": "A direct conversation",
         "href": "https://wa.me/917668648224",
         "tone": "whatsapp"
       },
       {
         "name": "Email",
         "handle": "priyasinha1809@gmail.com",
-        "body": "For a longer letter",
+        "body": "Write when you are ready",
         "href": "mailto:priyasinha1809@gmail.com",
         "tone": "mail"
       },
       {
         "name": "Location",
         "handle": "Dehradun",
-        "body": "See it on the map",
+        "body": "Find the practice",
         "href": "https://www.google.com/maps/place/Divine+Souls/@21.0680074,82.7525294,5z/data=!3m1!4b1!4m6!3m5!1s0x3be04dcf4d001d75:0x7f2ddcbbbcbefc00!8m2!3d21.0680074!4d82.7525294!16s%2Fg%2F11f55jgcmh",
         "tone": "location"
       }
     ]
   },
   "visit": {
-    "title": "Based in\nDehradun",
-    "body": "Sessions can also begin by message.",
+    "title": "The room is in\nDehradun",
+    "body": "The first note can come from anywhere. A sitting can be held here, or at a distance.",
     "actions": [
       {
-        "label": "Call for free consultation",
+        "label": "Call now",
         "href": "tel:+917668648224",
         "variant": "primary"
       },
       {
-        "label": "WhatsApp for your query",
+        "label": "WhatsApp",
         "href": "https://wa.me/917668648224",
-        "variant": "secondary"
+        "variant": "whatsapp"
       }
     ]
   },
   "form": {
-    "title": "Send a note",
-    "body": "This form confirms on the page. It does not deliver yet. To reach Priya now, call +91 7668648224 or email priyasinha1809@gmail.com.",
-    "submit": "Submit your request",
-    "success": "Received on this page. Nothing was sent on. Email priyasinha1809@gmail.com or call +91 7668648224 and Priya can pick it up."
+    "title": "Leave a note",
+    "body": "Name, a number, and what you are asking for. To reach her today, WhatsApp +91 7668648224 or email priyasinha1809@gmail.com.",
+    "submit": "Send the note",
+    "success": "Saved on this page. To reach Priya now, WhatsApp +91 7668648224 or email priyasinha1809@gmail.com."
   },
   "faq": {
     "title": "Before you write",
-    "intro": "The practical details. The personal part can wait for the conversation.",
+    "intro": "The practical bits. The rest can wait until you speak.",
     "items": [
       {
         "q": "Where do messages go?",
-        "a": "The form on this page only confirms what you typed. Call +91 7668648224 or email priyasinha1809@gmail.com to reach Priya."
+        "a": "The form on this page only confirms what you typed. To reach Priya, WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or call the same number."
       },
       {
         "q": "What should I include?",
-        "a": "Your name, a number Priya can reach, and which service, course, or product you have in mind. A short message is enough to start."
+        "a": "Your name, a number she can reach, and what you want — a sitting, a course, or a piece. A few lines is enough."
       },
       {
         "q": "Do I have to be in Dehradun?",
-        "a": "No. The practice is based in Dehradun, and Vedic healing can also be offered at a distance. Say which you need."
+        "a": "No. The room is in Dehradun. A lot of the work can be held at a distance. Say which you need."
+      },
+      {
+        "q": "Can I call first?",
+        "a": "Yes. Call +91 7668648224. A short first conversation is normal. If she is in a sitting, leave a WhatsApp."
+      },
+      {
+        "q": "How soon will she reply?",
+        "a": "Usually the same day, sometimes the next. WhatsApp is the fastest. Email priyasinha1809@gmail.com if you want a longer letter."
       }
     ]
   }

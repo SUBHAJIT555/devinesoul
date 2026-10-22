@@ -1,10 +1,9 @@
 import Image from "next/image";
 import type { HomeContent } from "@/lib/types";
-import { Button, Check, Lines, Reveal, SectionHeading } from "@/components/ui";
+import { Button, Check, Lines, Reveal, SectionHeading, WhatsAppIcon } from "@/components/ui";
 import { Compare } from "@/components/compare";
 import { FaqList } from "@/components/faq-list";
 import { TestimonialsColumns } from "@/components/testimonials-columns";
-import { div } from "motion/react-client";
 
 const stage: Record<HomeContent["stories"][number]["tone"], string> = {
   blue: "bg-[#dff2fe]",
@@ -275,11 +274,12 @@ function StoryArt({
 export function CompareBand({ compare }: { compare: HomeContent["compare"] }) {
   return (
     <section className="bg-white px-5 pb-20 pt-10">
-      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-20">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-12">
         <Reveal className="flex flex-col items-center text-center">
           <h2 className="max-w-[600px] text-[clamp(32px,4vw,48px)] font-medium leading-[1.2] tracking-[-0.03em] text-ink">
             {compare.title}
           </h2>
+          {compare.body ? <p className="mt-4 max-w-[480px] text-[16px] leading-6 text-zinc-500">{compare.body}</p> : null}
         </Reveal>
         <Reveal delay={0.08} className="w-full rounded-[30px] bg-mist p-5">
           <Compare
@@ -289,6 +289,16 @@ export function CompareBand({ compare }: { compare: HomeContent["compare"] }) {
             afterSrc={compare.afterImage}
           />
         </Reveal>
+        {compare.actions?.length ? (
+          <Reveal delay={0.12} className="flex flex-wrap items-center justify-center gap-3">
+            {compare.actions.map((action) => (
+              <Button key={action.href + action.label} href={action.href} variant={action.variant ?? "primary"}>
+                {action.variant === "whatsapp" ? <WhatsAppIcon /> : null}
+                {action.label}
+              </Button>
+            ))}
+          </Reveal>
+        ) : null}
       </div>
     </section>
   );
@@ -385,6 +395,19 @@ function FeatureIcon({ name }: { name: string }) {
           <path d="M19 12h2" />
         </>
       ) : null}
+      {name === "tag" ? (
+        <>
+          <path d="M7.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          <path d="M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" />
+        </>
+      ) : null}
+      {name === "message" ? (
+        <>
+          <path d="M8 9h8" />
+          <path d="M8 13h6" />
+          <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3z" />
+        </>
+      ) : null}
     </svg>
   );
 }
@@ -453,6 +476,7 @@ export function Spotlight({
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               {spotlight.actions.map((action) => (
                 <Button key={action.href + action.label} href={action.href} variant={action.variant ?? "primary"}>
+                  {action.variant === "whatsapp" ? <WhatsAppIcon /> : null}
                   {action.label}
                 </Button>
               ))}
@@ -505,14 +529,9 @@ export function Steps({ steps }: { steps: HomeContent["steps"] }) {
                 <p className="max-w-md text-[16px] leading-6 text-zinc-600">{item.body}</p>
                 {index === steps.items.length - 1 ? (
                   <div className="mt-6 flex flex-wrap items-center gap-3">
-                    <Button href="/contacts">Contact us</Button>
+                    <Button href="/contacts">Contact Now</Button>
                     <Button href="https://wa.me/917668648224" variant="whatsapp" external>
-                      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" aria-hidden="true">
-                        <path
-                          fill="currentColor"
-                          d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10 10 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.9c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.14-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.16-1.54-1.16-2.94s.73-2.08 1-2.37c.24-.28.64-.41 1.02-.41.12 0 .23 0 .33.01.3.01.44.03.64.49.24.57.82 1.98.89 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.56.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.28.14.44.12.6-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.46.21.53.33.07.12.07.68-.17 1.36z"
-                        />
-                      </svg>
+                      <WhatsAppIcon />
                       WhatsApp
                     </Button>
                   </div>

@@ -59,14 +59,18 @@ function Column({
   );
 }
 
-function QuoteCard({ item }: { item: Quote }) {
+export function QuoteCard({ item }: { item: Quote }) {
   return (
     <figure className="flex flex-col gap-5 rounded-xl bg-mist p-5 shadow-[0_8px_19.1px_-7px_rgba(0,0,0,0.06)] border-b border-black/7">
-      <blockquote className="text-[14px] leading-[21px] tracking-[-0.03em] text-black">{item.text}</blockquote>
+      {item.text ? <blockquote className="text-[14px] leading-[21px] tracking-[-0.03em] text-black">{item.text}</blockquote> : null}
       <figcaption className="flex items-center gap-2">
         {item.image ? (
           <img src={item.image} alt="" className="h-[46px] w-[46px] shrink-0 rounded-full object-cover" />
-        ) : null}
+        ) : (
+          <span className="grid h-[46px] w-[46px] shrink-0 place-items-center rounded-full bg-white text-[14px] font-semibold tracking-[-0.03em] text-ink">
+            {item.role.trim().charAt(0)}
+          </span>
+        )}
         <span className="min-w-0">
           <span className="block text-[14px] font-semibold leading-[16.8px] tracking-[-0.03em] text-black">{item.role}</span>
           <span className="mt-1 block">

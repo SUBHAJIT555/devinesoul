@@ -1,27 +1,27 @@
 {
   "title": "Services",
-  "description": "Healings, candle rituals, Akashic records, past-life regression, Hoodoo, divination, and meditation with Divine Souls By Priya. Courses sit inside the same practice.",
+  "description": "Healing sittings, candle rituals, Akashic records, past-life regression, Hoodoo, readings, and meditation with Priya in Dehradun — or at a distance.",
   "hero": {
     "eyebrow": "Services",
-    "title": "Divine\nAssistance.",
-    "body": "Explore a world of Divinely charged techniques to solve your issues. The courses live here too, as part of the same practice.",
+    "title": "The sittings\nshe holds.",
+    "body": "Healing, ritual, records, readings, and meditation. In Dehradun, or at a distance. If you are not sure which one, write first.",
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
     "whatsappHref": "https://wa.me/917668648224",
-    "notes": ["Healings, ritual, readings, and meditation", "In Dehradun and at a distance"],
+    "notes": ["In Dehradun, and at a distance", "Ask if you are not sure"],
     "image": "/media/mark.jpg",
     "imageAlt": "Cards and crystals prepared for a reading"
   },
   "intro": {
     "chip": "Services",
-    "title": "Explore our service and book according to your need."
+    "title": "Pick the one that fits.\nOr ask her first."
   },
   "features": [
     {
       "id": "healings",
       "title": "Healings",
-      "body": "Healing sessions chosen by the modality and by what you are actually carrying. The sitting can be in Dehradun or at a distance.",
+      "body": "Lama Fera, Shalvik Mantra Rahasya, Saropa, Reiki, or Hunkara with Haleemi. Priya picks the method after she hears what you are carrying — not from a fixed list.",
       "points": [
         "Lama Fera Healing",
         "Shalvik Mantra Rahasya Healing",
@@ -37,7 +37,7 @@
     {
       "id": "ritual-castings",
       "title": "Ritual Castings",
-      "body": "Candle rituals set around the matter you bring, whether that is healing, a relation, protection, a clearing, love, or a blessing.",
+      "body": "A candle named to the matter — healing, a relation, protection, a clearing, love, or a blessing. She will say what she needs from you first, then how the candle is held.",
       "points": [
         "Healing Candle",
         "Relation Candle",
@@ -54,7 +54,7 @@
     {
       "id": "akashic-records",
       "title": "Akashic Records",
-      "body": "A sitting in the Akashic records, used to see the thread of a life and what is asking to be understood now.",
+      "body": "A guided hour in the records. Used when you need to see the thread of a life, and what is asking to be understood now. Not a performance.",
       "points": [],
       "image": "/media/dusk.jpg",
       "imageAlt": "A quiet dusk field",
@@ -64,7 +64,7 @@
     {
       "id": "plr",
       "title": "PLR (Past Life Regression) Therapy",
-      "body": "A guided regression sitting, used when a present matter seems older than this life.",
+      "body": "When a present matter feels older than this life. She holds the hour quietly, so what is pressing can be seen without force.",
       "points": [],
       "image": "/media/practice-a.jpg",
       "imageAlt": "A guided sitting",
@@ -74,7 +74,7 @@
     {
       "id": "hoodoo",
       "title": "Hoodoo",
-      "body": "Seeking help with Saints and spirits. The working is set around the matter you bring.",
+      "body": "Work with Saints and spirits, named to the situation you bring. Not a generic ritual off a list. Priya will say what she needs first.",
       "points": [],
       "image": "/media/hecate.jpg",
       "imageAlt": "A candle and figure prepared for spirit work",
@@ -84,7 +84,7 @@
     {
       "id": "divinations",
       "title": "Divinations",
-      "body": "A reading to see what is present and what is pressing, so the next choice is easier to see.",
+      "body": "Tarot, dowsing, smoke, or runes. The method follows the question, not a habit. You leave knowing what is going on, and what to do next.",
       "points": [
         "Tarot card reading",
         "Dowsing",
@@ -99,7 +99,7 @@
     {
       "id": "meditations",
       "title": "Meditations",
-      "body": "A guided sitting, meant to settle attention and lift it toward the part of you that already knows the way.",
+      "body": "Sound, breath, bowl, water, chanting, or a fully guided hour. Meant to settle you, then send you back to the week with something you can keep.",
       "points": [
         "Sound Meditation",
         "Breathing techniques",
@@ -113,5 +113,52 @@
       "align": "left",
       "tone": "peach"
     }
-  ]
+  ],
+  "faq": {
+    "title": "About the sittings",
+    "intro": "The questions people ask before they book one.",
+    "items": [
+      {
+        "q": "Which sitting should I book?",
+        "a": "If you already know, book that one. If you do not, write Priya what is going on. She will say whether it is a healing, a ritual, a reading, or something else."
+      },
+      {
+        "q": "Can these be done if I am not in Dehradun?",
+        "a": "Most of them, yes. Say you need the work at a distance when you write. She will tell you if that sitting can be held that way."
+      },
+      {
+        "q": "What is the difference between a healing and a reading?",
+        "a": "A healing is work done on what you are carrying. A reading (tarot, dowsing, smoke, or runes) is to see what is present and what to do next. Some people need both. She will say if that is you."
+      },
+      {
+        "q": "Do I need to prepare anything?",
+        "a": "For most sittings, a clear note of the matter is enough. For a candle ritual she may ask for names or a detail first. She will tell you before the hour."
+      },
+      {
+        "q": "How do I book?",
+        "a": "WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Name the sitting if you know it. If not, say what you want to work on."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Name the sitting,\nor describe the matter.",
+    "cards": [
+      {
+        "title": "Write to book",
+        "body": "A healing, a ritual, a reading, or a meditation. Leave your name and a number. She will say which hour fits.",
+        "cta": "Contact Now",
+        "href": "/contacts",
+        "icon": "help"
+      },
+      {
+        "title": "Prefer WhatsApp?",
+        "body": "Say what you are carrying. She will tell you which sitting to book.",
+        "cta": "WhatsApp",
+        "href": "https://wa.me/917668648224",
+        "icon": "people",
+        "external": true
+      }
+    ]
+  }
 }

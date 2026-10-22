@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { AboutHero } from "@/components/about-hero";
-import { ContactBand, HomeFaq } from "@/components/home-sections";
+import { Bento, ContactBand, HomeFaq } from "@/components/home-sections";
 import { ProductOrder } from "@/components/product-order";
-import { Check, Reveal } from "@/components/ui";
-import { getHome, getProducts } from "@/lib/content";
+import { Lines, PointGrid, Reveal } from "@/components/ui";
+import { getProducts, withChannels } from "@/lib/content";
 
 const wash = {
   blue: "bg-[#dff2fe]",
@@ -19,7 +19,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ProductsPage() {
   const page = await getProducts();
-  const home = await getHome();
 
   return (
     <main>
@@ -30,8 +29,8 @@ export default async function ProductsPage() {
             <span className="inline-flex rounded-md border-b border-white bg-mist px-3 py-3 text-[12px] font-normal leading-none text-black shadow-md">
               {page.intro.chip}
             </span>
-            <h2 className="max-w-[700px] text-balance text-[clamp(32px,4vw,48px)] font-medium leading-[1.2] tracking-[-0.03em] text-ink">
-              {page.intro.title}
+            <h2 className="max-w-[700px] text-[clamp(32px,4vw,48px)] font-medium leading-[1.2] tracking-[-0.03em] text-ink">
+              <Lines text={page.intro.title} />
             </h2>
           </Reveal>
           <div className="mt-16 flex flex-col gap-6">
@@ -65,14 +64,7 @@ export default async function ProductsPage() {
                   </Reveal>
                   <Reveal className={`order-3 mt-8 lg:mt-4 ${textCol} lg:row-start-2`}>
                     <p className="max-w-md text-[16px] leading-6 text-zinc-600">{item.summary}</p>
-                    <ul className="mt-6 max-w-md space-y-3">
-                      {item.points.map((point) => (
-                        <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
-                          <Check />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {item.points.length ? <PointGrid points={item.points} className="mt-5" /> : null}
                     <ProductOrder name={item.name} summary={item.summary} points={item.points} />
                   </Reveal>
                 </article>
@@ -81,8 +73,9 @@ export default async function ProductsPage() {
           </div>
         </div>
       </section>
-      <ContactBand contact={home.contact} />
-      <HomeFaq faq={home.faq} />
+      <Bento bento={{ eyebrow: "", title: page.specs.title, items: page.specs.items }} />
+      <ContactBand contact={withChannels(page.contact)} />
+      <HomeFaq faq={page.faq} />
     </main>
   );
 }

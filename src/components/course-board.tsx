@@ -7,6 +7,7 @@ import { Lines } from "@/components/ui";
 const wash: Record<Course["tone"], string> = {
   blue: "bg-[#dff2fe]",
   orange: "bg-[#ffedd4]",
+  peach: "bg-[#ffedd4]",
   violet: "bg-[#ece9fe]",
   mist: "bg-mist",
 };

@@ -6,14 +6,69 @@ export type LinkItem = {
 export type NavMenuItem = {
   label: string;
   href: string;
-  body: string;
-  tone: "blue" | "amber" | "green" | "violet" | "red" | "mist";
-  icon: "heart" | "cards" | "sun" | "flame" | "spark" | "device" | "eye" | "moon";
+  body?: string;
+  tone?: "blue" | "amber" | "green" | "violet" | "red" | "mist";
+  icon?:
+    | "heart"
+    | "cards"
+    | "sun"
+    | "flame"
+    | "spark"
+    | "device"
+    | "eye"
+    | "moon"
+    | "handshake"
+    | "book"
+    | "brain"
+    | "sparkles"
+    | "crystal"
+    | "flower";
   group?: string;
 };
 
 export type NavItem = LinkItem & {
   menu?: NavMenuItem[];
+  menuLayout?: "cards" | "list";
+};
+
+export type OfferingKind = "service" | "course";
+
+export type CatalogItem = {
+  slug: string;
+  title: string;
+  service: string;
+  course: string;
+  points: string[];
+  image: string;
+  imageAlt: string;
+};
+
+export type CatalogGroup = {
+  id: string;
+  title: string;
+  summary: string;
+  courseSummary: string;
+  image: string;
+  imageAlt: string;
+  tone: "blue" | "violet" | "peach";
+  items: CatalogItem[];
+};
+
+export type CatalogContent = {
+  groups: CatalogGroup[];
+};
+
+export type ResolvedOffering = CatalogItem & {
+  kind: OfferingKind;
+  group: CatalogGroup;
+  href: string;
+  lead: string;
+};
+
+export type ResolvedGroup = CatalogGroup & {
+  kind: OfferingKind;
+  href: string;
+  lead: string;
 };
 
 export type FooterContactItem = {
@@ -105,6 +160,7 @@ export type HomeContent = {
     after: string;
     beforeImage: string;
     afterImage: string;
+    actions?: { label: string; href: string; variant?: "primary" | "secondary" | "dark" | "whatsapp" }[];
   };
   bento: {
     eyebrow: string;
@@ -116,6 +172,7 @@ export type HomeContent = {
     title: string;
     body: string;
     points: string[];
+    actions?: { label: string; href: string; variant?: "primary" | "secondary" | "dark" | "whatsapp" }[];
   };
   steps: {
     eyebrow: string;
@@ -154,6 +211,12 @@ export type HomeContent = {
   };
 };
 
+export type PageContact = {
+  eyebrow: string;
+  title: string;
+  cards: HomeContent["contact"]["cards"];
+};
+
 export type PhotoHeroContent = {
   title: string;
   body: string;
@@ -184,6 +247,15 @@ export type AboutContent = {
       external?: boolean;
     }[];
   }[];
+  gallery: {
+    title: string;
+    body: string;
+    cta: string;
+    href: string;
+    whatsapp: string;
+    whatsappHref: string;
+    items: { src: string; thumb?: string; alt: string }[];
+  };
   conquests: {
     title: string;
     items: {
@@ -207,13 +279,21 @@ export type AboutContent = {
   path: {
     title: string;
     body: string;
-    items: { index: string; title: string; body: string; figure?: string }[];
+    items: {
+      index: string;
+      title: string;
+      body: string;
+      figure?: string;
+      actions?: { label: string; href: string; variant: "primary" | "whatsapp"; external?: boolean }[];
+    }[];
   };
   purpose: {
     title: string;
     body: string;
     items: { title: string; body: string; tone: "dark" | "light"; points: string[] }[];
   };
+  faq: HomeContent["faq"];
+  contact: PageContact;
   closing: { title: string; body: string; cta: string; href: string };
 };
 
@@ -223,8 +303,10 @@ export type Course = {
   level: string;
   length: string;
   summary: string;
+  body: string;
   points: string[];
-  tone: "blue" | "orange" | "violet" | "mist";
+  tone: "blue" | "orange" | "violet" | "mist" | "peach";
+  align: "left" | "right";
   image: string;
   imageAlt: string;
 };
@@ -232,9 +314,12 @@ export type Course = {
 export type CoursesContent = {
   title: string;
   description: string;
-  hero: { eyebrow: string; title: string; body: string };
+  hero: PhotoHeroContent & { eyebrow: string };
+  intro: { chip: string; title: string };
   filters: string[];
   items: Course[];
+  faq: HomeContent["faq"];
+  contact: PageContact;
   closing: { title: string; body: string; cta: string; href: string };
 };
 
@@ -253,6 +338,8 @@ export type ServicesContent = {
     align: "left" | "right";
     tone: "blue" | "violet" | "peach";
   }[];
+  faq: HomeContent["faq"];
+  contact: PageContact;
 };
 
 export type ProductsContent = {
@@ -269,8 +356,22 @@ export type ProductsContent = {
     imageAlt: string;
     align: "left" | "right";
   }[];
-  specs: { title: string; items: { title: string; body: string }[] };
+  specs: { title: string; items: { title: string; body: string; icon: string }[] };
+  faq: HomeContent["faq"];
+  contact: PageContact;
   closing: { title: string; body: string; cta: string; href: string };
+};
+
+export type ReviewsContent = {
+  title: string;
+  intro: string;
+  googleHref: string;
+  rateHref: string;
+  readCta: string;
+  rateCta: string;
+  items: Quote[];
+  faq: HomeContent["faq"];
+  contact: PageContact;
 };
 
 export type ContactsContent = {

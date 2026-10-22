@@ -4,28 +4,50 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import type { FormEvent, KeyboardEvent as ReactKeyboardEvent } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { serviceEnquiry } from "@/lib/whatsapp";
+import type { OfferingKind } from "@/lib/types";
+import { courseEnquiry, serviceEnquiry } from "@/lib/whatsapp";
 import { Button, Check, WhatsAppIcon } from "@/components/ui";
 
 const primaryButton =
-  "inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-4 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa]";
+  "inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-3 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa] sm:px-4";
 
-export function ServiceBook({ title, body, points }: { title: string; body: string; points: string[] }) {
+export function ServiceBook({
+  title,
+  body,
+  points,
+  kind = "service",
+  label,
+  showWhatsapp = true,
+  className = "mt-8 flex flex-nowrap gap-2 sm:flex-wrap sm:gap-3",
+}: {
+  title: string;
+  body: string;
+  points: string[];
+  kind?: OfferingKind;
+  label?: string;
+  showWhatsapp?: boolean;
+  className?: string;
+}) {
   const [open, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
+  const whatsapp = kind === "course" ? courseEnquiry(title) : serviceEnquiry(title);
+  const formLabel = label ?? (kind === "course" ? "Request this course" : "Request this sitting");
 
   return (
     <>
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div className={className}>
         <button type="button" onClick={() => setOpen(true)} className={primaryButton}>
-          Book this service now
+          {formLabel}
         </button>
-        <Button href={serviceEnquiry(title)} variant="whatsapp" external>
-          <WhatsAppIcon />
-          Enquire on WhatsApp
-        </Button>
+        {showWhatsapp ? (
+          <Button href={whatsapp} variant="whatsapp" external>
+            <WhatsAppIcon />
+            <span className="sm:hidden">WhatsApp</span>
+            <span className="hidden sm:inline">Enquire on WhatsApp</span>
+          </Button>
+        ) : null}
       </div>
-      <BookModal title={title} body={body} points={points} open={open} onClose={close} />
+      <BookModal title={title} body={body} points={points} kind={kind} open={open} onClose={close} />
     </>
   );
 }
@@ -34,12 +56,14 @@ function BookModal({
   title,
   body,
   points,
+  kind,
   open,
   onClose,
 }: {
   title: string;
   body: string;
   points: string[];
+  kind: OfferingKind;
   open: boolean;
   onClose: () => void;
 }) {
@@ -116,9 +140,11 @@ function BookModal({
             <div className="flex items-start justify-between gap-4 px-6 pb-2 pt-6">
               <div>
                 <h2 id={titleId} className="text-[26px] font-medium tracking-[-0.03em] text-ink">
-                  Book {title}
+                  Request {title}
                 </h2>
-                <p className="mt-1 text-[14px] leading-5 text-zinc-500">The service is already noted.</p>
+                <p className="mt-1 text-[14px] leading-5 text-zinc-500">
+                  The {kind === "course" ? "course" : "sitting"} is already noted.
+                </p>
               </div>
               <button
                 type="button"
@@ -141,7 +167,7 @@ function BookModal({
               <form onSubmit={onSubmit} className="flex min-h-0 flex-1 flex-col">
                 <div data-lenis-prevent className="quiet-scroll min-h-0 flex-1 overflow-y-auto px-6 pb-2 pt-3">
                   <div className="rounded-[24px] bg-mist px-5 py-5">
-                    <p className="font-meta text-[12px] leading-[18px] text-zinc-500">Service</p>
+                    <p className="font-meta text-[12px] leading-[18px] text-zinc-500">{kind === "course" ? "Course" : "Service"}</p>
                     <p className="mt-1 text-[20px] font-medium tracking-[-0.03em] text-ink">{title}</p>
                     <p className="mt-2 text-[14px] leading-6 text-zinc-600">{body}</p>
                     <ul className="mt-4 space-y-2">
@@ -154,7 +180,7 @@ function BookModal({
                     </ul>
                   </div>
                   <div className="mt-5 grid gap-3.5">
-                    <input type="hidden" name="service" value={title} />
+                    <input type="hidden" name={kind} value={title} />
                     <Field label="Name" name="name" type="text" required />
                     <Field label="Email" name="email" type="email" required />
                     <Field label="Phone" name="phone" type="tel" required />

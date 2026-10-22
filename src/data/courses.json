@@ -1,10 +1,21 @@
 {
   "title": "Courses",
-  "description": "Courses in healings, candle rituals, Akashic records, past-life regression, Hoodoo, divination, and meditation with Divine Souls By Priya.",
+  "description": "Courses in healing, candle ritual, Akashic records, past-life regression, Hoodoo, readings, and meditation with Priya in Dehradun — or at a distance.",
   "hero": {
     "eyebrow": "Courses",
-    "title": "Learn the same practice.",
-    "body": "The courses follow the services: healings, candle rituals, records, regression, Hoodoo, readings, and meditation."
+    "title": "The methods\nshe teaches.",
+    "body": "The same work as the sittings — healing, ritual, records, readings, meditation. You learn it so you can hold it. In Dehradun, or at a distance.",
+    "cta": "Contact Now",
+    "href": "/contacts",
+    "whatsapp": "WhatsApp",
+    "whatsappHref": "https://wa.me/917668648224",
+    "notes": ["Learn the method, then hold it", "In Dehradun, and at a distance"],
+    "image": "/media/lama-fera.jpg",
+    "imageAlt": "A healing sitting"
+  },
+  "intro": {
+    "chip": "Courses",
+    "title": "Pick the one you want to hold.\nOr ask her first."
   },
   "filters": ["All", "Healings", "Ritual", "Records", "Insight", "Practice"],
   "items": [
@@ -13,7 +24,8 @@
       "title": "Healings",
       "level": "Healings",
       "length": "By modality",
-      "summary": "Learn the healing modalities in this practice, chosen to the work you want to hold.",
+      "summary": "Learn the healing method you will actually use — not a script to recite.",
+      "body": "Lama Fera, Shalvik Mantra Rahasya, Saropa, Reiki, or Hunkara with Haleemi. She teaches the one that matches the work you want to hold. The course can start in Dehradun or at a distance.",
       "points": [
         "Lama Fera Healing",
         "Shalvik Mantra Rahasya Healing",
@@ -22,6 +34,7 @@
         "Hunkara with Haleemi Healing"
       ],
       "tone": "blue",
+      "align": "left",
       "image": "/media/lama-fera.jpg",
       "imageAlt": "A Lama Fera healing sitting"
     },
@@ -30,7 +43,8 @@
       "title": "Ritual Castings",
       "level": "Ritual",
       "length": "By session",
-      "summary": "Candle rituals for healing, relation, protection, clearing, love, and blessing.",
+      "summary": "How a candle is named, prepared, and held.",
+      "body": "How a candle is named, prepared, and held — healing, a relation, protection, a clearing, love, or a blessing. You learn the working, not a generic list. She will say what she needs from you first.",
       "points": [
         "Healing Candle",
         "Relation Candle",
@@ -39,7 +53,8 @@
         "Love Candle",
         "Blessing Candle"
       ],
-      "tone": "orange",
+      "tone": "peach",
+      "align": "right",
       "image": "/media/candles.jpg",
       "imageAlt": "Candles prepared for a ritual"
     },
@@ -48,9 +63,11 @@
       "title": "Akashic Records",
       "level": "Records",
       "length": "A sitting",
-      "summary": "A course in reading the Akashic records.",
+      "summary": "How to sit in the records and read the thread of a life.",
+      "body": "How to sit in the records and read the thread of a life. Taught as a working hour, not a show. You leave able to hold the sitting, not just remember it.",
       "points": [],
       "tone": "violet",
+      "align": "left",
       "image": "/media/dusk.jpg",
       "imageAlt": "A quiet dusk field"
     },
@@ -59,9 +76,11 @@
       "title": "PLR (Past Life Regression) Therapy",
       "level": "Records",
       "length": "A sitting",
-      "summary": "A course in past-life regression therapy.",
+      "summary": "How to hold a past-life regression hour.",
+      "body": "How to hold a past-life regression hour — for others, or to understand a matter that feels older than this life. She teaches it quietly. No force.",
       "points": [],
-      "tone": "orange",
+      "tone": "peach",
+      "align": "right",
       "image": "/media/practice-a.jpg",
       "imageAlt": "A guided sitting"
     },
@@ -70,9 +89,11 @@
       "title": "Hoodoo",
       "level": "Ritual",
       "length": "A working",
-      "summary": "Seeking help with Saints and spirits, taught as a working practice.",
+      "summary": "Work with Saints and spirits, taught as a practice you can hold.",
+      "body": "Work with Saints and spirits, taught as a practice you can hold. Named to a real situation, not a generic ritual. She will say what the course needs first.",
       "points": [],
       "tone": "blue",
+      "align": "left",
       "image": "/media/hecate.jpg",
       "imageAlt": "A candle and figure prepared for spirit work"
     },
@@ -81,7 +102,8 @@
       "title": "Divinations",
       "level": "Insight",
       "length": "A reading",
-      "summary": "Tarot, dowsing, smoke, and runes, taught as a way to see the situation.",
+      "summary": "Tarot, dowsing, smoke, or runes — taught to the question.",
+      "body": "Tarot, dowsing, smoke, or runes. You learn to read what is present and what to do next. The method follows the question, not a habit.",
       "points": [
         "Tarot card reading",
         "Dowsing",
@@ -89,6 +111,7 @@
         "Runes Reading"
       ],
       "tone": "violet",
+      "align": "right",
       "image": "/media/mark.jpg",
       "imageAlt": "Cards laid out for a reading"
     },
@@ -97,7 +120,8 @@
       "title": "Meditations",
       "level": "Practice",
       "length": "A practice",
-      "summary": "Sound, breath, bowl, water, chanting, and guided sitting.",
+      "summary": "Sound, breath, bowl, water, chanting, or a guided hour.",
+      "body": "Sound, breath, bowl, water, chanting, or a guided hour. Taught so you can settle yourself — and sit with other people later.",
       "points": [
         "Sound Meditation",
         "Breathing techniques",
@@ -106,14 +130,62 @@
         "Chanting & Meditation",
         "Guided Meditation"
       ],
-      "tone": "mist",
+      "tone": "peach",
+      "align": "left",
       "image": "/media/chanting-meditation.jpg",
       "imageAlt": "A chanting meditation"
     }
   ],
+  "faq": {
+    "title": "About the courses",
+    "intro": "The questions people ask before they start one.",
+    "items": [
+      {
+        "q": "Is a course the same as a sitting?",
+        "a": "No. A sitting is work she holds for you. A course is so you can hold the method yourself. Some people do a sitting first. Some start with the course."
+      },
+      {
+        "q": "Do I need a sitting before I learn?",
+        "a": "Not always. If you already know the method you want, write that. If you are not sure, tell her what you want to do with it. She will say if a sitting should come first."
+      },
+      {
+        "q": "Can I take a course if I am not in Dehradun?",
+        "a": "Most of them, yes. Say you need it at a distance when you write. She will tell you if that course can be held that way."
+      },
+      {
+        "q": "How long is a course?",
+        "a": "It depends on the method. Some are a few sittings. Some take longer. She will say the shape after she hears what you want to hold."
+      },
+      {
+        "q": "How do I start a course?",
+        "a": "WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Name the course if you know it. If not, say what you want to learn."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell her what you\nwant to hold.",
+    "cards": [
+      {
+        "title": "Ask about a course",
+        "body": "Name the method if you know it. If not, say what you want to learn. Leave a number she can reach.",
+        "cta": "Contact Now",
+        "href": "/contacts",
+        "icon": "help"
+      },
+      {
+        "title": "Prefer WhatsApp?",
+        "body": "A few lines is enough. She will say which course fits, and whether a sitting should come first.",
+        "cta": "WhatsApp",
+        "href": "https://wa.me/917668648224",
+        "icon": "people",
+        "external": true
+      }
+    ]
+  },
   "closing": {
     "title": "If a course is the right beginning, start with a note.",
-    "body": "Priya can tell you which practice fits, and whether a session should come first.",
+    "body": "Priya can tell you which practice fits, and whether a sitting should come first.",
     "cta": "Ask about a course",
     "href": "/contacts"
   }

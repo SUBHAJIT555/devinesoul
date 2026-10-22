@@ -28,6 +28,14 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s — ${site.name}`,
     },
     description: site.description,
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/icon.png", type: "image/png", sizes: "192x192" },
+        { url: "/brand/logo.png", type: "image/png", sizes: "576x576" },
+      ],
+      apple: "/apple-icon.png",
+    },
   };
 }
 

@@ -1,56 +1,84 @@
 {
   "title": "About",
-  "description": "How Divine Souls By Priya intertwines ancient practices with modern spirituality.",
+  "description": "Priya Sinha holds healing sittings, tarot, and Vedic work in Dehradun. Fifteen years in practice. The hour is for the person in the chair.",
   "hero": {
     "eyebrow": "About",
-    "title": "Learn about our\nunique healing approach.",
-    "body": "Discover how Divine Souls By Priya intertwines ancient practices with modern spirituality to enhance personal growth and healing.",
+    "title": "Meet Priya Sinha.\nStill in the work.",
+    "body": "Healing, tarot, and Vedic sittings in Dehradun — or by message if you cannot travel. She works with the person in front of her, not with a script.",
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
     "whatsappHref": "https://wa.me/917668648224",
-    "notes": ["15+ years in practice"],
+    "notes": ["15+ years in practice", "Based in Dehradun"],
     "image": "/media/meditation.jpg",
     "imageAlt": "A quiet moment in Priya's practice"
   },
   "features": [
     {
-      "title": "Learn About Divine Souls and Our Transformative Services",
+      "title": "A sitting, not a package.",
       "paragraphs": [
-        "At Divine Souls By Priya, we empower our clients to embrace transformation through tailored holistic healing. Many have experienced profound positive changes, overcoming personal challenges through our specialized services and insightful guidance.",
-        "Our focus on personalized care allows clients to connect deeply with their spirituality, leading to life-altering revelations and newfound strength along their journey toward healing."
+        "People find Divine Souls when something will not settle — a stretch of life, a question, a weight they cannot name. Priya listens first. Then she chooses the work that fits: healing, cards, ritual, or a longer course.",
+        "The hour is for one person. She has been doing this for more than fifteen years, in Dehradun and at a distance."
       ],
       "image": "/media/practice-b.jpg",
       "imageAlt": "A guided healing moment with a singing bowl",
       "align": "left",
       "tone": "blue",
       "actions": [
-        { "label": "Contact", "href": "/contacts", "variant": "primary" },
-        { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp", "external": true }
+        { "label": "Services", "href": "/services", "variant": "primary" },
+        { "label": "Products", "href": "/products", "variant": "dark" }
       ]
     },
     {
-      "title": "Demystifying the myths around field of occult",
+      "title": "Magic has no colour of its own.",
       "paragraphs": [
-        "Priya’s philosophy dispels myths surrounding magic and healing. She believes that magic has no color-it is neither black nor white—but rather, it is shaped by the intentions of the practitioner. Intentions are the driving force behind growth or downfall, and understanding this is key to embracing these ancient practices without fear or prejudice."
+        "Priya does not split this work into black or white. Intention does the shaping. That is the line she teaches, and the one she works by. If you come afraid of the word occult, start there."
       ],
       "image": "/media/candles.jpg",
       "imageAlt": "Candles prepared for a ritual",
       "align": "right",
       "tone": "violet",
       "actions": [
-        { "label": "Products", "href": "/products", "variant": "primary" },
-        { "label": "Services", "href": "/services", "variant": "dark" }
+        { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
+        { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp", "external": true }
       ]
     }
   ],
+  "gallery": {
+    "title": "From the room.",
+    "body": "Sittings, ritual, and the hours in between.",
+    "cta": "Contact Now",
+    "href": "/contacts",
+    "whatsapp": "WhatsApp",
+    "whatsappHref": "https://wa.me/917668648224",
+    "items": [
+      { "src": "/media/practice-a.jpg", "alt": "A quiet sitting in the practice" },
+      { "src": "/media/practice-b.jpg", "alt": "A guided healing moment with a singing bowl" },
+      { "src": "/media/meditation.jpg", "alt": "A quiet moment in Priya's practice" },
+      { "src": "/media/candles.jpg", "alt": "Candles prepared for a ritual" },
+      { "src": "/media/ritual.jpg", "alt": "Ritual tools laid out for the work" },
+      { "src": "/media/dusk.jpg", "alt": "The room as the light falls" },
+      { "src": "/media/night.jpg", "alt": "Night light over the work" },
+      { "src": "/media/mark.jpg", "alt": "The mark of the practice" },
+      { "src": "/media/hero.jpg", "alt": "The opening frame of the work" },
+      { "src": "/media/chanting-meditation.jpg", "alt": "A seated meditation with the Om mark" },
+      { "src": "/media/hecate.jpg", "alt": "A figure holding flame for the tradition" },
+      { "src": "/media/lama-fera.jpg", "alt": "A seated figure in a forest shrine" },
+      { "src": "/media/gallery/meditation-dusk.jpg", "alt": "Meditation as the light goes" },
+      { "src": "/media/gallery/yoga-mat.jpg", "alt": "A mat laid for the sitting" },
+      { "src": "/media/gallery/yoga-room.jpg", "alt": "A quiet room prepared for practice" },
+      { "src": "/media/gallery/crystals.jpg", "alt": "Crystals gathered for the work" },
+      { "src": "/media/gallery/spa-candles.jpg", "alt": "Candles set for a longer sitting" },
+      { "src": "/media/gallery/prayer-hands.jpg", "alt": "Hands held in prayer" }
+    ]
+  },
   "conquests": {
-    "title": "Conquests",
+    "title": "What she carries.",
     "items": [
       {
         "index": "01",
         "title": "Lama Fera Grandmaster",
-        "body": "More than fifteen years in Lama Fera, held as part of the healing work.",
+        "body": "More than fifteen years in Lama Fera, used in the sittings, not kept as a title on the wall.",
         "tone": "blue",
         "image": "/media/lama-fera.jpg",
         "imageAlt": "A seated figure in a forest shrine, for Lama Fera"
@@ -58,15 +86,15 @@
       {
         "index": "02",
         "title": "High Priestess of ITW",
-        "body": "The title Priya carries in this tradition, beside the sessions and the teaching.",
+        "body": "The lineage she holds beside the private hours and the teaching.",
         "tone": "violet",
         "image": "/media/hecate.jpg",
         "imageAlt": "A many-armed figure holding flame, for the High Priestess of ITW"
       },
       {
         "index": "03",
-        "title": "Meditation Instructor",
-        "body": "A life of teaching meditation, so the practice can continue after the hour.",
+        "title": "Meditation instructor",
+        "body": "She teaches the practice so it does not end when you leave the room.",
         "tone": "peach",
         "image": "/media/chanting-meditation.jpg",
         "imageAlt": "A seated meditation with the Om mark"
@@ -76,89 +104,140 @@
   "story": {
     "title": "The will behind\nthe healing.",
     "paragraphs": [
-      "Divine Souls By Priya was founded to offer a serene space for spiritual exploration. Priya’s expertise in healing techniques has guided people through personal challenges, toward revelations and a strength they can carry home.",
-      "Her philosophy is plain. The work has no color of its own. It is shaped by the intention of the practitioner. Intention is what drives growth, and understanding that is how these practices can be met without fear."
+      "Divine Souls began as a quiet place to sit. Priya still works that way. People come with a matter they are actually carrying, and they leave with a next step they can use.",
+      "Her line is plain. The work has no colour of its own. Intention does the shaping. That is how these practices can be met without fear."
     ],
-    "aside": "Ancient practice, held with modern clarity."
+    "aside": "Intention does the work."
   },
   "values": {
-    "title": "Experience the Divine\nSouls difference.",
+    "title": "How the hour actually goes.",
     "items": [
       {
         "icon": "user-heart",
-        "title": "Personalized care",
-        "body": "Sessions are tailored to individual needs, so the healing stays personal and has a real effect."
+        "title": "One person at a time",
+        "body": "She works with whoever is in the chair. No two hours look the same."
       },
       {
         "icon": "shield-check",
-        "title": "Expertise you can trust",
-        "body": "Priya’s knowledge of healing traditions keeps the guidance rooted in practice, and pointed at life outside the session."
+        "title": "Old titles, used in the room",
+        "body": "Lama Fera Grandmaster, High Priestess of ITW, and a meditation teacher. The titles are for the work, not the website."
       },
       {
         "icon": "yin-yang",
-        "title": "Holistic integration",
-        "body": "Diverse modalities sit together, so mind, body, and spirit are addressed as one."
+        "title": "Healing, cards, and ritual",
+        "body": "They can share one hour. You do not need three appointments to be met as a whole person."
       },
       {
         "icon": "focus",
         "title": "Intention first",
-        "body": "The practice is shaped by intention. That is the standard Priya teaches, and the one she works by."
+        "body": "What you bring, and why you bring it, is what shapes the sitting. That is the standard she teaches."
       }
     ]
   },
   "path": {
-    "title": "A path with a record.",
-    "body": "From a founded sanctuary to a practice people return to. These are the marks Priya stands on.",
+    "title": "The record, in numbers.",
+    "body": "Not a brand story. The years and the people.",
     "items": [
       {
         "index": "01",
         "figure": "15+",
-        "title": "Fifteen years",
-        "body": "More than fifteen years in healing traditions, including Lama Fera, and a life of teaching meditation."
+        "title": "Years in the work",
+        "body": "Healing traditions, including Lama Fera, and a life of teaching meditation."
       },
       {
         "index": "02",
         "figure": "150+",
-        "title": "One hundred and fifty clients",
-        "body": "People who have been guided through a session, a reading, or a longer stretch of work."
+        "title": "People already guided",
+        "body": "A sitting, a reading, or a longer stretch of work. The number is the record, not a pitch."
       },
       {
         "index": "03",
-        "title": "A mission that stays still",
-        "body": "Transformative healing through personal guidance, so a person can meet their own strength."
+        "title": "The room is still open",
+        "body": "Same practice. Same person. In Dehradun, and by message if you cannot travel.",
+        "actions": [
+          { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
+          { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp", "external": true }
+        ]
       }
     ]
   },
   "purpose": {
-    "title": "Our Journey Through Time",
-    "body": "Divine Souls By Priya began as a serene place for spiritual exploration, and grew into a trusted sanctuary for guidance and healing.",
+    "title": "Why this practice exists.",
+    "body": "It started as a quiet place to sit. It is still that.",
     "items": [
       {
-        "title": "Our Mission",
-        "body": "To provide transformative healing experiences through personalized spiritual guidance and holistic practices, empowering individuals to overcome challenges and embrace their inner strength.",
+        "title": "What she is here for",
+        "body": "To sit with the matter you actually carry, and to choose the work that fits it — not a script, not a package.",
         "tone": "dark",
         "points": [
-          "Personalized spiritual guidance",
-          "Holistic practices",
-          "Inner strength for the challenges people carry"
+          "A sitting shaped around one person",
+          "Healing, cards, and ritual in the same house",
+          "A next step you can take home"
         ]
       },
       {
-        "title": "Our Vision",
-        "body": "To cultivate a community where all individuals can discover their true selves, harness their personal power, and engage fully in their spiritual journeys.",
+        "title": "What she wants the room to stay",
+        "body": "A place you can walk into without fear of the work, and leave knowing what to do next.",
         "tone": "light",
         "points": [
-          "A community that can discover its true self",
-          "Personal power, harnessed",
-          "A spiritual journey taken fully"
+          "No colour put on the practice for you",
+          "A first conversation before the hour, if you need it",
+          "Teaching, when one sitting is not enough"
         ]
       }
     ]
   },
+  "faq": {
+    "title": "About Priya, in short",
+    "intro": "If you want to know who she is before you write.",
+    "items": [
+      {
+        "q": "Who is Priya?",
+        "a": "Priya Sinha. She holds sittings in Dehradun under Divine Souls. Lama Fera Grandmaster, High Priestess of ITW, and a meditation instructor. More than fifteen years in the work."
+      },
+      {
+        "q": "What does “the work has no colour” mean?",
+        "a": "She does not split healing into black or white. What you bring, and why you bring it, is what shapes the hour."
+      },
+      {
+        "q": "Has she taught, or only sat with people?",
+        "a": "Both. She teaches meditation and the methods she uses, and she still holds private sittings. Some people come for one hour. Some stay for a course."
+      },
+      {
+        "q": "How many people has she sat with?",
+        "a": "More than a hundred and fifty, on the record she keeps. The number is not a sales line. It is how long the room has been open."
+      },
+      {
+        "q": "Can I speak to her before I book?",
+        "a": "Yes. Call +91 7668648224, write on WhatsApp, or email priyasinha1809@gmail.com. A short first conversation is normal."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "When you want\nto sit with her.",
+    "cards": [
+      {
+        "title": "Write to Priya",
+        "body": "A first conversation is normal. Leave your name and a number. She will take it from there.",
+        "cta": "Contact Now",
+        "href": "/contacts",
+        "icon": "help"
+      },
+      {
+        "title": "Prefer WhatsApp?",
+        "body": "Say who you are and what you want to know. She answers there.",
+        "cta": "WhatsApp",
+        "href": "https://wa.me/917668648224",
+        "icon": "people",
+        "external": true
+      }
+    ]
+  },
   "closing": {
-    "title": "Our vision is a community that can find itself.",
-    "body": "A place to discover who you are, hold your own power, and take the spiritual journey seriously.",
-    "cta": "Begin a conversation",
+    "title": "When you are ready,\nwrite.",
+    "body": "Priya is in Dehradun. The first note can come from anywhere.",
+    "cta": "Contact Now",
     "href": "/contacts"
   }
 }

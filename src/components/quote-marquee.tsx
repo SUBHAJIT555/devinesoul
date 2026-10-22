@@ -33,17 +33,25 @@ export function quotesToMarquee(items: Quote[]): MarqueeItem[] {
   }));
 }
 
-export function QuoteMarquee({ items, rows }: { items?: MarqueeItem[]; rows?: MarqueeItem[][] }) {
+export function QuoteMarquee({
+  items,
+  rows,
+  duration,
+}: {
+  items?: MarqueeItem[];
+  rows?: MarqueeItem[][];
+  duration?: string;
+}) {
   const bands = rows?.length
     ? rows.map((row, index) => ({
         items: row,
         track: index % 2 === 0 ? "marquee-track-reverse" : "marquee-track",
-        duration: rowDuration(row.length, index),
+        duration: duration ?? rowDuration(row.length, index),
       }))
     : defaultRows.map((row) => ({
         items: rotate(items ?? [], row.shift),
         track: row.track,
-        duration: row.duration,
+        duration: duration ?? row.duration,
       }));
 
   return (
