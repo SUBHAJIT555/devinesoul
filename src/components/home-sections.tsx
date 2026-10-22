@@ -3,6 +3,7 @@ import type { HomeContent } from "@/lib/types";
 import { Button, Check, Lines, Reveal, SectionHeading } from "@/components/ui";
 import { Compare } from "@/components/compare";
 import { FaqList } from "@/components/faq-list";
+import { TestimonialsColumns } from "@/components/testimonials-columns";
 import { div } from "motion/react-client";
 
 const stage: Record<HomeContent["stories"][number]["tone"], string> = {
@@ -538,19 +539,7 @@ export function Voices({ voices }: { voices: HomeContent["voices"] }) {
           </h2>
         </Reveal>
         <div className="flex w-full flex-col items-center">
-          <div
-            className="h-[540px] w-full overflow-hidden"
-            style={{
-              maskImage: "linear-gradient(#000 54%, transparent 97%)",
-              WebkitMaskImage: "linear-gradient(#000 54%, transparent 97%)",
-            }}
-          >
-            <div className="columns-1 gap-x-5 sm:columns-2 lg:columns-4">
-              {voices.items.map((item) => (
-                <QuoteCard key={item.role} item={item} />
-              ))}
-            </div>
-          </div>
+          <TestimonialsColumns items={voices.items} />
           <div className="relative z-[1] -mt-4">
             <Button href={voices.href} external>
               {voices.cta}
@@ -562,39 +551,6 @@ export function Voices({ voices }: { voices: HomeContent["voices"] }) {
   );
 }
 
-function QuoteCard({ item }: { item: HomeContent["voices"]["items"][number] }) {
-  return (
-    <figure className="mb-2.5 flex break-inside-avoid flex-col gap-5 rounded-xl bg-mist p-5 shadow-[0_8px_19.1px_-7px_rgba(0,0,0,0.06)] border-b border-black/7">
-      <blockquote className="text-[14px] leading-[21px] tracking-[-0.03em] text-black">{item.text}</blockquote>
-      <figcaption className="flex items-center gap-2">
-        {item.image ? (
-          <img src={item.image} alt="" className="h-[46px] w-[46px] shrink-0 rounded-full object-cover" />
-        ) : null}
-        <span className="min-w-0">
-          <span className="block text-[14px] font-semibold leading-[16.8px] tracking-[-0.03em] text-black">{item.role}</span>
-          <span className="mt-1 block">
-            <Stars />
-          </span>
-        </span>
-      </figcaption>
-    </figure>
-  );
-}
-
-function Stars() {
-  return (
-    <span className="inline-flex text-[#f5b301]" aria-label="5 stars">
-      {Array.from({ length: 5 }, (_, index) => (
-        <svg key={index} viewBox="0 0 12 12" className="h-3 w-3" aria-hidden="true">
-          <path
-            fill="currentColor"
-            d="M6 1.1 7.3 4l3.2.3-2.4 2.1.7 3.1L6 8.1 3.2 9.5l.7-3.1L1.5 4.3 4.7 4 6 1.1Z"
-          />
-        </svg>
-      ))}
-    </span>
-  );
-}
 
 export function Plans({ plans }: { plans: HomeContent["plans"] }) {
   return (

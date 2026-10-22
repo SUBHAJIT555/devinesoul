@@ -5,7 +5,7 @@ import { CourseCards } from "@/components/course-cards";
 import { ContactBand, HomeFaq } from "@/components/home-sections";
 import { ServiceBook } from "@/components/service-book";
 import { Check, Reveal } from "@/components/ui";
-import { getCourses, getHome, getServices } from "@/lib/content";
+import { getCourses, getHome, getServices, offeringMarquee } from "@/lib/content";
 
 const wash = {
   blue: "bg-[#dff2fe]",
@@ -25,7 +25,14 @@ export default async function ServicesPage() {
 
   return (
     <main>
-      <AboutHero hero={page.hero} />
+      <AboutHero
+        hero={page.hero}
+        tone="services"
+        marqueeRows={[
+          offeringMarquee(page.features, "Service", (id) => `#${id}`),
+          offeringMarquee(courses.items, "Course", (id) => `#course-${id}`),
+        ]}
+      />
       <section className="bg-white px-6 pb-8 pt-8">
         <div className="mx-auto flex max-w-[1000px] flex-col">
           <Reveal className="flex flex-col items-center gap-5 text-center">
@@ -69,14 +76,16 @@ export default async function ServicesPage() {
                 </Reveal>
                 <Reveal className={`order-3 mt-8 lg:mt-4 ${textCol} lg:row-start-2`}>
                   <p className="max-w-md text-[16px] leading-6 text-zinc-600">{feature.body}</p>
-                  <ul className="mt-6 max-w-md space-y-3">
-                    {feature.points.map((point) => (
-                      <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
-                        <Check />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {feature.points.length ? (
+                    <ul className="mt-6 max-w-md space-y-3">
+                      {feature.points.map((point) => (
+                        <li key={point} className="flex gap-3 text-[15px] leading-6 text-ink">
+                          <Check />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
                   <ServiceBook title={feature.title} body={feature.body} points={feature.points} />
                 </Reveal>
               </article>

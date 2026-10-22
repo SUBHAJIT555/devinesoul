@@ -20,25 +20,25 @@
       "href": "/services",
       "menu": [
         {
-          "label": "Ritual Castings & Hoodoo",
+          "label": "Healings",
+          "href": "/services#healings",
+          "body": "Lama Fera, Reiki, Saropa, and allied sittings.",
+          "tone": "blue",
+          "icon": "heart",
+          "group": "Services"
+        },
+        {
+          "label": "Ritual Castings",
           "href": "/services#ritual-castings",
-          "body": "Hoodoo and candle magic rituals, tailored to you.",
+          "body": "Candle rituals set around the matter you bring.",
           "tone": "red",
           "icon": "flame",
           "group": "Services"
         },
         {
-          "label": "Digital Vedic Healings",
-          "href": "/services#digital-vedic-healings",
-          "body": "Vedic healing, offered at a distance.",
-          "tone": "amber",
-          "icon": "sun",
-          "group": "Services"
-        },
-        {
           "label": "Divinations",
           "href": "/services#divinations",
-          "body": "Card readings for clarity in your life.",
+          "body": "Tarot, dowsing, smoke, and runes.",
           "tone": "violet",
           "icon": "cards",
           "group": "Services"
@@ -46,31 +46,31 @@
         {
           "label": "Meditations",
           "href": "/services#meditations",
-          "body": "An ancient method toward the higher self.",
+          "body": "Sound, breath, bowl, water, chanting, and guided sitting.",
           "tone": "green",
           "icon": "moon",
           "group": "Services"
         },
         {
-          "label": "Ritual castings and Hoodoo",
+          "label": "Healings",
+          "href": "/services#course-healings",
+          "body": "A course in the healing modalities.",
+          "tone": "blue",
+          "icon": "heart",
+          "group": "Courses"
+        },
+        {
+          "label": "Ritual Castings",
           "href": "/services#course-ritual-castings",
-          "body": "A course in Hoodoo and candle magic rituals.",
+          "body": "A course in candle rituals.",
           "tone": "red",
           "icon": "flame",
           "group": "Courses"
         },
         {
-          "label": "Digital Vedic healings",
-          "href": "/services#course-digital-vedic-healings",
-          "body": "A course in Vedic healing, offered at a distance.",
-          "tone": "amber",
-          "icon": "sun",
-          "group": "Courses"
-        },
-        {
           "label": "Divinations",
           "href": "/services#course-divinations",
-          "body": "A course in card readings for clarity.",
+          "body": "A course in tarot, dowsing, smoke, and runes.",
           "tone": "violet",
           "icon": "cards",
           "group": "Courses"
@@ -78,7 +78,7 @@
         {
           "label": "Meditations",
           "href": "/services#course-meditations",
-          "body": "A course in the ancient method of meditation.",
+          "body": "A course in the meditation sittings.",
           "tone": "green",
           "icon": "moon",
           "group": "Courses"
@@ -131,15 +131,21 @@
     "services": {
       "title": "Services",
       "links": [
-        { "label": "Ritual Castings & Hoodoo", "href": "/services#ritual-castings" },
-        { "label": "Digital Vedic Healings", "href": "/services#digital-vedic-healings" },
+        { "label": "Healings", "href": "/services#healings" },
+        { "label": "Ritual Castings", "href": "/services#ritual-castings" },
+        { "label": "Akashic Records", "href": "/services#akashic-records" },
+        { "label": "PLR Therapy", "href": "/services#plr" },
+        { "label": "Hoodoo", "href": "/services#hoodoo" },
         { "label": "Divinations", "href": "/services#divinations" },
         { "label": "Meditations", "href": "/services#meditations" }
       ],
       "coursesTitle": "Courses",
       "courses": [
-        { "label": "Ritual castings and Hoodoo", "href": "/services#course-ritual-castings" },
-        { "label": "Digital Vedic healings", "href": "/services#course-digital-vedic-healings" },
+        { "label": "Healings", "href": "/services#course-healings" },
+        { "label": "Ritual Castings", "href": "/services#course-ritual-castings" },
+        { "label": "Akashic Records", "href": "/services#course-akashic-records" },
+        { "label": "PLR Therapy", "href": "/services#course-plr" },
+        { "label": "Hoodoo", "href": "/services#course-hoodoo" },
         { "label": "Divinations", "href": "/services#course-divinations" },
         { "label": "Meditations", "href": "/services#course-meditations" }
       ]

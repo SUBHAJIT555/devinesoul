@@ -82,7 +82,10 @@ export type HomeContent = {
     subhead: string;
     cta: string;
     ctaHref: string;
-    notes: string[];
+    whatsapp: string;
+    whatsappHref: string;
+    rating: string;
+    ratingHref: string;
   };
   logos: {
     label: string;
@@ -220,6 +223,7 @@ export type Course = {
   level: string;
   length: string;
   summary: string;
+  points: string[];
   tone: "blue" | "orange" | "violet" | "mist";
   image: string;
   imageAlt: string;

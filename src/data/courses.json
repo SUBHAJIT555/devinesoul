@@ -1,39 +1,93 @@
 {
   "title": "Courses",
-  "description": "Candle magic, ritual, Vedic healing, divination, and meditation with Divine Souls By Priya.",
+  "description": "Courses in healings, candle rituals, Akashic records, past-life regression, Hoodoo, divination, and meditation with Divine Souls By Priya.",
   "hero": {
     "eyebrow": "Courses",
-    "title": "Candle magic and healing.",
-    "body": "Empowering rituals, tarot readings, and healing techniques for your spiritual journey and personal growth."
+    "title": "Learn the same practice.",
+    "body": "The courses follow the services: healings, candle rituals, records, regression, Hoodoo, readings, and meditation."
   },
-  "filters": ["All", "Ritual", "Vedic", "Insight", "Practice"],
+  "filters": ["All", "Healings", "Ritual", "Records", "Insight", "Practice"],
   "items": [
     {
+      "id": "healings",
+      "title": "Healings",
+      "level": "Healings",
+      "length": "By modality",
+      "summary": "Learn the healing modalities in this practice, chosen to the work you want to hold.",
+      "points": [
+        "Lama Fera Healing",
+        "Shalvik Mantra Rahasya Healing",
+        "Saropa Healing",
+        "Reiki Healing",
+        "Hunkara with Haleemi Healing"
+      ],
+      "tone": "blue",
+      "image": "/media/lama-fera.jpg",
+      "imageAlt": "A Lama Fera healing sitting"
+    },
+    {
       "id": "ritual-castings",
-      "title": "Ritual castings and Hoodoo",
+      "title": "Ritual Castings",
       "level": "Ritual",
       "length": "By session",
-      "summary": "Healing through Hoodoo and candle magic rituals, tailored to what you are actually facing.",
+      "summary": "Candle rituals for healing, relation, protection, clearing, love, and blessing.",
+      "points": [
+        "Healing Candle",
+        "Relation Candle",
+        "Protection Candle",
+        "Negativity Removal Candle",
+        "Love Candle",
+        "Blessing Candle"
+      ],
       "tone": "orange",
       "image": "/media/candles.jpg",
       "imageAlt": "Candles prepared for a ritual"
     },
     {
-      "id": "digital-vedic-healings",
-      "title": "Digital Vedic healings",
-      "level": "Vedic",
-      "length": "At a distance",
-      "summary": "Vedic healing offered remotely, so the work can meet you without asking you to travel first.",
+      "id": "akashic-records",
+      "title": "Akashic Records",
+      "level": "Records",
+      "length": "A sitting",
+      "summary": "A course in reading the Akashic records.",
+      "points": [],
+      "tone": "violet",
+      "image": "/media/dusk.jpg",
+      "imageAlt": "A quiet dusk field"
+    },
+    {
+      "id": "plr",
+      "title": "PLR (Past Life Regression) Therapy",
+      "level": "Records",
+      "length": "A sitting",
+      "summary": "A course in past-life regression therapy.",
+      "points": [],
+      "tone": "orange",
+      "image": "/media/practice-a.jpg",
+      "imageAlt": "A guided sitting"
+    },
+    {
+      "id": "hoodoo",
+      "title": "Hoodoo",
+      "level": "Ritual",
+      "length": "A working",
+      "summary": "Seeking help with Saints and spirits, taught as a working practice.",
+      "points": [],
       "tone": "blue",
-      "image": "/media/practice-b.jpg",
-      "imageAlt": "A guided healing moment with a singing bowl"
+      "image": "/media/hecate.jpg",
+      "imageAlt": "A candle and figure prepared for spirit work"
     },
     {
       "id": "divinations",
       "title": "Divinations",
       "level": "Insight",
       "length": "A reading",
-      "summary": "Card readings for clarity. A way to see the situation, then choose what comes next.",
+      "summary": "Tarot, dowsing, smoke, and runes, taught as a way to see the situation.",
+      "points": [
+        "Tarot card reading",
+        "Dowsing",
+        "Smoke Divination Reading",
+        "Runes Reading"
+      ],
       "tone": "violet",
       "image": "/media/mark.jpg",
       "imageAlt": "Cards laid out for a reading"
@@ -43,10 +97,18 @@
       "title": "Meditations",
       "level": "Practice",
       "length": "A practice",
-      "summary": "An ancient method of meditation, used to lift attention toward the higher self.",
+      "summary": "Sound, breath, bowl, water, chanting, and guided sitting.",
+      "points": [
+        "Sound Meditation",
+        "Breathing techniques",
+        "Bowl Meditation",
+        "Water meditation",
+        "Chanting & Meditation",
+        "Guided Meditation"
+      ],
       "tone": "mist",
-      "image": "/media/meditation.jpg",
-      "imageAlt": "A quiet moment of meditation"
+      "image": "/media/chanting-meditation.jpg",
+      "imageAlt": "A chanting meditation"
     }
   ],
   "closing": {

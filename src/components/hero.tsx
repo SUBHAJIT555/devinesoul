@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useReducedMotion } from "motion/react";
 import type { HomeContent } from "@/lib/types";
-import { Button } from "@/components/ui";
+import { Button, WhatsAppIcon } from "@/components/ui";
 
 export function Hero({ hero }: { hero: HomeContent["hero"] }) {
   const lines = hero.headline
@@ -15,7 +15,7 @@ export function Hero({ hero }: { hero: HomeContent["hero"] }) {
 
   return (
     <section className="relative bg-white">
-      <div className="relative h-screen overflow-clip [mask-image:radial-gradient(164%_85%_at_50%_14.6%,#000_86.3214%,transparent_100%)]">
+      <div className="relative h-[100svh] overflow-clip [mask-image:radial-gradient(164%_85%_at_50%_14.6%,#000_86.3214%,transparent_100%)]">
         <div
           data-hero-appear="background-back"
           className="absolute -top-10 -left-[10%] z-0 h-[180vh] w-[120%]"
@@ -39,8 +39,8 @@ export function Hero({ hero }: { hero: HomeContent["hero"] }) {
           </video>
         </div>
 
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[700px] flex-col items-center px-6 pt-[130px] text-center">
-          <h1 className="text-[clamp(40px,5vw,56px)] font-medium leading-[1.2] tracking-[-0.025em] text-white">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[700px] flex-col items-center px-6 pt-[108px] text-center sm:pt-[130px]">
+          <h1 className="text-[clamp(32px,8.4vw,56px)] font-medium leading-[1.2] tracking-[-0.025em] text-white">
             {lines.map((line) => (
               <span key={line} className="block">
                 {line.split(" ").map((word) => {
@@ -66,33 +66,30 @@ export function Hero({ hero }: { hero: HomeContent["hero"] }) {
           >
             {hero.subhead}
           </p>
-          <div data-hero-appear="cta" className="mt-7">
+          <div data-hero-appear="cta" className="mt-7 flex flex-wrap items-center justify-center gap-3">
             <Button href={hero.ctaHref}>{hero.cta}</Button>
+            <Button href={hero.whatsappHref} variant="whatsapp" external>
+              <WhatsAppIcon />
+              {hero.whatsapp}
+            </Button>
           </div>
-          <p className="font-meta mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[12px] tracking-normal text-white/80">
-            {hero.notes.map((note, index) => (
-              <span key={note} className="inline-flex items-center gap-2">
-                {index > 0 ? (
-                  <span data-hero-appear="separator" aria-hidden="true">
-                    ·
-                  </span>
-                ) : null}
-                <span
-                  data-hero-appear={index === 0 ? "trial" : "no-card"}
-                  className="inline-flex items-center gap-2"
-                >
-                  <NoteIcon index={index} />
-                  {note}
-                </span>
-              </span>
-            ))}
-          </p>
+          <a
+            data-hero-appear="rating"
+            href={hero.ratingHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2.5 rounded-xl bg-white/20 px-3.5 py-2 text-[14px] font-medium tracking-[-0.02em] text-white no-underline shadow-[0_1px_2px_rgba(0,0,0,0.12)] backdrop-blur-[8px]"
+          >
+            <GoogleMark />
+            <Stars />
+            <span>{hero.rating}</span>
+          </a>
         </div>
       </div>
 
       <div
         data-hero-appear="video"
-        className="relative z-20 mx-auto -mt-[40vh] w-[min(1080px,75vw)]"
+        className="relative z-20 mx-auto -mt-[min(40vh,calc(100svh-27.5rem))] w-[min(1080px,calc(100vw-32px))] sm:w-[min(1080px,80vw)] lg:-mt-[40vh] lg:w-[min(1080px,75vw)]"
       >
         <Stage />
       </div>
@@ -108,22 +105,41 @@ function Plate({ appear, src, className }: { appear: string; src: string; classN
   );
 }
 
-function NoteIcon({ index }: { index: number }) {
-  if (index === 0) {
-    return (
-      <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
-        <path
-          d="M8 1.5 9.4 6H14l-3.7 2.7 1.4 4.3L8 10.3 4.3 13l1.4-4.3L2 6h4.6L8 1.5Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
-
+function GoogleMark() {
   return (
-    <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
-      <path d="M11.2 2.2A5.2 5.2 0 1 0 13.8 10 4 4 0 0 1 11.2 2.2Z" fill="currentColor" />
+    <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true">
+      <path
+        fill="#4285F4"
+        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+      />
     </svg>
+  );
+}
+
+function Stars() {
+  return (
+    <span className="inline-flex text-[#fbbc04]" aria-hidden="true">
+      {Array.from({ length: 5 }, (_, index) => (
+        <svg key={index} viewBox="0 0 12 12" className="h-4 w-4">
+          <path
+            fill="currentColor"
+            d="M6 1.1 7.3 4l3.2.3-2.4 2.1.7 3.1L6 8.1 3.2 9.5l.7-3.1L1.5 4.3 4.7 4 6 1.1Z"
+          />
+        </svg>
+      ))}
+    </span>
   );
 }
 
@@ -146,7 +162,7 @@ function Stage() {
         <button
           type="button"
           onClick={() => setPlaying((value) => !value)}
-          className="absolute left-1/2 top-1/2 aspect-square w-[12%] min-w-[88px] max-w-[128px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/10 text-white shadow-[0_1px_2px_rgba(0,0,0,0.1),inset_0_3px_2px_-1px_rgba(255,255,255,0.5)] backdrop-blur-[5px] transition-transform duration-200 will-change-transform group-hover:scale-[1.08]"
+          className="absolute left-1/2 top-1/2 aspect-square w-[18%] max-w-[128px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/10 text-white shadow-[0_1px_2px_rgba(0,0,0,0.1),inset_0_3px_2px_-1px_rgba(255,255,255,0.5)] backdrop-blur-[5px] transition-transform duration-200 will-change-transform group-hover:scale-[1.08] sm:w-[12%]"
           aria-label={playing ? "Pause preview" : "Play preview"}
         >
           {playing ? (

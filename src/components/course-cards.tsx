@@ -7,7 +7,7 @@ import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Course } from "@/lib/types";
 import { courseEnquiry } from "@/lib/whatsapp";
-import { Button, Reveal, WhatsAppIcon } from "@/components/ui";
+import { Button, Check, Reveal, WhatsAppIcon } from "@/components/ui";
 
 const wash: Record<Course["tone"], string> = {
   blue: "bg-[#dff2fe]",
@@ -38,6 +38,16 @@ export function CourseCards({ items }: { items: Course[] }) {
               <div className="flex flex-1 flex-col px-4 pb-5 pt-6">
                 <h3 className="text-[26px] font-medium leading-[1.2] tracking-[-0.04em] text-ink">{item.title}</h3>
                 <p className="mt-3 text-[15px] leading-6 text-zinc-600">{item.summary}</p>
+                {item.points.length ? (
+                  <ul className="mt-4 space-y-2">
+                    {item.points.map((point) => (
+                      <li key={point} className="flex gap-2 text-[14px] leading-5 text-ink">
+                        <Check />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
                 <div className="mt-6 flex flex-wrap gap-3">
                   <button
                     type="button"

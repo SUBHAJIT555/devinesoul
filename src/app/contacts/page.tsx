@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/contact-form";
 import { FaqList } from "@/components/faq-list";
 import { ContactBand, Spotlight } from "@/components/home-sections";
 import { Lines, Reveal } from "@/components/ui";
-import { getContacts, getCourses, getProducts, getServices, getSite } from "@/lib/content";
+import { getContacts, getCourses, getProducts, getServices, getSite, offeringNames } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getContacts();
@@ -39,8 +39,8 @@ export default async function ContactsPage() {
           <Reveal>
             <ContactForm
               form={page.form}
-              services={services.features.map((item) => item.title)}
-              courses={courses.items.map((item) => item.title)}
+              services={offeringNames(services.features)}
+              courses={offeringNames(courses.items)}
               products={products.items.map((item) => item.name)}
             />
           </Reveal>

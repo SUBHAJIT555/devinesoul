@@ -51,10 +51,10 @@ body {
 
 @keyframes marquee {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   to {
-    transform: translate3d(-50%, 0, 0);
+    transform: translateX(-50%);
   }
 }
 
@@ -72,7 +72,10 @@ body {
 
 .marquee-mask:hover .marquee-track,
 .marquee-mask:hover .marquee-track-slow,
-.marquee-mask:hover .marquee-track-reverse {
+.marquee-mask:hover .marquee-track-reverse,
+.quote-marquee:hover .marquee-track,
+.quote-marquee:hover .marquee-track-slow,
+.quote-marquee:hover .marquee-track-reverse {
   animation-play-state: paused;
 }
 
@@ -118,22 +121,9 @@ body {
   --hero-delay: 0.8s;
 }
 
-[data-hero-appear="trial"],
-[data-hero-appear="separator"],
-[data-hero-appear="no-card"] {
+[data-hero-appear="rating"] {
   --hero-y: 4px;
-}
-
-[data-hero-appear="trial"] {
-  --hero-delay: 0.9s;
-}
-
-[data-hero-appear="separator"] {
-  --hero-delay: 1s;
-}
-
-[data-hero-appear="no-card"] {
-  --hero-delay: 1.1s;
+  --hero-delay: 0.95s;
 }
 
 [data-hero-appear="video"] {

@@ -1,15 +1,15 @@
 {
   "title": "Services",
-  "description": "Ritual, Vedic healing, divination, and meditation with Divine Souls By Priya. Courses sit inside the same practice.",
+  "description": "Healings, candle rituals, Akashic records, past-life regression, Hoodoo, divination, and meditation with Divine Souls By Priya. Courses sit inside the same practice.",
   "hero": {
     "eyebrow": "Services",
     "title": "Divine\nAssistance.",
     "body": "Explore a world of Divinely charged techniques to solve your issues. The courses live here too, as part of the same practice.",
-    "cta": "Contact",
+    "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
     "whatsappHref": "https://wa.me/917668648224",
-    "notes": ["Ritual, readings, and meditation", "In Dehradun and at a distance"],
+    "notes": ["Healings, ritual, readings, and meditation", "In Dehradun and at a distance"],
     "image": "/media/mark.jpg",
     "imageAlt": "Cards and crystals prepared for a reading"
   },
@@ -19,43 +19,98 @@
   },
   "features": [
     {
+      "id": "healings",
+      "title": "Healings",
+      "body": "Healing sessions chosen by the modality and by what you are actually carrying. The sitting can be in Dehradun or at a distance.",
+      "points": [
+        "Lama Fera Healing",
+        "Shalvik Mantra Rahasya Healing",
+        "Saropa Healing",
+        "Reiki Healing",
+        "Hunkara with Haleemi Healing"
+      ],
+      "image": "/media/lama-fera.jpg",
+      "imageAlt": "A Lama Fera healing sitting",
+      "align": "left",
+      "tone": "blue"
+    },
+    {
       "id": "ritual-castings",
-      "title": "Ritual Castings & Hoodoo",
-      "body": "Experience powerful healing through Hoodoo and candle magic rituals tailored to your needs. The working is set around the matter you bring, whether that is protection, a clearing, or something that has stayed stuck.",
-      "points": ["Set around the matter you bring", "Protection, a clearing, or something stuck", "Hoodoo and candle magic, tailored to you"],
+      "title": "Ritual Castings",
+      "body": "Candle rituals set around the matter you bring, whether that is healing, a relation, protection, a clearing, love, or a blessing.",
+      "points": [
+        "Healing Candle",
+        "Relation Candle",
+        "Protection Candle",
+        "Negativity Removal Candle",
+        "Love Candle",
+        "Blessing Candle"
+      ],
       "image": "/media/candles.jpg",
       "imageAlt": "Candles prepared for a ritual",
-      "align": "left",
+      "align": "right",
       "tone": "peach"
     },
     {
-      "id": "digital-vedic-healings",
-      "title": "Digital Vedic Healings",
-      "body": "Vedic healing offered at a distance, so the session can meet you without a journey to Dehradun first. The method stays the same as an in-person sitting. Distance only changes where you are while the work is done.",
-      "points": ["The same method as an in-person sitting", "No journey to Dehradun required first", "The session meets you where you are"],
-      "image": "/media/practice-b.jpg",
-      "imageAlt": "A guided healing moment with a singing bowl",
+      "id": "akashic-records",
+      "title": "Akashic Records",
+      "body": "A sitting in the Akashic records, used to see the thread of a life and what is asking to be understood now.",
+      "points": [],
+      "image": "/media/dusk.jpg",
+      "imageAlt": "A quiet dusk field",
+      "align": "left",
+      "tone": "violet"
+    },
+    {
+      "id": "plr",
+      "title": "PLR (Past Life Regression) Therapy",
+      "body": "A guided regression sitting, used when a present matter seems older than this life.",
+      "points": [],
+      "image": "/media/practice-a.jpg",
+      "imageAlt": "A guided sitting",
       "align": "right",
+      "tone": "peach"
+    },
+    {
+      "id": "hoodoo",
+      "title": "Hoodoo",
+      "body": "Seeking help with Saints and spirits. The working is set around the matter you bring.",
+      "points": [],
+      "image": "/media/hecate.jpg",
+      "imageAlt": "A candle and figure prepared for spirit work",
+      "align": "left",
       "tone": "blue"
     },
     {
       "id": "divinations",
       "title": "Divinations",
-      "body": "Discover insights and guidance through card readings for clarity in your life. A reading shows what is present and what is pressing, so the next choice is easier to see.",
-      "points": ["See what is present and what is pressing", "Card readings for clarity", "A clearer look at the next choice"],
+      "body": "A reading to see what is present and what is pressing, so the next choice is easier to see.",
+      "points": [
+        "Tarot card reading",
+        "Dowsing",
+        "Smoke Divination Reading",
+        "Runes Reading"
+      ],
       "image": "/media/mark.jpg",
       "imageAlt": "Cards laid out for a reading",
-      "align": "left",
+      "align": "right",
       "tone": "violet"
     },
     {
       "id": "meditations",
       "title": "Meditations",
-      "body": "Elevate yourself to your higher self using the ancient method of meditation. The sitting is guided and quiet, meant to settle attention and lift it toward the part of you that already knows the way.",
-      "points": ["A guided, quiet sitting", "Attention settled, then lifted", "An ancient method toward the higher self"],
+      "body": "A guided sitting, meant to settle attention and lift it toward the part of you that already knows the way.",
+      "points": [
+        "Sound Meditation",
+        "Breathing techniques",
+        "Bowl Meditation",
+        "Water meditation",
+        "Chanting & Meditation",
+        "Guided Meditation"
+      ],
       "image": "/media/meditation.jpg",
       "imageAlt": "A quiet moment of meditation",
-      "align": "right",
+      "align": "left",
       "tone": "peach"
     }
   ]

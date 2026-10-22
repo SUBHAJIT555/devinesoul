@@ -23,7 +23,7 @@ export default async function ProductsPage() {
 
   return (
     <main>
-      <AboutHero hero={page.hero} />
+      <AboutHero hero={page.hero} tone="products" />
       <section className="bg-white px-6 pb-8 pt-8">
         <div className="mx-auto flex max-w-[1000px] flex-col">
           <Reveal className="flex flex-col items-center gap-5 text-center">

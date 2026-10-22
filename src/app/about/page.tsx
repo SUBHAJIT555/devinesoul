@@ -17,7 +17,7 @@ export default async function AboutPage() {
 
   return (
     <main>
-      <AboutHero hero={page.hero} />
+      <AboutHero hero={page.hero} tone="about" />
       <section className="bg-white px-6 pb-12 pt-16">
         <div className="mx-auto flex max-w-[1000px] flex-col gap-28">
           {page.features.map((feature) => {

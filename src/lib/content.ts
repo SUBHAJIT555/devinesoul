@@ -42,3 +42,29 @@ export function getProducts() {
 export function getContacts() {
   return contactsData as ContactsContent;
 }
+
+type OfferingGroup = {
+  id: string;
+  title: string;
+  image: string;
+  points: string[];
+  body?: string;
+  summary?: string;
+};
+
+export function offeringNames(groups: { title: string; points: string[] }[]) {
+  return groups.flatMap((group) => (group.points.length ? group.points : [group.title]));
+}
+
+export function offeringMarquee(groups: OfferingGroup[], meta: string, hrefFor: (id: string) => string) {
+  return groups.flatMap((group) => {
+    const names = group.points.length ? group.points : [group.title];
+    return names.map((name) => ({
+      title: group.points.length ? group.title : name,
+      text: name,
+      image: group.image,
+      meta,
+      href: hrefFor(group.id),
+    }));
+  });
+}
