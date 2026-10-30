@@ -53,7 +53,7 @@ export default async function AboutPage() {
                       alt={item.imageAlt}
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
-                      className={`object-cover ${item.tone === "violet" ? "object-[center_22%]" : "object-center"}`}
+                      className="object-cover object-center"
                     />
                   </div>
                   <div className="flex flex-1 flex-col px-4 pb-5 pt-6">
@@ -160,7 +160,7 @@ function FeatureArticle({ feature }: { feature: AboutContent["features"][number]
   return (
     <article
       className={`grid grid-cols-1 items-start lg:items-center lg:justify-between lg:gap-x-[60px] ${
-        reversed ? "lg:grid-cols-[minmax(0,420px)_minmax(0,405px)]" : "lg:grid-cols-[minmax(0,405px)_minmax(0,420px)]"
+        reversed ? "lg:grid-cols-[minmax(0,440px)_minmax(0,405px)]" : "lg:grid-cols-[minmax(0,405px)_minmax(0,440px)]"
       }`}
     >
       <Reveal className={`order-1 ${textCol} lg:row-start-1`}>
@@ -168,16 +168,14 @@ function FeatureArticle({ feature }: { feature: AboutContent["features"][number]
           {feature.title}
         </h2>
       </Reveal>
-      <Reveal delay={0.08} className={`order-2 mt-8 w-full lg:order-none lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-center ${imageCol}`}>
-        <div
-          className={`relative aspect-[1.12766] w-full overflow-hidden rounded-[30px] shadow-[inset_0_0_28px_#fff] ${feature.tone === "violet" ? "bg-[#ece9fe]" : "bg-[#dff2fe]"}`}
-        >
+      <Reveal delay={0.08} className={`order-2 mx-auto mt-8 w-full max-w-[440px] lg:order-none lg:row-span-2 lg:row-start-1 lg:mx-0 lg:mt-0 lg:w-[440px] lg:max-w-none lg:self-center ${imageCol}`}>
+        <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[16px] shadow-lg shadow-black/8 ring-1 ring-black/8 ring-offset-2 md:ring-offset-6 md:ring-offset-white">
           <Image
             src={feature.image}
             alt={feature.imageAlt}
             fill
-            sizes="(min-width: 1024px) 420px, calc(100vw - 48px)"
-            className="object-cover"
+            sizes="(min-width: 1024px) 440px, 90vw"
+            className="object-cover object-[center_28%]"
           />
         </div>
       </Reveal>
@@ -214,7 +212,7 @@ function AboutGallery({ gallery }: { gallery: AboutContent["gallery"] }) {
           <p className="mt-4 text-[16px] leading-6 text-zinc-600">{gallery.body}</p>
         </Reveal>
         <div className="relative mt-10 w-full overflow-hidden rounded-[30px]">
-          <MorphGallery items={gallery.items} height="min(68svh, 640px)" autoplay={4500} />
+          <MorphGallery items={gallery.items} aspectRatio="3 / 2" autoplay={4500} />
         </div>
         <Reveal className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button href={gallery.href}>{gallery.cta}</Button>

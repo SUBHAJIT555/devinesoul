@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { HomeContent } from "@/lib/types";
+import { Scales } from "@/components/scales";
 import { Button, Check, Lines, Reveal, SectionHeading, WhatsAppIcon } from "@/components/ui";
 import { Compare } from "@/components/compare";
 import { FaqList } from "@/components/faq-list";
@@ -185,8 +186,8 @@ export function Stories({ stories }: { stories: HomeContent["stories"] }) {
                   {story.title}
                 </h3>
               </Reveal>
-              <Reveal delay={0.08} className={`order-3 mt-8 w-full lg:order-none lg:row-span-3 lg:row-start-1 lg:mt-0 lg:self-center ${imageCol}`}>
-                <StoryArt tone={story.tone} title={story.title} image={story.image} />
+              <Reveal delay={0.08} className={`order-3 mt-4 w-full lg:order-none lg:row-span-3 lg:row-start-1 lg:mt-0 lg:self-center ${imageCol}`}>
+                <StoryArt tone={story.tone} title={story.title} image={story.image} framed />
               </Reveal>
               <Reveal className={`order-4 mt-8 lg:mt-4 ${textCol} lg:row-start-3`}>
                 <p className="max-w-md text-[16px] leading-6 text-zinc-600">{story.intro}</p>
@@ -220,14 +221,68 @@ export function Stories({ stories }: { stories: HomeContent["stories"] }) {
 }
 
 function StoryArt({
-  tone,
+  tone = "blue",
   title,
   image,
+  framed = false,
 }: {
-  tone: HomeContent["stories"][number]["tone"];
+  tone?: HomeContent["stories"][number]["tone"];
   title: string;
   image?: string;
+  framed?: boolean;
 }) {
+  if (image && framed) {
+    return (
+      <div className="relative mx-auto flex w-full items-center justify-center overflow-hidden py-4 sm:overflow-visible sm:py-10 md:py-14">
+        <div className="relative aspect-square w-full max-w-[340px] p-3 sm:max-w-[320px] sm:p-5">
+          <div
+            aria-hidden="true"
+            className="absolute -inset-y-[12%] -left-4 h-[124%] w-6 sm:-inset-y-[30%] sm:-left-8 sm:h-[160%] sm:w-8"
+            style={{
+              WebkitMaskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
+              maskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
+            }}
+          >
+            <Scales size={8} className="rounded-lg" />
+          </div>
+          <div
+            aria-hidden="true"
+            className="absolute -inset-y-[12%] -right-4 h-[124%] w-6 sm:-inset-y-[30%] sm:-right-8 sm:h-[160%] sm:w-8"
+            style={{
+              WebkitMaskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
+              maskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
+            }}
+          >
+            <Scales size={8} className="rounded-lg" />
+          </div>
+          <div
+            aria-hidden="true"
+            className="absolute -inset-x-[12%] -top-4 h-6 w-[124%] sm:-inset-x-[30%] sm:-top-8 sm:h-8 sm:w-[160%]"
+            style={{
+              WebkitMaskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
+              maskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
+            }}
+          >
+            <Scales size={8} className="rounded-lg" />
+          </div>
+          <div
+            aria-hidden="true"
+            className="absolute -inset-x-[12%] -bottom-4 h-6 w-[124%] sm:-inset-x-[30%] sm:-bottom-8 sm:h-8 sm:w-[160%]"
+            style={{
+              WebkitMaskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
+              maskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
+            }}
+          >
+            <Scales size={8} className="rounded-lg" />
+          </div>
+          <div className="relative z-10 h-full w-full overflow-hidden rounded-[16px] bg-white shadow-sm shadow-black/8 ring-1 ring-black/5">
+            <Image src={image} alt="" fill sizes="(min-width: 640px) 320px, 90vw" className="object-cover" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (image) {
     return (
       <div className={`relative aspect-[1.12766] w-full overflow-hidden rounded-[30px] shadow-[inset_0_0_28px_#fff] ${stage[tone]}`}>
@@ -510,8 +565,8 @@ export function Steps({ steps }: { steps: HomeContent["steps"] }) {
               key={item.index}
               className={`grid w-full grid-cols-1 items-start lg:items-center lg:justify-between lg:gap-x-[60px] ${
                 reversed
-                  ? "lg:grid-cols-[minmax(0,420px)_minmax(0,405px)]"
-                  : "lg:grid-cols-[minmax(0,405px)_minmax(0,420px)]"
+                  ? "lg:grid-cols-[minmax(0,440px)_minmax(0,405px)]"
+                  : "lg:grid-cols-[minmax(0,405px)_minmax(0,440px)]"
               }`}
             >
               <Reveal className={`order-1 ${textCol} lg:row-start-1`}>
@@ -520,9 +575,9 @@ export function Steps({ steps }: { steps: HomeContent["steps"] }) {
               <Reveal className={`order-2 mt-3 ${textCol} lg:row-start-2`}>
                 <h3 className="text-[28px] font-normal leading-[1.2] tracking-[-0.05em] text-ink">{item.title}</h3>
               </Reveal>
-              <Reveal delay={0.08} className={`order-3 mt-8 w-full max-w-[420px] lg:order-none lg:row-span-3 lg:row-start-1 lg:mt-0 lg:w-[420px] lg:max-w-none lg:self-center ${imageCol}`}>
-                <div className="flex aspect-[535/380] w-full items-center justify-center">
-                  <img src={item.image} alt="" className="h-full w-full object-contain" />
+              <Reveal delay={0.08} className={`order-3 mx-auto mt-8 w-full max-w-[440px] lg:order-none lg:row-span-3 lg:row-start-1 lg:mx-0 lg:mt-0 lg:w-[440px] lg:max-w-none lg:self-center ${imageCol}`}>
+                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[16px] ring-1 ring-black/8 shadow-lg shadow-black/8 ring-offset-4 md:ring-offset-6 md:ring-offset-white">
+                  <Image src={item.image} alt="" fill sizes="(min-width: 1024px) 440px, 90vw" className="object-cover" />
                 </div>
               </Reveal>
               <Reveal className={`order-4 mt-8 lg:mt-3 ${textCol} lg:row-start-3`}>

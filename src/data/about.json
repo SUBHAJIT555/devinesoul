@@ -20,8 +20,8 @@
         "People find Divine Souls when something will not settle — a stretch of life, a question, a weight they cannot name. Priya listens first. Then she chooses the work that fits: healing, cards, ritual, or a longer course.",
         "The hour is for one person. She has been doing this for more than fifteen years, in Dehradun and at a distance."
       ],
-      "image": "/media/practice-b.jpg",
-      "imageAlt": "A guided healing moment with a singing bowl",
+      "image": "/media/about-sitting.webp",
+      "imageAlt": "A sitting in the practice",
       "align": "left",
       "tone": "blue",
       "actions": [
@@ -34,8 +34,8 @@
       "paragraphs": [
         "Priya does not split this work into black or white. Intention does the shaping. That is the line she teaches, and the one she works by. If you come afraid of the word occult, start there."
       ],
-      "image": "/media/candles.jpg",
-      "imageAlt": "Candles prepared for a ritual",
+      "image": "/media/about-no-colour.webp",
+      "imageAlt": "A pale candle and a dark candle, the same flame",
       "align": "right",
       "tone": "violet",
       "actions": [
@@ -52,24 +52,16 @@
     "whatsapp": "WhatsApp",
     "whatsappHref": "https://wa.me/917668648224",
     "items": [
-      { "src": "/media/practice-a.jpg", "alt": "A quiet sitting in the practice" },
-      { "src": "/media/practice-b.jpg", "alt": "A guided healing moment with a singing bowl" },
-      { "src": "/media/meditation.jpg", "alt": "A quiet moment in Priya's practice" },
-      { "src": "/media/candles.jpg", "alt": "Candles prepared for a ritual" },
-      { "src": "/media/ritual.jpg", "alt": "Ritual tools laid out for the work" },
-      { "src": "/media/dusk.jpg", "alt": "The room as the light falls" },
-      { "src": "/media/night.jpg", "alt": "Night light over the work" },
-      { "src": "/media/mark.jpg", "alt": "The mark of the practice" },
-      { "src": "/media/hero.jpg", "alt": "The opening frame of the work" },
-      { "src": "/media/chanting-meditation.jpg", "alt": "A seated meditation with the Om mark" },
-      { "src": "/media/hecate.jpg", "alt": "A figure holding flame for the tradition" },
-      { "src": "/media/lama-fera.jpg", "alt": "A seated figure in a forest shrine" },
-      { "src": "/media/gallery/meditation-dusk.jpg", "alt": "Meditation as the light goes" },
-      { "src": "/media/gallery/yoga-mat.jpg", "alt": "A mat laid for the sitting" },
-      { "src": "/media/gallery/yoga-room.jpg", "alt": "A quiet room prepared for practice" },
-      { "src": "/media/gallery/crystals.jpg", "alt": "Crystals gathered for the work" },
-      { "src": "/media/gallery/spa-candles.jpg", "alt": "Candles set for a longer sitting" },
-      { "src": "/media/gallery/prayer-hands.jpg", "alt": "Hands held in prayer" }
+      { "src": "/media/gallery/beads-candle.webp", "alt": "Prayer beads and a candle for the hour" },
+      { "src": "/media/gallery/wax-candle.webp", "alt": "A candle held through the sitting" },
+      { "src": "/media/gallery/palm-reading.webp", "alt": "A reading held in the hands" },
+      { "src": "/media/gallery/crystal-circle.webp", "alt": "Stones held in a circle" },
+      { "src": "/media/gallery/group-sitting.webp", "alt": "A sitting with others in the room" },
+      { "src": "/media/gallery/forest-sitting.webp", "alt": "A seated practice in the trees" },
+      { "src": "/media/gallery/sound-session.webp", "alt": "Sound work over a quiet floor" },
+      { "src": "/media/gallery/singing-bowl.webp", "alt": "A singing bowl held over the sitting" },
+      { "src": "/media/gallery/healing-bell.webp", "alt": "A bell over a resting face" },
+      { "src": "/media/gallery/candle-rite.webp", "alt": "Candles set for a longer rite" }
     ]
   },
   "conquests": {
@@ -80,24 +72,24 @@
         "title": "Lama Fera Grandmaster",
         "body": "More than fifteen years in Lama Fera, used in the sittings, not kept as a title on the wall.",
         "tone": "blue",
-        "image": "/media/lama-fera.jpg",
-        "imageAlt": "A seated figure in a forest shrine, for Lama Fera"
+        "image": "/media/carry-lama-fera-v2.webp",
+        "imageAlt": "A Lama Fera sitting, hands held over the work"
       },
       {
         "index": "02",
         "title": "High Priestess of ITW",
         "body": "The lineage she holds beside the private hours and the teaching.",
         "tone": "violet",
-        "image": "/media/hecate.jpg",
-        "imageAlt": "A many-armed figure holding flame, for the High Priestess of ITW"
+        "image": "/media/carry-priestess.webp",
+        "imageAlt": "A priestess sitting with candles"
       },
       {
         "index": "03",
         "title": "Meditation instructor",
         "body": "She teaches the practice so it does not end when you leave the room.",
         "tone": "peach",
-        "image": "/media/chanting-meditation.jpg",
-        "imageAlt": "A seated meditation with the Om mark"
+        "image": "/media/carry-meditation.webp",
+        "imageAlt": "A meditation sitting with students"
       }
     ]
   },

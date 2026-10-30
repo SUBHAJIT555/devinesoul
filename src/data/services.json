@@ -29,8 +29,8 @@
         "Reiki Healing",
         "Hunkara with Haleemi Healing"
       ],
-      "image": "/media/lama-fera.jpg",
-      "imageAlt": "A Lama Fera healing sitting",
+      "image": "/media/svc-healings.webp",
+      "imageAlt": "A healing sitting, hands held over the work",
       "align": "left",
       "tone": "blue"
     },
@@ -46,8 +46,8 @@
         "Love Candle",
         "Blessing Candle"
       ],
-      "image": "/media/candles.jpg",
-      "imageAlt": "Candles prepared for a ritual",
+      "image": "/media/svc-ritual.webp",
+      "imageAlt": "Candles named and set for a ritual",
       "align": "right",
       "tone": "peach"
     },
@@ -56,8 +56,8 @@
       "title": "Akashic Records",
       "body": "A guided hour in the records. Used when you need to see the thread of a life, and what is asking to be understood now. Not a performance.",
       "points": [],
-      "image": "/media/dusk.jpg",
-      "imageAlt": "A quiet dusk field",
+      "image": "/media/svc-akashic.webp",
+      "imageAlt": "A quiet hour in the records",
       "align": "left",
       "tone": "violet"
     },
@@ -66,8 +66,8 @@
       "title": "PLR (Past Life Regression) Therapy",
       "body": "When a present matter feels older than this life. She holds the hour quietly, so what is pressing can be seen without force.",
       "points": [],
-      "image": "/media/practice-a.jpg",
-      "imageAlt": "A guided sitting",
+      "image": "/media/svc-plr.webp",
+      "imageAlt": "A past-life regression sitting",
       "align": "right",
       "tone": "peach"
     },
@@ -76,8 +76,8 @@
       "title": "Hoodoo",
       "body": "Work with Saints and spirits, named to the situation you bring. Not a generic ritual off a list. Priya will say what she needs first.",
       "points": [],
-      "image": "/media/hecate.jpg",
-      "imageAlt": "A candle and figure prepared for spirit work",
+      "image": "/media/svc-hoodoo.webp",
+      "imageAlt": "A saint candle and herbs set for Hoodoo work",
       "align": "left",
       "tone": "blue"
     },
@@ -91,8 +91,8 @@
         "Smoke Divination Reading",
         "Runes Reading"
       ],
-      "image": "/media/mark.jpg",
-      "imageAlt": "Cards laid out for a reading",
+      "image": "/media/svc-divinations.webp",
+      "imageAlt": "Cards, runes, and a pendulum for a reading",
       "align": "right",
       "tone": "violet"
     },
@@ -108,8 +108,8 @@
         "Chanting & Meditation",
         "Guided Meditation"
       ],
-      "image": "/media/meditation.jpg",
-      "imageAlt": "A quiet moment of meditation",
+      "image": "/media/svc-meditations.webp",
+      "imageAlt": "A bowl meditation sitting",
       "align": "left",
       "tone": "peach"
     }

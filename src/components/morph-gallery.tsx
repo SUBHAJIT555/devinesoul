@@ -32,8 +32,10 @@ export type MorphItem = {
 
 export type MorphGalleryProps = {
   items: MorphItem[];
-  /** **Must be a definite length.** The canvas fills this box. */
+  /** Used when `aspectRatio` is omitted. The canvas fills this box. */
   height?: string;
+  /** CSS aspect-ratio, e.g. `"3 / 2"`. Same crop on every screen. */
+  aspectRatio?: string;
   /** Milliseconds of dissolve. */
   duration?: number;
   /** fbm frequency. Higher tears into finer shreds. */
@@ -226,6 +228,7 @@ const loadImage = (src: string) =>
 export default function MorphGallery({
   items,
   height = "100svh",
+  aspectRatio,
   duration = 1500,
   noiseScale = 3.5,
   edge = 0.15,
@@ -499,7 +502,7 @@ export default function MorphGallery({
   return (
     <section
       className={"relative w-full overflow-hidden bg-black " + className}
-      style={{ height }}
+      style={aspectRatio ? { aspectRatio } : { height }}
       role="region"
       aria-roledescription="carousel"
       aria-label="Image gallery"

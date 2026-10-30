@@ -46,6 +46,8 @@ The page stays light. Dark sections are bands.
 - Nav is fixed, centered, `top: 18px`, fill `#1e1e1f`, radius 22px, white links.
 - Primary buttons are 45px tall, padding 16px, radius 16px, fill `#00a7f5`. Shadow is `inset 0 3px 0 rgba(255, 255, 255, 0.2), 0 2px 4px rgba(6, 147, 255, 0.25)`. No border. Content is centered with a 7px gap.
 - Media frames are radius 16px with a wide soft shadow.
+- Home **stories** keep a square photo inside a light diagonal hatch (scales), 16px corners, and a gap. Do not put that hatch on the steps.
+- Home **steps** use a landscape photo card: `3/2`, about 440px wide, 16px corners, a thin `ring-black/8`, a soft shadow, and a white ring-offset. No scales. The subject must read in the crop — do not force a square photo into this box.
 - Inner page heroes are white, with the eyebrow in accent deep and the title at hero size in ink.
 - Phone widths collapse the links into a menu on the same pill.
 
