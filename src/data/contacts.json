@@ -16,7 +16,7 @@
         "title": "Or WhatsApp",
         "body": "Faster if you already know what you need. Send the same few lines there.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "icon": "people",
         "external": true
       }
@@ -38,16 +38,16 @@
       },
       {
         "name": "WhatsApp",
-        "handle": "917668648224",
+        "handle": "{whatsapp}",
         "body": "A direct conversation",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "tone": "whatsapp"
       },
       {
         "name": "Email",
-        "handle": "priyasinha1809@gmail.com",
+        "handle": "{email}",
         "body": "Write when you are ready",
-        "href": "mailto:priyasinha1809@gmail.com",
+        "href": "{mailtoHref}",
         "tone": "mail"
       },
       {
@@ -65,21 +65,21 @@
     "actions": [
       {
         "label": "Call now",
-        "href": "tel:+917668648224",
+        "href": "{telHref}",
         "variant": "primary"
       },
       {
         "label": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "variant": "whatsapp"
       }
     ]
   },
   "form": {
     "title": "Leave a note",
-    "body": "Name, a number, and what you are asking for. To reach her today, WhatsApp +91 7668648224 or email priyasinha1809@gmail.com.",
+    "body": "Name, a number, and what you are asking for. To reach her today, WhatsApp {phone} or email {email}.",
     "submit": "Send the note",
-    "success": "Saved on this page. To reach Priya now, WhatsApp +91 7668648224 or email priyasinha1809@gmail.com."
+    "success": "Saved on this page. To reach Priya now, WhatsApp {phone} or email {email}."
   },
   "faq": {
     "title": "Before you write",
@@ -87,7 +87,7 @@
     "items": [
       {
         "q": "Where do messages go?",
-        "a": "The form on this page only confirms what you typed. To reach Priya, WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or call the same number."
+        "a": "The form on this page only confirms what you typed. To reach Priya, WhatsApp {phone}, email {email}, or call the same number."
       },
       {
         "q": "What should I include?",
@@ -99,11 +99,11 @@
       },
       {
         "q": "Can I call first?",
-        "a": "Yes. Call +91 7668648224. A short first conversation is normal. If she is in a sitting, leave a WhatsApp."
+        "a": "Yes. Call {phone}. A short first conversation is normal. If she is in a sitting, leave a WhatsApp."
       },
       {
         "q": "How soon will she reply?",
-        "a": "Usually the same day, sometimes the next. WhatsApp is the fastest. Email priyasinha1809@gmail.com if you want a longer letter."
+        "a": "Usually the same day, sometimes the next. WhatsApp is the fastest. Email {email} if you want a longer letter."
       }
     ]
   }

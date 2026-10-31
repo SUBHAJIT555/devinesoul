@@ -8,7 +8,7 @@
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/917668648224",
+    "whatsappHref": "{whatsappHref}",
     "notes": ["15+ years in practice", "Based in Dehradun"],
     "image": "/media/meditation.jpg",
     "imageAlt": "A quiet moment in Priya's practice"
@@ -40,7 +40,7 @@
       "tone": "violet",
       "actions": [
         { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
-        { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp", "external": true }
+        { "label": "WhatsApp", "href": "{whatsappHref}", "variant": "whatsapp", "external": true }
       ]
     }
   ],
@@ -50,7 +50,7 @@
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/917668648224",
+    "whatsappHref": "{whatsappHref}",
     "items": [
       { "src": "/media/gallery/beads-candle.webp", "alt": "Prayer beads and a candle for the hour" },
       { "src": "/media/gallery/wax-candle.webp", "alt": "A candle held through the sitting" },
@@ -72,8 +72,8 @@
         "title": "Lama Fera Grandmaster",
         "body": "More than fifteen years in Lama Fera, used in the sittings, not kept as a title on the wall.",
         "tone": "blue",
-        "image": "/media/carry-lama-fera-v2.webp",
-        "imageAlt": "A Lama Fera sitting, hands held over the work"
+        "image": "/media/carry-lama-fera-v3.webp",
+        "imageAlt": "A sitting before a Buddha statue"
       },
       {
         "index": "02",
@@ -148,7 +148,7 @@
         "body": "Same practice. Same person. In Dehradun, and by message if you cannot travel.",
         "actions": [
           { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
-          { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp", "external": true }
+          { "label": "WhatsApp", "href": "{whatsappHref}", "variant": "whatsapp", "external": true }
         ]
       }
     ]
@@ -201,7 +201,7 @@
       },
       {
         "q": "Can I speak to her before I book?",
-        "a": "Yes. Call +91 7668648224, write on WhatsApp, or email priyasinha1809@gmail.com. A short first conversation is normal."
+        "a": "Yes. Call {phone}, write on WhatsApp, or email {email}. A short first conversation is normal."
       }
     ]
   },
@@ -220,7 +220,7 @@
         "title": "Prefer WhatsApp?",
         "body": "Say who you are and what you want to know. She answers there.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "icon": "people",
         "external": true
       }

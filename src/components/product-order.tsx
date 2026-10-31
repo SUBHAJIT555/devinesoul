@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import type { FormEvent, KeyboardEvent as ReactKeyboardEvent } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { contact } from "@/lib/contact";
 import { productOrder } from "@/lib/whatsapp";
 import { Button, Check, WhatsAppIcon } from "@/components/ui";
 
@@ -142,7 +143,7 @@ function EnquireModal({
             {sent ? (
               <div className="px-6 pb-6 pt-3">
                 <p className="rounded-[20px] bg-[#dff2fe] px-4 py-4 text-[15px] leading-6 text-ink">
-                  Received on this page. Nothing was sent on. Email priyasinha1809@gmail.com or call +91 7668648224 and Priya can pick it up.
+                  Received on this page. Nothing was sent on. Email {contact.email} or call {contact.phoneDisplay} and Priya can pick it up.
                 </p>
               </div>
             ) : (

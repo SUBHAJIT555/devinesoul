@@ -30,6 +30,30 @@
       "href": "/products",
       "menu": [
         {
+          "label": "Healing Water",
+          "href": "/products#healing-water",
+          "body": "A sanctified elixir, made for one person. Happy, Healthy, and Healed.",
+          "tone": "blue",
+          "icon": "flower",
+          "group": "Products"
+        },
+        {
+          "label": "Protection spray",
+          "href": "/products#protection-spray",
+          "body": "A spray to seal the aura against the evil eye and what will not settle.",
+          "tone": "violet",
+          "icon": "eye",
+          "group": "Products"
+        },
+        {
+          "label": "Wealth spray",
+          "href": "/products#wealth-spray",
+          "body": "For wealth and success. A spray for the body, not to drink.",
+          "tone": "amber",
+          "icon": "sun",
+          "group": "Products"
+        },
+        {
           "label": "Crystals",
           "href": "/products#crystals",
           "body": "A stone for the issue you are in, charged before it leaves.",
@@ -116,21 +140,28 @@
         },
         {
           "label": "WhatsApp",
-          "value": "+91 7668648224",
-          "href": "https://wa.me/917668648224"
+          "value": "{phone}",
+          "href": "{whatsappHref}"
         },
         {
           "label": "Gmail",
-          "value": "priyasinha1809@gmail.com",
-          "href": "mailto:priyasinha1809@gmail.com"
+          "value": "{email}",
+          "href": "{mailtoHref}"
         },
         {
           "label": "Mobile",
-          "value": "+91 7668648224",
-          "href": "tel:+917668648224"
+          "value": "{phone}",
+          "href": "{telHref}"
         }
       ]
     },
     "note": "© 2026 Divine Souls By Priya. All rights reserved."
+  },
+  "whatsappWidget": {
+    "title": "Write to Priya",
+    "body": "A sitting, a course, or something to take home. A few lines is enough.",
+    "placeholder": "Type a message...",
+    "cta": "Send on WhatsApp",
+    "emptyMessage": "Hello Priya, I would like to begin. Please tell me how to start."
   }
 }

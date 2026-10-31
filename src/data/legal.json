@@ -23,7 +23,7 @@
         "paragraphs": [
           "The site describes holistic healing, tarot and divination, Vedic healing, ritual and candle work, meditation, courses, and charged pieces such as crystals, healing kits, and ritual tools. It is written so a person can understand the work before they write to Priya.",
           "The practice is based in Dehradun. Some sessions can also be offered at a distance. The site says so where that is true. It does not publish a street address, a price list, or a checkout.",
-          "You can reach Priya in the ways the site already shows: call +91 7668648224, email priyasinha1809@gmail.com, or write on WhatsApp at the same number. Instagram and Facebook are public pages of the practice. The map link opens the Google place for Divine Souls."
+          "You can reach Priya in the ways the site already shows: call {phone}, email {email}, or write on WhatsApp at the same number. Instagram and Facebook are public pages of the practice. The map link opens the Google place for Divine Souls."
         ]
       },
       {
@@ -55,7 +55,7 @@
         "paragraphs": [
           "The writing, photographs, illustrations, and layout on this site belong to the practice, or are used with permission. The name Divine Souls By Priya, and the mark in the navigation, identify the practice. You may not copy them onto another site, a product, or an advertisement as if they were yours.",
           "You may read the pages, and you may share a link to a page, for a personal reason. You may not copy the pages into a collection, a database, or a product, and you may not scrape them with a script.",
-          "If you want to use a photograph, a passage, or the name for anything beyond a private link, write to priyasinha1809@gmail.com and wait for a yes. Silence is not permission."
+          "If you want to use a photograph, a passage, or the name for anything beyond a private link, write to {email} and wait for a yes. Silence is not permission."
         ]
       },
       {
@@ -133,8 +133,8 @@
         ],
         "points": [
           "Divine Souls By Priya, Dehradun, India",
-          "Phone and WhatsApp: +91 7668648224",
-          "Email: priyasinha1809@gmail.com"
+          "Phone and WhatsApp: {phone}",
+          "Email: {email}"
         ]
       }
     ]
@@ -168,7 +168,7 @@
         "paragraphs": [
           "This notice is about the website of Divine Souls By Priya, a healing practice in Dehradun, India. It covers the pages on this site: home, about, services, courses, products, contact, and these legal pages.",
           "It does not cover Instagram, Facebook, WhatsApp, Gmail, your phone company, or Google Maps, except to say that a link from here opens them. Those services have their own notices.",
-          "Priya is the person to ask. There is no separate data-protection office and no company registration number published on this site, because none is claimed here. Contact her at +91 7668648224 or priyasinha1809@gmail.com."
+          "Priya is the person to ask. There is no separate data-protection office and no company registration number published on this site, because none is claimed here. Contact her at {phone} or {email}."
         ]
       },
       {
@@ -182,7 +182,7 @@
       {
         "title": "3. What you send by phone, email, or WhatsApp",
         "paragraphs": [
-          "If you call +91 7668648224, email priyasinha1809@gmail.com, or open WhatsApp to that number, you are contacting Priya through that service. She may read the message, reply, and keep it while she is working with you.",
+          "If you call {phone}, email {email}, or open WhatsApp to that number, you are contacting Priya through that service. She may read the message, reply, and keep it while she is working with you.",
           "Send only what you want her to know. A healing conversation can include personal detail. You choose what to say. She does not pull that detail out of the website, because the website does not have it.",
           "Those services may keep their own copies under their own rules. This site cannot delete a WhatsApp chat from Meta’s systems, or an email from your mail provider. If you want Priya to disregard a message she received, ask her directly."
         ]
@@ -253,8 +253,8 @@
         ],
         "points": [
           "Divine Souls By Priya, Dehradun, India",
-          "Phone and WhatsApp: +91 7668648224",
-          "Email: priyasinha1809@gmail.com"
+          "Phone and WhatsApp: {phone}",
+          "Email: {email}"
         ]
       }
     ]
@@ -305,8 +305,8 @@
         ],
         "points": [
           "Instagram and Facebook, for the public pages of the practice.",
-          "WhatsApp, when you choose to message +91 7668648224.",
-          "Your email app or Gmail, when you write to priyasinha1809@gmail.com.",
+          "WhatsApp, when you choose to message {phone}.",
+          "Your email app or Gmail, when you write to {email}.",
           "Google Maps, when you open the place link for Dehradun.",
           "A phone call, which is your carrier, not a cookie."
         ]
@@ -325,8 +325,8 @@
         ],
         "points": [
           "Divine Souls By Priya, Dehradun, India",
-          "Phone and WhatsApp: +91 7668648224",
-          "Email: priyasinha1809@gmail.com"
+          "Phone and WhatsApp: {phone}",
+          "Email: {email}"
         ]
       }
     ]

@@ -6,6 +6,7 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { WhatsAppWidget } from "@/components/whatsapp-widget";
 import { getSite } from "@/lib/content";
 import "./globals.css";
 
@@ -57,6 +58,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <SiteHeader site={site} />
           <div id="content">{children}</div>
           <SiteFooter site={site} />
+          <WhatsAppWidget site={site} />
           <ScrollToTop />
         </SmoothScroll>
       </body>

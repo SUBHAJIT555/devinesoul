@@ -3,6 +3,7 @@ import { FaqList } from "@/components/faq-list";
 import { ContactBand } from "@/components/home-sections";
 import { Button, MailIcon, PhoneIcon, Reveal, WhatsAppIcon } from "@/components/ui";
 import { faqGroups, withChannels } from "@/lib/content";
+import { contact } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -28,15 +29,15 @@ export default function FaqPage() {
             Every question from the site, kept in one place. For anything personal, call or write Priya directly.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Button href="tel:+917668648224">
+            <Button href={contact.telHref}>
               <PhoneIcon />
               Call now
             </Button>
-            <Button href="mailto:priyasinha1809@gmail.com" variant="purple">
+            <Button href={contact.mailtoHref} variant="purple">
               <MailIcon />
               Email
             </Button>
-            <Button href="https://wa.me/917668648224" variant="whatsapp" external>
+            <Button href={contact.whatsappHref} variant="whatsapp" external>
               <WhatsAppIcon />
               WhatsApp
             </Button>
@@ -68,9 +69,9 @@ export default function FaqPage() {
             },
             {
               title: "Prefer WhatsApp?",
-              body: "Send the question there. Call +91 7668648224 if you would rather speak.",
+              body: `Send the question there. Call ${contact.phoneDisplay} if you would rather speak.`,
               cta: "WhatsApp",
-              href: "https://wa.me/917668648224",
+              href: contact.whatsappHref,
               icon: "people",
               external: true,
             },

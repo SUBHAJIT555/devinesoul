@@ -15,8 +15,10 @@
           "service": "A Lama Fera sitting with Priya, in Dehradun or at a distance.",
           "course": "Learn Lama Fera so you can hold the method in your own practice.",
           "points": ["A sitting set around the matter you bring", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A lotus on still water"
+          "image": "/media/heal-lama-fera.webp",
+          "imageAlt": "A Lama Fera sitting before a Buddha statue",
+          "courseImage": "/media/learn-lama-fera.webp",
+          "courseImageAlt": "Learning Lama Fera so the method can be held"
         },
         {
           "slug": "shalvik-mantra-rahasya-healing",
@@ -24,8 +26,10 @@
           "service": "A Shalvik Mantra Rahasya sitting, set around what you are actually facing.",
           "course": "A course in Shalvik Mantra Rahasya, taught as a working practice.",
           "points": ["The mantra work is chosen to the sitting", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A quiet meditation sitting"
+          "image": "/media/heal-shalvik.webp",
+          "imageAlt": "A mantra sitting with prayer beads",
+          "courseImage": "/media/learn-shalvik.webp",
+          "courseImageAlt": "Learning Shalvik Mantra Rahasya as a working practice"
         },
         {
           "slug": "saropa-healing",
@@ -33,8 +37,10 @@
           "service": "A Saropa healing sitting with Priya.",
           "course": "Learn Saropa healing as part of this practice.",
           "points": ["A sitting, not a lecture", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A person stretching in a quiet room"
+          "image": "/media/heal-saropa.webp",
+          "imageAlt": "A Saropa healing sitting",
+          "courseImage": "/media/learn-saropa.webp",
+          "courseImageAlt": "Learning Saropa healing in a sitting"
         },
         {
           "slug": "reiki-healing",
@@ -42,8 +48,10 @@
           "service": "A Reiki sitting, used when the body and the mind both need quiet.",
           "course": "A course in Reiki, so the method can continue after the hour.",
           "points": ["A quiet, guided sitting", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Hands held in a quiet practice"
+          "image": "/media/heal-reiki.webp",
+          "imageAlt": "A Reiki sitting, hands held over the work",
+          "courseImage": "/media/learn-reiki.webp",
+          "courseImageAlt": "Learning Reiki so the method can continue"
         },
         {
           "slug": "hunkara-with-haleemi-healing",
@@ -51,8 +59,10 @@
           "service": "Hunkara with Haleemi, offered as a healing sitting.",
           "course": "Learn Hunkara with Haleemi as a working method.",
           "points": ["Set around the matter you bring", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A voice held in a quiet room"
+          "image": "/media/heal-hunkara.webp",
+          "imageAlt": "A Hunkara sitting with voice and bowl",
+          "courseImage": "/media/learn-hunkara.webp",
+          "courseImageAlt": "Learning Hunkara with Haleemi as a working method"
         }
       ]
     },
@@ -71,8 +81,10 @@
           "service": "A healing candle ritual, cast around the matter you bring.",
           "course": "Learn how a healing candle is prepared and cast.",
           "points": ["The working is set to your situation", "Priya will say what she needs from you first", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A lit candle on a table"
+          "image": "/media/ritual-healing.webp",
+          "imageAlt": "A healing candle named to the matter",
+          "courseImage": "/media/learn-candle-healing.webp",
+          "courseImageAlt": "Learning how a healing candle is prepared and cast"
         },
         {
           "slug": "relation-candle",
@@ -80,8 +92,10 @@
           "service": "A candle ritual for a relation that needs clearing or care.",
           "course": "A course in relation candle work.",
           "points": ["Named to the people involved", "The next step is a conversation with Priya", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1571115177098-24ec17bd0255?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Candles gathered together"
+          "image": "/media/ritual-relation.webp",
+          "imageAlt": "Two candles set for a relation",
+          "courseImage": "/media/learn-candle-relation.webp",
+          "courseImageAlt": "Learning relation candle work"
         },
         {
           "slug": "protection-candle",
@@ -89,8 +103,10 @@
           "service": "A protection candle, set when something around you needs a boundary.",
           "course": "Learn protection candle work as a ritual practice.",
           "points": ["Cast around the matter you bring", "Priya will say how the working is held", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Smoke rising from a candle"
+          "image": "/media/ritual-protection.webp",
+          "imageAlt": "A protection candle inside a ring of salt",
+          "courseImage": "/media/learn-candle-protection.webp",
+          "courseImageAlt": "Learning protection candle work"
         },
         {
           "slug": "negativity-removal-candle",
@@ -98,8 +114,10 @@
           "service": "A clearing candle, used when something stuck needs to move.",
           "course": "Learn negativity-removal candle work.",
           "points": ["A clearing, not a generic ritual", "Begin with a short note to Priya", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A dark still-life with stones"
+          "image": "/media/ritual-clearing.webp",
+          "imageAlt": "A clearing candle and smoke",
+          "courseImage": "/media/learn-candle-clearing.webp",
+          "courseImageAlt": "Learning negativity-removal candle work"
         },
         {
           "slug": "love-candle",
@@ -107,8 +125,10 @@
           "service": "A love candle ritual, set around the relation you name.",
           "course": "A course in love candle work.",
           "points": ["The working is specific, not generic", "Priya will ask what should be said first", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Small hearts on a cloth"
+          "image": "/media/ritual-love.webp",
+          "imageAlt": "A love candle with a folded note",
+          "courseImage": "/media/learn-candle-love.webp",
+          "courseImageAlt": "Learning love candle work"
         },
         {
           "slug": "blessing-candle",
@@ -116,8 +136,10 @@
           "service": "A blessing candle, cast for a person, a house, or a beginning.",
           "course": "Learn how a blessing candle is cast.",
           "points": ["Named to the blessing you want held", "In Dehradun or arranged at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Warm light in a quiet room"
+          "image": "/media/ritual-blessing.webp",
+          "imageAlt": "A blessing candle and a diya",
+          "courseImage": "/media/learn-candle-blessing.webp",
+          "courseImageAlt": "Learning how a blessing candle is cast"
         }
       ]
     },
@@ -126,8 +148,8 @@
       "title": "Akashic Records",
       "summary": "A guided hour in the records, when you need to see the thread of a life.",
       "courseSummary": "How to sit in the records and read that thread.",
-      "image": "/media/dusk.jpg",
-      "imageAlt": "A quiet dusk field",
+      "image": "/media/akashic-records.webp",
+      "imageAlt": "A guided hour in the records",
       "tone": "violet",
       "items": [
         {
@@ -136,8 +158,10 @@
           "service": "A sitting in the Akashic records, for what this life is asking to show.",
           "course": "A course in reading the Akashic records.",
           "points": ["A guided sitting, not a performance", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A night sky"
+          "image": "/media/akashic-records.webp",
+          "imageAlt": "A sitting with the book and the thread of a life",
+          "courseImage": "/media/learn-akashic.webp",
+          "courseImageAlt": "Learning to sit in the records and read that thread"
         }
       ]
     },
@@ -156,8 +180,10 @@
           "service": "A guided regression sitting with Priya.",
           "course": "A course in past-life regression therapy.",
           "points": ["Used when the present matter feels older than this life", "A quiet, guided hour", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A path through a forest"
+          "image": "/media/plr-therapy.webp",
+          "imageAlt": "A quiet past-life regression sitting",
+          "courseImage": "/media/learn-plr.webp",
+          "courseImageAlt": "Learning to hold a past-life regression hour"
         }
       ]
     },
@@ -176,8 +202,10 @@
           "service": "Hoodoo work, seeking help with Saints and spirits around the matter you bring.",
           "course": "A course in Hoodoo, taught as a working practice.",
           "points": ["Saints and spirits, asked for a named matter", "Priya will say what the working needs", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1509248961158-e54f9671847e?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Candles prepared on a table"
+          "image": "/media/hoodoo-v2.webp",
+          "imageAlt": "A Hoodoo sitting with a saint candle and herbs",
+          "courseImage": "/media/learn-hoodoo.webp",
+          "courseImageAlt": "Learning Hoodoo as a working practice"
         }
       ]
     },
@@ -196,8 +224,10 @@
           "service": "A tarot reading for the situation in front of you.",
           "course": "A course in tarot, so you can read for yourself and for others.",
           "points": ["A clearer look at what is present", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Books and papers laid out for a reading"
+          "image": "/media/div-tarot.webp",
+          "imageAlt": "A tarot spread on a wooden table",
+          "courseImage": "/media/learn-tarot.webp",
+          "courseImageAlt": "Learning tarot so you can read for yourself and for others"
         },
         {
           "slug": "dowsing",
@@ -205,8 +235,10 @@
           "service": "A dowsing sitting, used when a yes or no needs to be asked cleanly.",
           "course": "Learn dowsing as a reading method.",
           "points": ["A direct question, a direct sitting", "Priya will say how to prepare", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A sunlit landscape"
+          "image": "/media/div-dowsing.webp",
+          "imageAlt": "A pendulum held over an open palm",
+          "courseImage": "/media/learn-dowsing.webp",
+          "courseImageAlt": "Learning dowsing as a reading method"
         },
         {
           "slug": "smoke-divination-reading",
@@ -214,8 +246,10 @@
           "service": "A smoke divination reading for what is pressing now.",
           "course": "A course in smoke divination.",
           "points": ["A reading, then a next step you can take", "In Dehradun or arranged with Priya", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1499209974431-9dad8d1d5be0?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Smoke in still air"
+          "image": "/media/div-smoke.webp",
+          "imageAlt": "Incense smoke rising for a reading",
+          "courseImage": "/media/learn-smoke.webp",
+          "courseImageAlt": "Learning smoke divination"
         },
         {
           "slug": "runes-reading",
@@ -223,8 +257,10 @@
           "service": "A runes reading for the choice in front of you.",
           "course": "Learn to read the runes.",
           "points": ["Cast for the question you bring", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Leaves and stones on a table"
+          "image": "/media/div-runes.webp",
+          "imageAlt": "Rune tiles cast on a linen cloth",
+          "courseImage": "/media/learn-runes.webp",
+          "courseImageAlt": "Learning to read the runes"
         }
       ]
     },
@@ -243,8 +279,10 @@
           "service": "A sound meditation sitting with Priya.",
           "course": "A course in sound meditation.",
           "points": ["A guided, quiet hour", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A record and quiet room"
+          "image": "/media/med-sound.webp",
+          "imageAlt": "A sound meditation with singing bowls",
+          "courseImage": "/media/learn-sound.webp",
+          "courseImageAlt": "Learning sound meditation"
         },
         {
           "slug": "breathing-techniques",
@@ -252,8 +290,10 @@
           "service": "A sitting in breathing techniques, to settle what is running.",
           "course": "Learn the breathing techniques used in this practice.",
           "points": ["Simple enough to take home", "Priya will match the method to you", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A still spa setting"
+          "image": "/media/med-breath.webp",
+          "imageAlt": "A sitting in breathing techniques",
+          "courseImage": "/media/learn-breath.webp",
+          "courseImageAlt": "Learning the breathing techniques used in this practice"
         },
         {
           "slug": "bowl-meditation",
@@ -261,8 +301,10 @@
           "service": "A bowl meditation sitting.",
           "course": "A course in bowl meditation.",
           "points": ["Sound and sitting, held together", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Soft light on a quiet table"
+          "image": "/media/med-bowl.webp",
+          "imageAlt": "A brass bowl meditation sitting",
+          "courseImage": "/media/learn-bowl.webp",
+          "courseImageAlt": "Learning bowl meditation"
         },
         {
           "slug": "water-meditation",
@@ -270,8 +312,10 @@
           "service": "A water meditation sitting.",
           "course": "Learn water meditation as a practice.",
           "points": ["A guided sitting", "Priya will say how to prepare", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "Water meeting the shore"
+          "image": "/media/med-water.webp",
+          "imageAlt": "A water meditation with a brass bowl",
+          "courseImage": "/media/learn-water.webp",
+          "courseImageAlt": "Learning water meditation as a practice"
         },
         {
           "slug": "chanting-meditation",
@@ -279,8 +323,10 @@
           "service": "Chanting and meditation in one sitting.",
           "course": "A course in chanting and meditation.",
           "points": ["Voice and attention, held together", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "People gathered around sound"
+          "image": "/media/med-chanting.webp",
+          "imageAlt": "A chanting meditation with a mala",
+          "courseImage": "/media/learn-chanting.webp",
+          "courseImageAlt": "Learning chanting and meditation"
         },
         {
           "slug": "guided-meditation",
@@ -288,8 +334,10 @@
           "service": "A guided meditation sitting with Priya.",
           "course": "Learn to hold a guided meditation for yourself and for others.",
           "points": ["Attention settled, then lifted", "In Dehradun or at a distance", "The hour follows what you bring, not a script"],
-          "image": "https://images.unsplash.com/photo-1474418397713-7ede21d49118?auto=format&fit=crop&w=1400&q=80",
-          "imageAlt": "A person sitting in meditation"
+          "image": "/media/med-guided.webp",
+          "imageAlt": "A guided meditation sitting",
+          "courseImage": "/media/learn-guided.webp",
+          "courseImageAlt": "Learning to hold a guided meditation for others"
         }
       ]
     }

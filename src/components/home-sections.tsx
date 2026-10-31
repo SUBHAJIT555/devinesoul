@@ -1,16 +1,10 @@
 import Image from "next/image";
 import type { HomeContent } from "@/lib/types";
-import { Scales } from "@/components/scales";
 import { Button, Check, Lines, Reveal, SectionHeading, WhatsAppIcon } from "@/components/ui";
 import { Compare } from "@/components/compare";
 import { FaqList } from "@/components/faq-list";
 import { TestimonialsColumns } from "@/components/testimonials-columns";
-
-const stage: Record<HomeContent["stories"][number]["tone"], string> = {
-  blue: "bg-[#dff2fe]",
-  orange: "bg-[#ffedd4]",
-  violet: "bg-[#ece9fe]",
-};
+import { contact } from "@/lib/contact";
 
 const badge: Record<HomeContent["stories"][number]["tone"], string> = {
   blue: "bg-[#dff2fe] text-accent-deep",
@@ -171,8 +165,8 @@ export function Stories({ stories }: { stories: HomeContent["stories"] }) {
               id={story.id}
               className={`grid scroll-mt-28 grid-cols-1 items-start overflow-visible lg:items-center lg:justify-between lg:gap-x-[60px] ${
                 story.align === "right"
-                  ? "lg:grid-cols-[minmax(0,420px)_minmax(0,405px)]"
-                  : "lg:grid-cols-[minmax(0,405px)_minmax(0,420px)]"
+                  ? "lg:grid-cols-[minmax(0,440px)_minmax(0,405px)]"
+                  : "lg:grid-cols-[minmax(0,405px)_minmax(0,440px)]"
               }`}
             >
               <Reveal className={`order-1 ${textCol} lg:row-start-1`}>
@@ -186,8 +180,12 @@ export function Stories({ stories }: { stories: HomeContent["stories"] }) {
                   {story.title}
                 </h3>
               </Reveal>
-              <Reveal delay={0.08} className={`order-3 mt-4 w-full lg:order-none lg:row-span-3 lg:row-start-1 lg:mt-0 lg:self-center ${imageCol}`}>
-                <StoryArt tone={story.tone} title={story.title} image={story.image} framed />
+              <Reveal delay={0.08} className={`order-3 mx-auto mt-8 w-full max-w-[440px] lg:order-none lg:row-span-3 lg:row-start-1 lg:mx-0 lg:mt-0 lg:w-[440px] lg:max-w-none lg:self-center ${imageCol}`}>
+                {story.image ? (
+                  <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[16px] shadow-lg shadow-black/8 ring-1 ring-black/8 ring-offset-4 md:ring-offset-6 md:ring-offset-white">
+                    <Image src={story.image} alt="" fill sizes="(min-width: 1024px) 440px, 90vw" className="object-cover" />
+                  </div>
+                ) : null}
               </Reveal>
               <Reveal className={`order-4 mt-8 lg:mt-4 ${textCol} lg:row-start-3`}>
                 <p className="max-w-md text-[16px] leading-6 text-zinc-600">{story.intro}</p>
@@ -217,112 +215,6 @@ export function Stories({ stories }: { stories: HomeContent["stories"] }) {
         })}
       </div>
     </section>
-  );
-}
-
-function StoryArt({
-  tone = "blue",
-  title,
-  image,
-  framed = false,
-}: {
-  tone?: HomeContent["stories"][number]["tone"];
-  title: string;
-  image?: string;
-  framed?: boolean;
-}) {
-  if (image && framed) {
-    return (
-      <div className="relative mx-auto flex w-full items-center justify-center overflow-hidden py-4 sm:overflow-visible sm:py-10 md:py-14">
-        <div className="relative aspect-square w-full max-w-[340px] p-3 sm:max-w-[320px] sm:p-5">
-          <div
-            aria-hidden="true"
-            className="absolute -inset-y-[12%] -left-4 h-[124%] w-6 sm:-inset-y-[30%] sm:-left-8 sm:h-[160%] sm:w-8"
-            style={{
-              WebkitMaskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
-              maskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
-            }}
-          >
-            <Scales size={8} className="rounded-lg" />
-          </div>
-          <div
-            aria-hidden="true"
-            className="absolute -inset-y-[12%] -right-4 h-[124%] w-6 sm:-inset-y-[30%] sm:-right-8 sm:h-[160%] sm:w-8"
-            style={{
-              WebkitMaskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
-              maskImage: "linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent)",
-            }}
-          >
-            <Scales size={8} className="rounded-lg" />
-          </div>
-          <div
-            aria-hidden="true"
-            className="absolute -inset-x-[12%] -top-4 h-6 w-[124%] sm:-inset-x-[30%] sm:-top-8 sm:h-8 sm:w-[160%]"
-            style={{
-              WebkitMaskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
-              maskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
-            }}
-          >
-            <Scales size={8} className="rounded-lg" />
-          </div>
-          <div
-            aria-hidden="true"
-            className="absolute -inset-x-[12%] -bottom-4 h-6 w-[124%] sm:-inset-x-[30%] sm:-bottom-8 sm:h-8 sm:w-[160%]"
-            style={{
-              WebkitMaskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
-              maskImage: "linear-gradient(to right, transparent, #000 10%, #000 90%, transparent)",
-            }}
-          >
-            <Scales size={8} className="rounded-lg" />
-          </div>
-          <div className="relative z-10 h-full w-full overflow-hidden rounded-[16px] bg-white shadow-sm shadow-black/8 ring-1 ring-black/5">
-            <Image src={image} alt="" fill sizes="(min-width: 640px) 320px, 90vw" className="object-cover" />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (image) {
-    return (
-      <div className={`relative aspect-[1.12766] w-full overflow-hidden rounded-[30px] shadow-[inset_0_0_28px_#fff] ${stage[tone]}`}>
-        <div className="absolute z-[1] overflow-visible" style={{ width: "102%", height: "102%", top: "-1.05374%", right: "-5px" }}>
-          <div className="absolute inset-0" style={{ borderRadius: "inherit" }}>
-            <Image
-              src={image}
-              alt=""
-              fill
-              sizes="(min-width: 1024px) 420px, calc(100vw - 48px)"
-              className="object-cover"
-              style={{ borderRadius: "inherit", objectPosition: "center center" }}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className={`flex min-h-[420px] items-center justify-center rounded-[28px] p-6 sm:p-10 ${stage[tone]}`}>
-      <div className="w-full max-w-md rounded-2xl bg-white p-4 shadow-[0_20px_50px_rgba(24,24,27,0.08)]">
-        <div className="flex items-center gap-2 border-b border-black/6 pb-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-zinc-200" />
-          <span className="h-2.5 w-2.5 rounded-full bg-zinc-200" />
-          <span className="h-2.5 w-2.5 rounded-full bg-zinc-200" />
-          <span className="ml-2 text-[12px] text-zinc-400">{title.split(" ").slice(0, 2).join(" ")}</span>
-        </div>
-        <div className="mt-4 space-y-3">
-          <div className="h-28 rounded-xl bg-mist" />
-          <div className="h-3 w-4/5 rounded-full bg-zinc-200" />
-          <div className="h-3 w-3/5 rounded-full bg-zinc-100" />
-          <div className="grid grid-cols-3 gap-2 pt-2">
-            <div className="h-14 rounded-xl bg-[#dff2fe]" />
-            <div className="h-14 rounded-xl bg-[#ffedd4]" />
-            <div className="h-14 rounded-xl bg-[#ece9fe]" />
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -585,7 +477,7 @@ export function Steps({ steps }: { steps: HomeContent["steps"] }) {
                 {index === steps.items.length - 1 ? (
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <Button href="/contacts">Contact Now</Button>
-                    <Button href="https://wa.me/917668648224" variant="whatsapp" external>
+                    <Button href={contact.whatsappHref} variant="whatsapp" external>
                       <WhatsAppIcon />
                       WhatsApp
                     </Button>
@@ -760,9 +652,20 @@ function HelpMark() {
 
 function PeopleMark() {
   return (
-    <span className="flex h-[70px] w-[70px] items-center justify-center rounded-[10px] bg-white text-[#18181B] shadow-[0_1px_12px_rgba(0,0,0,0.1)]">
-      <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor" aria-hidden="true">
-        <path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-.086 5.066c.372 -.837 -.483 -1.692 -1.32 -1.32l-9 4l-.108 .055c-.75 .44 -.611 1.609 .271 1.83l3.418 .853l.855 3.419c.23 .922 1.498 1.032 1.884 .163z" />
+    <span className="flex h-[70px] w-[70px] items-center justify-center rounded-[10px] bg-white text-[#71717a] shadow-[0_1px_12px_rgba(0,0,0,0.1)]">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <g clipPath="url(#contact-whatsapp-clip)">
+          <path
+            opacity="0.4"
+            d="M6.9403 20.6304C8.4303 21.5004 10.1603 22.0005 12.0003 22.0005C17.6303 22.0005 22.3103 17.0305 21.9803 11.4105C21.6403 5.61045 16.3703 1.14045 10.3003 2.14045C6.12029 2.83045 2.77029 6.22045 2.12029 10.4005C1.74029 12.8205 2.24031 15.1104 3.33031 17.0005L2.4403 20.3104C2.2403 21.0604 2.93028 21.7404 3.67028 21.5304L6.9403 20.6304Z"
+          />
+          <path d="M17 15.1705C17 15.3505 16.96 15.5405 16.87 15.7205C16.78 15.9005 16.67 16.0705 16.53 16.2305C16.28 16.5005 16.01 16.7005 15.71 16.8205C15.41 16.9505 15.08 17.0105 14.73 17.0105C14.22 17.0105 13.67 16.8905 13.1 16.6405C12.52 16.3905 11.95 16.0605 11.38 15.6505C10.8 15.2305 10.26 14.7605 9.73999 14.2505C9.21999 13.7305 8.76003 13.1805 8.34003 12.6105C7.93003 12.0405 7.59999 11.4705 7.35999 10.9005C7.11999 10.3305 7 9.78047 7 9.26047C7 8.92047 7.05999 8.59047 7.17999 8.29047C7.29999 7.98047 7.49001 7.70046 7.76001 7.45046C8.08001 7.13046 8.42999 6.98047 8.79999 6.98047C8.93999 6.98047 9.08002 7.01047 9.21002 7.07047C9.34002 7.13047 9.45999 7.22046 9.54999 7.35046L10.7 9.00047C10.79 9.13047 10.86 9.24046 10.9 9.35046C10.95 9.46046 10.97 9.56047 10.97 9.66047C10.97 9.78047 10.93 9.90046 10.86 10.0205C10.79 10.1405 10.7 10.2605 10.58 10.3805L10.2 10.7805C10.14 10.8405 10.12 10.9005 10.12 10.9805C10.12 11.0205 10.13 11.0605 10.14 11.1005C10.16 11.1405 10.17 11.1705 10.18 11.2005C10.27 11.3705 10.43 11.5805 10.65 11.8405C10.88 12.1005 11.12 12.3705 11.38 12.6305C11.65 12.9005 11.91 13.1405 12.18 13.3705C12.44 13.5905 12.66 13.7405 12.83 13.8305C12.86 13.8405 12.89 13.8605 12.92 13.8705C12.96 13.8905 13 13.8905 13.05 13.8905C13.14 13.8905 13.2 13.8605 13.26 13.8005L13.64 13.4205C13.77 13.2905 13.89 13.2005 14 13.1405C14.12 13.0705 14.23 13.0305 14.36 13.0305C14.46 13.0305 14.56 13.0505 14.67 13.1005C14.78 13.1505 14.9 13.2105 15.02 13.3005L16.68 14.4805C16.81 14.5705 16.9 14.6805 16.96 14.8005C16.97 14.9105 17 15.0305 17 15.1705Z" />
+        </g>
+        <defs>
+          <clipPath id="contact-whatsapp-clip">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
       </svg>
     </span>
   );

@@ -1,4 +1,5 @@
 import { Button, Lines, PhoneIcon, WhatsAppIcon } from "@/components/ui";
+import { contact } from "@/lib/contact";
 
 export function PageLead({
   eyebrow,
@@ -24,7 +25,7 @@ export function PageLead({
         </h1>
         <p className="mt-5 max-w-[34rem] text-[17px] leading-7 tracking-[-0.015em] text-zinc-600">{body}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button href="tel:+917668648224">
+          <Button href={contact.telHref}>
             <PhoneIcon />
             {call}
           </Button>

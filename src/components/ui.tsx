@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
+import { contact } from "@/lib/contact";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -134,7 +135,14 @@ export function WhatsAppIcon({ className = "h-[18px] w-[18px]" }: { className?: 
   );
 }
 
-const contactBits = /(\+91\s*7668648224|priyasinha1809@gmail\.com|WhatsApp)/g;
+const contactBits = new RegExp(
+  `(${escapeRegExp(contact.phoneDisplay)}|${escapeRegExp(contact.email)}|WhatsApp)`,
+  "g",
+);
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
 
 export function LinkedCopy({ text }: { text: string }) {
   const parts = text.split(contactBits);
@@ -144,21 +152,21 @@ export function LinkedCopy({ text }: { text: string }) {
       {parts.map((part, index) => {
         if (part === "WhatsApp") {
           return (
-            <a key={`${part}-${index}`} href="https://wa.me/917668648224" target="_blank" rel="noopener noreferrer" className="underline decoration-black/25 underline-offset-2 hover:decoration-ink">
+            <a key={`${part}-${index}`} href={contact.whatsappHref} target="_blank" rel="noopener noreferrer" className="underline decoration-black/25 underline-offset-2 hover:decoration-ink">
               WhatsApp
             </a>
           );
         }
-        if (/^\+91\s*7668648224$/.test(part)) {
+        if (part === contact.phoneDisplay) {
           return (
-            <a key={`${part}-${index}`} href="tel:+917668648224" className="underline decoration-black/25 underline-offset-2 hover:decoration-ink">
+            <a key={`${part}-${index}`} href={contact.telHref} className="underline decoration-black/25 underline-offset-2 hover:decoration-ink">
               {part}
             </a>
           );
         }
-        if (part === "priyasinha1809@gmail.com") {
+        if (part === contact.email) {
           return (
-            <a key={part} href="mailto:priyasinha1809@gmail.com" className="underline decoration-black/25 underline-offset-2 hover:decoration-ink">
+            <a key={part} href={contact.mailtoHref} className="underline decoration-black/25 underline-offset-2 hover:decoration-ink">
               {part}
             </a>
           );

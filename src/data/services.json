@@ -8,7 +8,7 @@
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/917668648224",
+    "whatsappHref": "{whatsappHref}",
     "notes": ["In Dehradun, and at a distance", "Ask if you are not sure"],
     "image": "/media/mark.jpg",
     "imageAlt": "Cards and crystals prepared for a reading"
@@ -136,7 +136,7 @@
       },
       {
         "q": "How do I book?",
-        "a": "WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Name the sitting if you know it. If not, say what you want to work on."
+        "a": "WhatsApp {phone}, email {email}, or use the contact page. Name the sitting if you know it. If not, say what you want to work on."
       }
     ]
   },
@@ -155,7 +155,7 @@
         "title": "Prefer WhatsApp?",
         "body": "Say what you are carrying. She will tell you which sitting to book.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "icon": "people",
         "external": true
       }

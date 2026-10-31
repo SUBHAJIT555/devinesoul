@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ContactBand, HomeFaq } from "@/components/home-sections";
 import { ServiceBook } from "@/components/service-book";
 import { Button, PhoneIcon, PointGrid, Reveal, WhatsAppIcon } from "@/components/ui";
+import { contact } from "@/lib/contact";
 import { getCourses, getServices, withChannels } from "@/lib/content";
 import { courseEnquiry, serviceEnquiry } from "@/lib/whatsapp";
 import type { ResolvedGroup } from "@/lib/types";
@@ -34,7 +35,7 @@ export function GroupPage({ group }: { group: ResolvedGroup }) {
         <div className="mx-auto max-w-[1000px]">
           <p className="max-w-2xl text-[17px] leading-7 tracking-[-0.015em] text-zinc-600">{brief}</p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Button href="tel:+917668648224">
+            <Button href={contact.telHref}>
               <PhoneIcon />
               Call now
             </Button>
@@ -79,8 +80,8 @@ export function GroupPage({ group }: { group: ResolvedGroup }) {
                   >
                     <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[var(--card-inner-radius)] bg-white/40">
                       <Image
-                        src={item.image}
-                        alt={item.imageAlt}
+                        src={group.kind === "course" ? item.courseImage : item.image}
+                        alt={group.kind === "course" ? item.courseImageAlt : item.imageAlt}
                         fill
                         unoptimized
                         sizes="(min-width: 768px) 50vw, 100vw"

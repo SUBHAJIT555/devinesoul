@@ -8,7 +8,7 @@
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/917668648224",
+    "whatsappHref": "{whatsappHref}",
     "notes": ["Learn the method, then hold it", "In Dehradun, and at a distance"],
     "image": "/media/lama-fera.jpg",
     "imageAlt": "A healing sitting"
@@ -35,8 +35,8 @@
       ],
       "tone": "blue",
       "align": "left",
-      "image": "/media/lama-fera.jpg",
-      "imageAlt": "A Lama Fera healing sitting"
+      "image": "/media/crs-healings.webp",
+      "imageAlt": "A healing method being taught"
     },
     {
       "id": "ritual-castings",
@@ -55,8 +55,8 @@
       ],
       "tone": "peach",
       "align": "right",
-      "image": "/media/candles.jpg",
-      "imageAlt": "Candles prepared for a ritual"
+      "image": "/media/crs-ritual.webp",
+      "imageAlt": "Learning how a candle is named and prepared"
     },
     {
       "id": "akashic-records",
@@ -68,8 +68,8 @@
       "points": [],
       "tone": "violet",
       "align": "left",
-      "image": "/media/dusk.jpg",
-      "imageAlt": "A quiet dusk field"
+      "image": "/media/crs-akashic.webp",
+      "imageAlt": "Learning to sit in the records"
     },
     {
       "id": "plr",
@@ -81,8 +81,8 @@
       "points": [],
       "tone": "peach",
       "align": "right",
-      "image": "/media/practice-a.jpg",
-      "imageAlt": "A guided sitting"
+      "image": "/media/crs-plr.webp",
+      "imageAlt": "Learning to hold a past-life regression hour"
     },
     {
       "id": "hoodoo",
@@ -94,8 +94,8 @@
       "points": [],
       "tone": "blue",
       "align": "left",
-      "image": "/media/hecate.jpg",
-      "imageAlt": "A candle and figure prepared for spirit work"
+      "image": "/media/crs-hoodoo.webp",
+      "imageAlt": "Learning Hoodoo work with Saints and spirits"
     },
     {
       "id": "divinations",
@@ -112,8 +112,8 @@
       ],
       "tone": "violet",
       "align": "right",
-      "image": "/media/mark.jpg",
-      "imageAlt": "Cards laid out for a reading"
+      "image": "/media/crs-divinations.webp",
+      "imageAlt": "Learning to read tarot, pendulum, and runes"
     },
     {
       "id": "meditations",
@@ -132,8 +132,8 @@
       ],
       "tone": "peach",
       "align": "left",
-      "image": "/media/chanting-meditation.jpg",
-      "imageAlt": "A chanting meditation"
+      "image": "/media/crs-meditations.webp",
+      "imageAlt": "Learning a guided meditation sitting"
     }
   ],
   "faq": {
@@ -158,7 +158,7 @@
       },
       {
         "q": "How do I start a course?",
-        "a": "WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Name the course if you know it. If not, say what you want to learn."
+        "a": "WhatsApp {phone}, email {email}, or use the contact page. Name the course if you know it. If not, say what you want to learn."
       }
     ]
   },
@@ -177,7 +177,7 @@
         "title": "Prefer WhatsApp?",
         "body": "A few lines is enough. She will say which course fits, and whether a sitting should come first.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "icon": "people",
         "external": true
       }

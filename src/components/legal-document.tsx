@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Button, Reveal, WhatsAppIcon } from "@/components/ui";
 import legalData from "@/data/legal.json";
+import { contact, fillContact } from "@/lib/contact";
 
 type LegalKey = keyof typeof legalData;
 
@@ -20,12 +21,12 @@ type LegalPage = {
 };
 
 export function legalMetadata(key: LegalKey): Metadata {
-  const page = legalData[key] as LegalPage;
+  const page = fillContact(legalData[key]) as LegalPage;
   return { title: page.title, description: page.description };
 }
 
 export function LegalDocument({ pageKey }: { pageKey: LegalKey }) {
-  const page = legalData[pageKey] as LegalPage;
+  const page = fillContact(legalData[pageKey]) as LegalPage;
 
   return (
     <main>
@@ -35,7 +36,7 @@ export function LegalDocument({ pageKey }: { pageKey: LegalKey }) {
           <p className="text-center font-meta text-[12px] leading-[18px] text-zinc-500">Last updated: {page.updated}</p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 pb-10">
             <Button href="/contacts">Contact us now</Button>
-            <Button href="https://wa.me/917668648224" variant="whatsapp" external>
+            <Button href={contact.whatsappHref} variant="whatsapp" external>
               <WhatsAppIcon />
               Chat on WhatsApp
             </Button>

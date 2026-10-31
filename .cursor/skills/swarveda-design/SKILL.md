@@ -33,5 +33,5 @@ Page copy lives in `src/data/*.json`. There is no content folder. When the brief
 2. Keep the floating pill nav. Do not replace it with a full-width bar.
 3. Add motion only when it leads the eye. Honor `prefers-reduced-motion`.
 4. Keep the page light. Use dark bands for emphasis.
-5. Honor the approved photo cards: stories stay square-in-scales; steps stay landscape (`3/2`, rounded 16px, ring and offset, no hatch).
+5. Honor the approved photo card: landscape `3/2`, rounded 16px, ring and offset, no hatch — on stories and steps.
 6. After a visual change, check the affected route in the browser, including the phone menu if the nav or layout changed.

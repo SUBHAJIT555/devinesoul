@@ -27,7 +27,7 @@
       },
       {
         "q": "How do I book after reading these?",
-        "a": "WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. You do not have to name a sitting first."
+        "a": "WhatsApp {phone}, email {email}, or use the contact page. You do not have to name a sitting first."
       }
     ]
   },
@@ -46,7 +46,7 @@
         "title": "Prefer WhatsApp?",
         "body": "The same note, sent there. She will take it from there.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "icon": "people",
         "external": true
       }

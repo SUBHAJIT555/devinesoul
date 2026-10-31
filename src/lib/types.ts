@@ -41,6 +41,8 @@ export type CatalogItem = {
   points: string[];
   image: string;
   imageAlt: string;
+  courseImage: string;
+  courseImageAlt: string;
 };
 
 export type CatalogGroup = {
@@ -90,6 +92,13 @@ export type SiteContent = {
     social: { title: string; links: LinkItem[]; legalTitle: string; legal: LinkItem[] };
     contact: { title: string; items: FooterContactItem[] };
     note: string;
+  };
+  whatsappWidget: {
+    title: string;
+    body: string;
+    placeholder: string;
+    cta: string;
+    emptyMessage: string;
   };
 };
 

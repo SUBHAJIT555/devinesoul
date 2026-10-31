@@ -1,7 +1,7 @@
-const WHATSAPP = "917668648224";
+import { contact } from "@/lib/contact";
 
 function link(text: string) {
-  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+  return `${contact.whatsappHref}?text=${encodeURIComponent(text)}`;
 }
 
 export function courseEnquiry(title: string) {
@@ -20,4 +20,12 @@ export function productOrder(name: string) {
   return link(
     `Hello Priya, I would like to order ${name}. Please let me know how to get it, and what I should share about my situation.`,
   );
+}
+
+export function widgetChat(text: string) {
+  return link(text);
+}
+
+export function widgetOpen() {
+  return contact.whatsappHref;
 }

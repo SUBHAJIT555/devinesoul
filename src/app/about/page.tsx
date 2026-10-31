@@ -5,6 +5,7 @@ import { Bento, ContactBand, HomeFaq, Spotlight } from "@/components/home-sectio
 import MorphGallery from "@/components/morph-gallery";
 import { Button, Check, ExploreIcon, Reveal, WhatsAppIcon } from "@/components/ui";
 import { getAbout, getSite, withChannels } from "@/lib/content";
+import { contact } from "@/lib/contact";
 import type { AboutContent } from "@/lib/types";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -73,7 +74,7 @@ export default async function AboutPage() {
           mark: site.name,
           actions: [
             { label: "Contact Now", href: "/contacts", variant: "primary" },
-            { label: "WhatsApp", href: "https://wa.me/917668648224", variant: "whatsapp" },
+            { label: "WhatsApp", href: contact.whatsappHref, variant: "whatsapp" },
           ],
         }}
       />

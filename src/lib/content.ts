@@ -7,6 +7,7 @@ import productsData from "@/data/products.json";
 import reviewsData from "@/data/reviews.json";
 import servicesData from "@/data/services.json";
 import siteData from "@/data/site.json";
+import { fillContact } from "@/lib/contact";
 import type {
   AboutContent,
   CatalogContent,
@@ -117,7 +118,7 @@ export function offeringSlugs() {
 }
 
 export function getSite() {
-  const site = siteData as SiteContent;
+  const site = fillContact(siteData as SiteContent);
   return {
     ...site,
     nav: site.nav.map((item) => {
@@ -141,31 +142,31 @@ export function getSite() {
 }
 
 export function getHome() {
-  return homeData as HomeContent;
+  return fillContact(homeData as HomeContent);
 }
 
 export function getAbout() {
-  return aboutData as AboutContent;
+  return fillContact(aboutData as AboutContent);
 }
 
 export function getCourses() {
-  return coursesData as CoursesContent;
+  return fillContact(coursesData as CoursesContent);
 }
 
 export function getServices() {
-  return servicesData as ServicesContent;
+  return fillContact(servicesData as ServicesContent);
 }
 
 export function getProducts() {
-  return productsData as ProductsContent;
+  return fillContact(productsData as ProductsContent);
 }
 
 export function getContacts() {
-  return contactsData as ContactsContent;
+  return fillContact(contactsData as ContactsContent);
 }
 
 export function getReviews() {
-  return reviewsData as ReviewsContent;
+  return fillContact(reviewsData as ReviewsContent);
 }
 
 export function faqGroups() {
@@ -224,7 +225,7 @@ export function catalogMarquee(kind: OfferingKind) {
     group.items.map((item) => ({
       title: group.title,
       text: item.title,
-      image: item.image,
+      image: kind === "course" ? item.courseImage : item.image,
       meta,
       href: `${root}/${group.id}#${item.slug}`,
     })),
@@ -235,7 +236,7 @@ export function groupMarquee(group: ResolvedGroup) {
   return group.items.map((item) => ({
     title: group.title,
     text: item.title,
-    image: item.image,
+    image: group.kind === "course" ? item.courseImage : item.image,
     meta: group.kind === "service" ? "Service" : "Course",
     href: `${group.href}#${item.slug}`,
   }));

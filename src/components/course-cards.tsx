@@ -8,6 +8,7 @@ import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Course } from "@/lib/types";
 import { offeringHref } from "@/lib/content";
+import { contact } from "@/lib/contact";
 import { courseEnquiry } from "@/lib/whatsapp";
 import { Button, Check, PointGrid, Reveal, WhatsAppIcon } from "@/components/ui";
 
@@ -179,7 +180,7 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
             </div>
             {sent ? (
               <p className="mt-6 rounded-2xl bg-[#dff2fe] px-4 py-4 text-[15px] leading-6 text-ink">
-                Received on this page. Nothing was sent on. Email priyasinha1809@gmail.com or call +91 7668648224 and Priya can pick it up.
+                Received on this page. Nothing was sent on. Email {contact.email} or call {contact.phoneDisplay} and Priya can pick it up.
               </p>
             ) : (
               <form className="mt-6 grid gap-4" onSubmit={onSubmit}>

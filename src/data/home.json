@@ -7,7 +7,7 @@
     "cta": "Contact Now",
     "ctaHref": "/contacts",
     "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/917668648224",
+    "whatsappHref": "{whatsappHref}",
     "rating": "5 star on Google",
     "ratingHref": "https://www.google.com/maps/place/Divine+Souls/@20.7572373,72.1085035,5z/data=!4m8!3m7!1s0x3be04dcf4d001d75:0x7f2ddcbbbcbefc00!8m2!3d21.0680074!4d82.7525294!9m1!1b1!16s%2Fg%2F11f55jgcmh"
   },
@@ -81,11 +81,11 @@
     "body": "Slide the handle. Both belong to the same room.",
     "before": "Candle work",
     "after": "A sitting",
-    "beforeImage": "/media/candles.jpg",
-    "afterImage": "/media/practice-b.jpg",
+    "beforeImage": "/media/compare-candle.webp",
+    "afterImage": "/media/compare-sitting.webp",
     "actions": [
       { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
-      { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp" }
+      { "label": "WhatsApp", "href": "{whatsappHref}", "variant": "whatsapp" }
     ]
   },
   "bento": {
@@ -135,7 +135,7 @@
     ],
     "actions": [
       { "label": "Contact Now", "href": "/contacts", "variant": "primary" },
-      { "label": "WhatsApp", "href": "https://wa.me/917668648224", "variant": "whatsapp" }
+      { "label": "WhatsApp", "href": "{whatsappHref}", "variant": "whatsapp" }
     ]
   },
   "steps": {
@@ -243,7 +243,7 @@
         "unit": "people",
         "cadence": "People who have already sat for a healing, a reading, or a longer path.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "featured": false,
         "points": [
           "One person at a time",
@@ -282,7 +282,7 @@
         "title": "Prefer WhatsApp?",
         "body": "Say what you are carrying. She will tell you which sitting fits.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "icon": "people",
         "external": true
       }
@@ -304,16 +304,16 @@
       },
       {
         "name": "WhatsApp",
-        "handle": "917668648224",
+        "handle": "{whatsapp}",
         "body": "A direct conversation",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "tone": "whatsapp"
       },
       {
         "name": "Email",
-        "handle": "priyasinha1809@gmail.com",
+        "handle": "{email}",
         "body": "Write when you are ready",
-        "href": "mailto:priyasinha1809@gmail.com",
+        "href": "{mailtoHref}",
         "tone": "mail"
       },
       {
@@ -339,7 +339,7 @@
       },
       {
         "q": "How do I start?",
-        "a": "A few lines is enough. WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Leave your name, a number, and what you want to work on."
+        "a": "A few lines is enough. WhatsApp {phone}, email {email}, or use the contact page. Leave your name, a number, and what you want to work on."
       },
       {
         "q": "How long is a sitting?",

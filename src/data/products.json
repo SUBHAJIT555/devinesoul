@@ -1,30 +1,69 @@
 {
   "title": "Products",
-  "description": "Crystals, healing kits, and ritual tools from Priya in Dehradun. Chosen for the person and the issue, then charged before they leave.",
+  "description": "Healing water, protection and wealth sprays, crystals, kits, and ritual tools from Priya in Dehradun. Charged for the person who asked.",
   "hero": {
     "eyebrow": "Products",
     "title": "She charges it.\nYou take it home.",
-    "body": "A crystal, a kit, or the tools for a ritual. Write her the issue. She picks the piece, charges it, and tells you how to use it.",
+    "body": "Healing water, a spray, a crystal, a kit, or the tools for a ritual. Write her the issue. She charges the piece for you, and tells you how to use it.",
     "cta": "Contact Now",
     "href": "/contacts",
     "whatsapp": "WhatsApp",
-    "whatsappHref": "https://wa.me/917668648224",
-    "notes": ["Crystals, kits, and ritual tools", "Named after she hears you"],
+    "whatsappHref": "{whatsappHref}",
+    "notes": ["Water, sprays, crystals, and tools", "Named after she hears you"],
     "image": "/media/practice-a.jpg",
     "imageAlt": "Stones set out for a healing piece"
   },
   "intro": {
     "chip": "Products",
-    "title": "Three kinds of piece.\nAll of them named to you."
+    "title": "The water and the sprays first.\nThen the pieces you already know."
   },
   "items": [
+    {
+      "name": "Healing Water",
+      "summary": "A sanctified elixir, chanted over every 5ml in an auspicious hour, and always made for one person. You take it as medicine — Happy, Healthy, and Healed.",
+      "tone": "blue",
+      "image": "/media/prod-healing-water-v2.webp",
+      "imageAlt": "A labelled dropper bottle of healing water in a bowl among flowers",
+      "align": "left",
+      "points": [
+        "Twelve drops in 500ml, twice a day — or twenty-one drops in a litre, sipped through the day",
+        "Enchanted for the person who asked",
+        "₹1,200 for 100ml. About a month"
+      ]
+    },
+    {
+      "name": "Protection spray",
+      "summary": "The same method — mantra, auspicious hour, made for you. A spray to seal the aura against the evil eye, entities, and what will not settle. Keep using it. The change is not one day.",
+      "tone": "violet",
+      "image": "/media/prod-protection-spray-v2.webp",
+      "imageAlt": "A labelled bottle of protection spray in the grass beside flowers",
+      "align": "right",
+      "points": [
+        "Spray seven or eight inches above the head, at the shoulders, and at the feet",
+        "For the aura — clarity, stability, and what sits too heavy",
+        "₹2,100 for 100ml. About a month"
+      ]
+    },
+    {
+      "name": "Wealth spray",
+      "summary": "Chanted the same way, for one person, to call wealth and success. It is a spray for the body — not to drink. No chemicals.",
+      "tone": "orange",
+      "image": "/media/prod-wealth-spray-v2.webp",
+      "imageAlt": "A labelled bottle of wealth spray standing in the grass among flowers",
+      "align": "left",
+      "points": [
+        "Use on the body. Do not consume",
+        "How long the bottle lasts depends on how often you spray. Often more than a month",
+        "₹2,100 for 100ml"
+      ]
+    },
     {
       "name": "Crystals",
       "summary": "A stone for the issue you are in — elemental correction, not a pretty object from a tray. She names it, then charges it, then it leaves.",
       "tone": "violet",
-      "image": "/media/mark.jpg",
-      "imageAlt": "Crystals and a card laid out for a reading",
-      "align": "left",
+      "image": "/media/prod-crystals.webp",
+      "imageAlt": "A stone being named and charged for the issue",
+      "align": "right",
       "points": [
         "Matched to the issue",
         "Used in elemental correction",
@@ -35,9 +74,9 @@
       "name": "Healing kits",
       "summary": "A small set of tools for the method you will actually use at home. She will say what is in it, why, and what to do first.",
       "tone": "blue",
-      "image": "/media/practice-b.jpg",
-      "imageAlt": "A singing bowl held during a healing",
-      "align": "right",
+      "image": "/media/prod-kits.webp",
+      "imageAlt": "A healing kit packed for home use",
+      "align": "left",
       "points": [
         "More than one tool",
         "Paired with a method",
@@ -48,9 +87,9 @@
       "name": "Ritual casting tools",
       "summary": "What a candle working needs. She will say which tools, how they are held, and what she needs from you before you begin.",
       "tone": "orange",
-      "image": "/media/candles.jpg",
-      "imageAlt": "A candle prepared for ritual work",
-      "align": "left",
+      "image": "/media/prod-ritual-tools.webp",
+      "imageAlt": "Tools laid out for a candle working",
+      "align": "right",
       "points": [
         "Made for ritual use",
         "Matched to the working",
@@ -64,7 +103,7 @@
       {
         "icon": "tag",
         "title": "A plain name",
-        "body": "Crystal, kit, or tool. Something you can ask for again."
+        "body": "Water, spray, crystal, kit, or tool. Something you can ask for again."
       },
       {
         "icon": "focus",
@@ -88,8 +127,16 @@
     "intro": "What people ask before they take something home.",
     "items": [
       {
+        "q": "Do I drink the sprays?",
+        "a": "No. Only Healing Water is to drink. Protection spray and Wealth spray go on the body."
+      },
+      {
+        "q": "How do I take the Healing Water?",
+        "a": "Twelve drops in 500ml, twice a day. Or twenty-one drops in a litre, sipped through the day. Treat it as medicine."
+      },
+      {
         "q": "Do I pick the crystal myself?",
-        "a": "No. Tell her the issue. She will say which stone, kit, or tool belongs with it. If you already have a name in mind, write that too."
+        "a": "No. Tell her the issue. She will say which water, spray, stone, kit, or tool belongs with it. If you already have a name in mind, write that too."
       },
       {
         "q": "Are these sitting on a shelf?",
@@ -105,7 +152,7 @@
       },
       {
         "q": "How do I ask for one?",
-        "a": "WhatsApp +91 7668648224, email priyasinha1809@gmail.com, or use the contact page. Name the issue. The product name can wait."
+        "a": "WhatsApp {phone}, email {email}, or use the contact page. Name the issue. The product name can wait."
       }
     ]
   },
@@ -115,7 +162,7 @@
     "cards": [
       {
         "title": "Write what the issue is",
-        "body": "A crystal, a kit, or a ritual tool. Leave your name and a number. She will say which piece fits.",
+        "body": "Healing water, a spray, a crystal, a kit, or a ritual tool. Leave your name and a number. She will say which piece fits.",
         "cta": "Contact Now",
         "href": "/contacts",
         "icon": "help"
@@ -124,7 +171,7 @@
         "title": "Prefer WhatsApp?",
         "body": "Send the situation in a few lines. She will tell you what to take home.",
         "cta": "WhatsApp",
-        "href": "https://wa.me/917668648224",
+        "href": "{whatsappHref}",
         "icon": "people",
         "external": true
       }
@@ -132,7 +179,7 @@
   },
   "closing": {
     "title": "Tell Priya what the piece is for.",
-    "body": "The right crystal or kit depends on the issue. A short note is the way to begin.",
+    "body": "The right water, spray, crystal, or kit depends on the issue. A short note is the way to begin.",
     "cta": "Ask about a product",
     "href": "/contacts"
   }
