@@ -23,12 +23,23 @@ const inter = Inter({
 export async function generateMetadata(): Promise<Metadata> {
   const site = await getSite();
 
+  const siteUrl = process.env.MAILER_SITE_URL || "https://divinesoulsbypriya.in";
+
   return {
+    metadataBase: new URL(siteUrl),
     title: {
       default: site.title,
       template: `%s — ${site.name}`,
     },
     description: site.description,
+    openGraph: {
+      type: "website",
+      siteName: site.title,
+      title: site.title,
+      description: site.description,
+      url: siteUrl,
+      images: [{ url: "/brand/logo.png", alt: site.title }],
+    },
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "any" },

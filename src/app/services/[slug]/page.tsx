@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { GroupPage } from "@/components/group-page";
+import { StaticRedirect } from "@/components/static-redirect";
 import { groupSlugs, offeringSlugs, resolveGroup, resolveOffering } from "@/lib/content";
 
 type PageProps = {
@@ -34,7 +35,7 @@ async function ServiceGroup({ params }: PageProps) {
   const group = resolveGroup("service", slug);
   if (group) return <GroupPage group={group} />;
   const offering = resolveOffering("service", slug);
-  if (offering) redirect(`/services/${offering.group.id}`);
+  if (offering) return <StaticRedirect href={`/services/${offering.group.id}/`} />;
   notFound();
 }
 

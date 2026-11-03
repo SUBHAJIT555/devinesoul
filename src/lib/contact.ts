@@ -1,8 +1,13 @@
 import data from "@/data/contact.json";
 
-const email = data.email;
-const phone = data.phone.replace(/\D/g, "");
-const countryCode = data.countryCode.replace(/\D/g, "");
+function env(name: string, fallback = "") {
+  const value = process.env[name];
+  return typeof value === "string" && value.trim() ? value.trim() : fallback;
+}
+
+const email = env("NEXT_PUBLIC_CONTACT_EMAIL", data.email);
+const phone = env("NEXT_PUBLIC_CONTACT_PHONE", data.phone).replace(/\D/g, "");
+const countryCode = env("NEXT_PUBLIC_CONTACT_COUNTRY_CODE", data.countryCode).replace(/\D/g, "");
 const whatsapp = `${countryCode}${phone}`;
 const phoneDisplay = `+${countryCode} ${phone}`;
 

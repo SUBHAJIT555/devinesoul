@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import type { FormEvent } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { ContactsContent, OfferingKind } from "@/lib/types";
+import { EnquiryError, EnquiryHoneypot, useEnquirySubmit } from "@/lib/enquire";
 
 const fieldClass =
   "h-12 w-full rounded-2xl bg-mist px-4 text-[15px] font-normal text-ink outline-none focus:bg-white focus:shadow-[inset_0_0_0_1.5px_#00a7f5]";
@@ -20,16 +20,11 @@ export function LeadForm({
   choices?: string[];
 }) {
   const reduce = useReducedMotion();
-  const [sent, setSent] = useState(false);
+  const { sent, sending, error, onSubmit } = useEnquirySubmit();
   const [phone, setPhone] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [same, setSame] = useState(false);
   const [selected, setSelected] = useState(offering);
-
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSent(true);
-  }
 
   return (
     <AnimatePresence mode="wait">
@@ -52,6 +47,9 @@ export function LeadForm({
           animate={{ opacity: 1 }}
           exit={reduce ? undefined : { opacity: 0 }}
         >
+          <EnquiryHoneypot />
+          <input type="hidden" name="kind" value={kind} />
+          <input type="hidden" name="topic" value={selected} />
           {choices?.length ? (
             <label className="grid gap-1.5">
               <span className="font-meta text-[12px] leading-[18px] text-zinc-500">
@@ -87,8 +85,10 @@ export function LeadForm({
               <input name="name" type="text" required className={fieldClass} />
             </label>
             <label className="grid gap-1.5">
-              <span className="font-meta text-[12px] leading-[18px] text-zinc-500">Email</span>
-              <input name="email" type="email" className={fieldClass} />
+              <span className="font-meta text-[12px] leading-[18px] text-zinc-500">
+                Email <span className="text-ink">*</span>
+              </span>
+              <input name="email" type="email" required className={fieldClass} />
             </label>
             <label className="grid gap-1.5">
               <span className="font-meta text-[12px] leading-[18px] text-zinc-500">
@@ -145,12 +145,14 @@ export function LeadForm({
               className="resize-none rounded-2xl bg-mist px-4 py-3 text-[15px] font-normal text-ink outline-none placeholder:text-zinc-400 focus:bg-white focus:shadow-[inset_0_0_0_1.5px_#00a7f5]"
             />
           </label>
+          <EnquiryError error={error} />
           <div className="flex justify-end pt-1">
             <button
               type="submit"
-              className="inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-4 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa]"
+              disabled={sending}
+              className="inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-4 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa] disabled:opacity-60"
             >
-              {form.submit}
+              {sending ? "Sending…" : form.submit}
             </button>
           </div>
         </motion.form>

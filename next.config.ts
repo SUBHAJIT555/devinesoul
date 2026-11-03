@@ -2,36 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  async redirects() {
-    return [
-      {
-        source: "/terms",
-        destination: "/terms-and-conditions",
-        permanent: true,
-      },
-      {
-        source: "/privacy",
-        destination: "/privacy-policy",
-        permanent: true,
-      },
-      {
-        source: "/cookies",
-        destination: "/cookie-policy",
-        permanent: true,
-      },
-    ];
-  },
+  output: "export",
+  trailingSlash: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-    ],
+    unoptimized: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {

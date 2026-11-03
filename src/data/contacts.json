@@ -79,7 +79,7 @@
     "title": "Leave a note",
     "body": "Name, a number, and what you are asking for. To reach her today, WhatsApp {phone} or email {email}.",
     "submit": "Send the note",
-    "success": "Saved on this page. To reach Priya now, WhatsApp {phone} or email {email}."
+    "success": "Priya has the note. A copy is on its way to your email. She will write back from there, or on WhatsApp {phone}."
   },
   "faq": {
     "title": "Before you write",
@@ -87,7 +87,7 @@
     "items": [
       {
         "q": "Where do messages go?",
-        "a": "The form on this page only confirms what you typed. To reach Priya, WhatsApp {phone}, email {email}, or call the same number."
+        "a": "The form writes to Priya. You get a short confirmation on the email you left. She replies from there, or on WhatsApp {phone}."
       },
       {
         "q": "What should I include?",

@@ -1,14 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import type { FormEvent, KeyboardEvent as ReactKeyboardEvent } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Course } from "@/lib/types";
 import { offeringHref } from "@/lib/content";
-import { contact } from "@/lib/contact";
+import { EnquiryError, EnquiryHoneypot, useEnquirySubmit } from "@/lib/enquire";
 import { courseEnquiry } from "@/lib/whatsapp";
 import { Button, Check, PointGrid, Reveal, WhatsAppIcon } from "@/components/ui";
 
@@ -90,13 +90,13 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
   const titleId = useId();
   const panelRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
-  const [sent, setSent] = useState(false);
+  const { sent, sending, error, onSubmit, reset } = useEnquirySubmit();
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!course) return;
-    setSent(false);
+    reset();
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (event: globalThis.KeyboardEvent) => {
@@ -111,12 +111,7 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
       window.removeEventListener("keydown", onKey);
       window.cancelAnimationFrame(frame);
     };
-  }, [course, onClose]);
-
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSent(true);
-  }
+  }, [course, onClose, reset]);
 
   function trap(event: ReactKeyboardEvent<HTMLDivElement>) {
     if (event.key !== "Tab" || !panelRef.current) return;
@@ -180,10 +175,13 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
             </div>
             {sent ? (
               <p className="mt-6 rounded-2xl bg-[#dff2fe] px-4 py-4 text-[15px] leading-6 text-ink">
-                Received on this page. Nothing was sent on. Email {contact.email} or call {contact.phoneDisplay} and Priya can pick it up.
+                Priya has the request. A copy is on its way to your email. She will write back from there, or on WhatsApp.
               </p>
             ) : (
               <form className="mt-6 grid gap-4" onSubmit={onSubmit}>
+                <EnquiryHoneypot />
+                <input type="hidden" name="kind" value="course" />
+                <input type="hidden" name="topic" value={course.title} />
                 <input type="hidden" name="course" value={course.title} />
                 <Field label="Name" name="name" type="text" required />
                 <Field label="Email" name="email" type="email" required />
@@ -197,12 +195,14 @@ function EnrollModal({ course, onClose }: { course: Course | null; onClose: () =
                     className="rounded-xl border border-black/10 px-3 py-3 text-[15px] font-normal text-ink outline-none placeholder:text-zinc-400 focus:border-accent"
                   />
                 </label>
+                <EnquiryError error={error} />
                 <div className="mt-2 flex justify-end">
                   <button
                     type="submit"
-                    className="inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-4 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa]"
+                    disabled={sending}
+                    className="inline-flex h-[45px] cursor-pointer items-center justify-center rounded-[16px] bg-[#00a7f5] px-4 text-[15px] font-medium tracking-[-0.02em] text-white shadow-[inset_0_3px_0_0_rgba(255,255,255,0.2),0_2px_4px_0_rgba(6,147,255,0.25)] transition-colors hover:bg-[#00b0fa] disabled:opacity-60"
                   >
-                    Submit your request
+                    {sending ? "Sending…" : "Submit your request"}
                   </button>
                 </div>
               </form>

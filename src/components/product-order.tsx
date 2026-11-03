@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import type { FormEvent, KeyboardEvent as ReactKeyboardEvent } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { contact } from "@/lib/contact";
+import { EnquiryError, EnquiryHoneypot, useEnquirySubmit } from "@/lib/enquire";
 import { productOrder } from "@/lib/whatsapp";
 import { Button, Check, WhatsAppIcon } from "@/components/ui";
 
@@ -56,13 +56,13 @@ function EnquireModal({
   const titleId = useId();
   const panelRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
-  const [sent, setSent] = useState(false);
+  const { sent, sending, error, onSubmit, reset } = useEnquirySubmit();
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
-    setSent(false);
+    reset();
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (event: globalThis.KeyboardEvent) => {
@@ -77,12 +77,7 @@ function EnquireModal({
       window.removeEventListener("keydown", onKey);
       window.cancelAnimationFrame(frame);
     };
-  }, [open, onClose]);
-
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSent(true);
-  }
+  }, [open, onClose, reset]);
 
   function trap(event: ReactKeyboardEvent<HTMLDivElement>) {
     if (event.key !== "Tab" || !panelRef.current) return;
@@ -143,7 +138,7 @@ function EnquireModal({
             {sent ? (
               <div className="px-6 pb-6 pt-3">
                 <p className="rounded-[20px] bg-[#dff2fe] px-4 py-4 text-[15px] leading-6 text-ink">
-                  Received on this page. Nothing was sent on. Email {contact.email} or call {contact.phoneDisplay} and Priya can pick it up.
+                  Priya has the request. A copy is on its way to your email. She will write back from there, or on WhatsApp.
                 </p>
               </div>
             ) : (
@@ -163,6 +158,9 @@ function EnquireModal({
                     </ul>
                   </div>
                   <div className="mt-5 grid gap-3.5">
+                    <EnquiryHoneypot />
+                    <input type="hidden" name="kind" value="product" />
+                    <input type="hidden" name="topic" value={name} />
                     <input type="hidden" name="product" value={name} />
                     <Field label="Name" name="name" type="text" required />
                     <Field label="Email" name="email" type="email" required />
@@ -178,10 +176,13 @@ function EnquireModal({
                     </label>
                   </div>
                 </div>
-                <div className="flex justify-end px-6 pb-6 pt-3">
-                  <button type="submit" className={primaryButton}>
-                    Submit your request
-                  </button>
+                <div className="grid gap-3 px-6 pb-6 pt-3">
+                  <EnquiryError error={error} />
+                  <div className="flex justify-end">
+                    <button type="submit" className={primaryButton} disabled={sending}>
+                      {sending ? "Sending…" : "Submit your request"}
+                    </button>
+                  </div>
                 </div>
               </form>
             )}

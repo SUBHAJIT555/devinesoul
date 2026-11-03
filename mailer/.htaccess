@@ -1,0 +1,6 @@
+Options -Indexes
+
+# Only the mail endpoint may be requested. Settings and PHP sources stay on disk.
+<FilesMatch "^(?!send\.php$).*">
+  Require all denied
+</FilesMatch>

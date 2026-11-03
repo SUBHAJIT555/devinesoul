@@ -89,6 +89,12 @@ function contactHref(site: SiteContent, label: string, fallback: string) {
   return site.footer.contact.items.find((item) => item.label === label)?.href ?? fallback;
 }
 
+function socialHandle(item: { label: string; href: string }) {
+  if (item.label === "Instagram") return "@divinesoulsbypriya";
+  if (item.label === "Facebook") return "Divine Souls";
+  return item.label;
+}
+
 function NavWhatsAppIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -370,6 +376,45 @@ export function SiteHeader({ site }: { site: SiteContent }) {
             })}
             <div className="px-4 pb-2 pt-3">
               <Button href={site.cta.href}>{site.cta.label}</Button>
+            </div>
+            {site.footer.explore.links
+              .filter((item) => item.href === "/faq" || item.href === "/reviews")
+              .map((item) => {
+                const active = pathname.startsWith(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block rounded-2xl px-4 py-3 text-[22px] font-medium tracking-[-0.03em] ${active ? "text-white" : "text-white/60"}`}
+                    aria-current={active ? "page" : undefined}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            <div className="mx-1 mt-2 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 px-3 pb-2 pt-4">
+              {site.footer.social.links.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block min-w-0 text-white transition-colors hover:text-white/70"
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="block text-[13px] font-medium text-white/50">{item.label}</span>
+                  <span className="mt-1 block text-[14px] leading-5">{socialHandle(item)}</span>
+                </a>
+              ))}
+              <a
+                href={contact.mailtoHref}
+                className="col-span-2 block min-w-0 break-all text-white transition-colors hover:text-white/70"
+                onClick={() => setOpen(false)}
+              >
+                <span className="block text-[13px] font-medium text-white/50">Mail</span>
+                <span className="mt-1 block text-[14px] leading-5">{contact.email}</span>
+              </a>
             </div>
           </motion.nav>
         ) : null}

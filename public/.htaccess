@@ -1,0 +1,5 @@
+DirectoryIndex index.html
+
+<Files ".env">
+  Require all denied
+</Files>
